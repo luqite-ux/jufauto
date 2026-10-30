@@ -1,0 +1,2 @@
+Reviewed 2026-10-30: https://www.carlsoneng.com/
+The navigation exposes Products, Industries, Applications, Company and Contact as separate procurement routes, with product family and application submenus. JUFTECH uses a simpler seven-item top navigation suited to its broader mixed catalogue.

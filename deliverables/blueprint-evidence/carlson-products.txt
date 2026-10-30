@@ -1,0 +1,2 @@
+Reviewed 2026-10-30: https://www.carlsoneng.com/products/
+The products page groups fixtured drive heads, handheld drive heads, screw feeders and accessories, then links into concrete types. JUFTECH adopts product-family hierarchy and category filtering, not Carlson's models, copy, media or performance assertions.

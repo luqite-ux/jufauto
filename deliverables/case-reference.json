@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "internalLibrary": {
+    "queries": ["industrial automation B2B", "screwdriving automation", "rugged vehicle tablet"],
+    "matchCount": 0,
+    "decision": "none",
+    "note": "统一案例库检索无匹配；未虚构案例。公司 MCP 因当前客户目录不在共享后台 workspace scope 返回 MCP_WORKSPACE_SCOPE，该限制不当作业务阻塞。"
+  },
+  "externalReferences": [
+    "https://www.weber-online.com/en/",
+    "https://www.weber-online.com/en/fixtured-screwdriving-systems/",
+    "https://www.carlsoneng.com/",
+    "https://www.carlsoneng.com/products/",
+    "https://www.waysion.com/",
+    "https://www.waysion.com/product-type/rugged-tablet/",
+    "https://www.waysion.com/v7s-rugged-android-tablet/"
+  ],
+  "use": "Information architecture and procurement-path reference only; no copied brand, layout, media, claims or code."
+}

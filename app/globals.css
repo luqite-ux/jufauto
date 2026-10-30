@@ -1,0 +1,356 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+.hide-scrollbar {
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: #ffffff;
+  --foreground: #0b1f3a;
+  --card: #ffffff;
+  --card-foreground: #0b1f3a;
+  --popover: #ffffff;
+  --popover-foreground: #0b1f3a;
+  --primary: #0a4a9e;
+  --primary-foreground: #ffffff;
+  --secondary: #eef3fa;
+  --secondary-foreground: #0b1f3a;
+  --muted: #f3f7fc;
+  --muted-foreground: #4a5b75;
+  --accent: #e6eef9;
+  --accent-foreground: #0a3a7c;
+  --destructive: #b42318;
+  --destructive-foreground: #ffffff;
+  --border: #d3ddeb;
+  --input: #7b8ca6;
+  --ring: #0b72d0;
+  --signal: #f58220;
+  --signal-ink: #b54708;
+  --ink: #0b1f3a;
+  --stage: #f6f9fd;
+  --success: #067647;
+  --radius: 0.375rem;
+  --ease-out-soft: cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+@theme inline {
+  --font-sans: "Segoe UI", Arial, ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Cascadia Mono", Consolas, ui-monospace, monospace;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-signal: var(--signal);
+  --color-signal-ink: var(--signal-ink);
+  --color-ink: var(--ink);
+  --color-stage: var(--stage);
+  --color-success: var(--success);
+  --radius-sm: calc(var(--radius) - 2px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 2px);
+  --radius-xl: calc(var(--radius) + 6px);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 96px;
+  }
+  body {
+    @apply bg-background text-foreground;
+    overflow-x: hidden;
+  }
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    letter-spacing: -0.015em;
+    text-wrap: balance;
+  }
+}
+
+@utility wrap {
+  margin-inline: auto;
+  width: 100%;
+  max-width: 80rem;
+  padding-inline: 1rem;
+  @media (min-width: 640px) {
+    padding-inline: 1.5rem;
+  }
+  @media (min-width: 1024px) {
+    padding-inline: 2rem;
+  }
+}
+
+.blueprint {
+  background-image:
+    linear-gradient(to right, rgb(10 74 158 / 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(10 74 158 / 0.06) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* ---------- Scene 2: viewport reveal ---------- */
+[data-reveal='hidden'] {
+  opacity: 0;
+  transform: translateY(20px);
+}
+[data-reveal='shown'] {
+  opacity: 1;
+  transform: none;
+  transition:
+    opacity 550ms var(--ease-out-soft),
+    transform 550ms var(--ease-out-soft);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+@media (max-width: 767px) {
+  [data-reveal='hidden'] {
+    transform: translateY(12px);
+  }
+}
+
+/* ---------- Scene 1: hero ---------- */
+.hero-slide {
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 450ms ease,
+    visibility 0s linear 450ms;
+}
+.hero-slide[data-active='true'] {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0s;
+}
+.hero-img {
+  object-position: var(--fx-m, 50%) 50%;
+}
+@media (min-width: 1024px) {
+  .hero-img {
+    object-position: var(--fx-d, 50%) 50%;
+  }
+}
+.hero-slide[data-active='true'] .hero-item {
+  animation: hero-in 560ms var(--ease-out-soft) both;
+  animation-delay: calc(var(--i, 0) * 70ms + 140ms);
+}
+@keyframes hero-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.hero-progress {
+  transform-origin: left;
+  transform: scaleX(0);
+}
+.hero-progress[data-state='running'] {
+  animation: hero-progress 6500ms linear forwards;
+}
+.hero-progress[data-state='paused'] {
+  transform: scaleX(1);
+}
+@keyframes hero-progress {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/* ---------- Scene 3: control-signal workflow ---------- */
+.wf-line-fill {
+  transform-origin: top;
+}
+@media (min-width: 1024px) {
+  .wf-line-fill {
+    transform-origin: left;
+  }
+}
+[data-wf='idle'] .wf-line-fill {
+  transform: scale(0);
+}
+[data-wf='idle'] .wf-node {
+  background: #fff;
+  color: var(--muted-foreground);
+  border-color: var(--border);
+}
+[data-wf='idle'] .wf-signal {
+  opacity: 0;
+}
+[data-wf='run'] .wf-line-fill {
+  animation: wf-fill-y 1800ms linear both;
+}
+[data-wf='run'] .wf-node {
+  animation: wf-node 320ms var(--ease-out-soft) both;
+  animation-delay: calc(var(--i) * 420ms);
+}
+[data-wf='run'] .wf-signal {
+  animation: wf-signal-y 1800ms linear both;
+}
+[data-wf='done'] .wf-signal {
+  opacity: 0;
+}
+@media (min-width: 1024px) {
+  [data-wf='run'] .wf-line-fill {
+    animation-name: wf-fill-x;
+  }
+  [data-wf='run'] .wf-signal {
+    animation-name: wf-signal-x;
+  }
+}
+@keyframes wf-fill-x {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+@keyframes wf-fill-y {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+@keyframes wf-signal-x {
+  0% {
+    left: 0;
+    opacity: 1;
+  }
+  92% {
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+    opacity: 0;
+  }
+}
+@keyframes wf-signal-y {
+  0% {
+    top: 0;
+    opacity: 1;
+  }
+  92% {
+    opacity: 1;
+  }
+  100% {
+    top: 100%;
+    opacity: 0;
+  }
+}
+@keyframes wf-node {
+  from {
+    background: #fff;
+    color: var(--muted-foreground);
+    border-color: var(--border);
+    transform: scale(0.92);
+  }
+  to {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+    transform: scale(1);
+  }
+}
+
+/* ---------- FAQ (native details) ---------- */
+details > summary {
+  list-style: none;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
+details[open] > summary .faq-chevron {
+  transform: rotate(180deg);
+}
+details[open] > .faq-body {
+  animation: faq-open 200ms ease-out both;
+}
+@keyframes faq-open {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .hero-slide,
+  .hero-slide[data-active='true'] {
+    transition: none;
+  }
+  .hero-slide[data-active='true'] .hero-item {
+    animation: none;
+  }
+  .hero-progress,
+  .hero-progress[data-state] {
+    animation: none !important;
+    transform: scaleX(1);
+  }
+  [data-wf] .wf-line-fill {
+    animation: none !important;
+    transform: none !important;
+  }
+  [data-wf] .wf-node {
+    animation: none !important;
+    background: var(--primary) !important;
+    color: #fff !important;
+    border-color: var(--primary) !important;
+  }
+  [data-wf] .wf-signal {
+    display: none;
+  }
+  details[open] > .faq-body {
+    animation: none;
+  }
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+  }
+}

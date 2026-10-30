@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "result": "PASS",
+  "note": "三张图为客户提供的广告合成主视觉，只能表达业务范围与视觉方向，不得标注为九峰真实厂房或真实设备全景。",
+  "slides": [
+    {
+      "file": "banner/1.jpg",
+      "sha256": "bbd848ce0ac9046120b6c6951c1a9f4e0d48feaee085cecda986275b398b0584",
+      "subjectSide": "right",
+      "safeTextSide": "left",
+      "desktopObjectPosition": "72% 50%",
+      "mobile390": "image object-position 72% 50%; keep machine and robots; render text in a separate lower panel or local left-safe overlay",
+      "overlay": "none or local subtle blue tint only behind text; never full-width dark overlay"
+    },
+    {
+      "file": "banner/2.jpg",
+      "sha256": "efa425256f03e505e90de53e2f11a08655b64594b3fade18fba41ed7c57c1cbb",
+      "subjectSide": "left",
+      "safeTextSide": "right",
+      "desktopObjectPosition": "34% 50%",
+      "mobile390": "image object-position 30% 50%; keep building and automation cell; place text below image to avoid covering the building",
+      "overlay": "right-local translucent brand-blue panel only if contrast requires it"
+    },
+    {
+      "file": "banner/3.jpg",
+      "sha256": "7786b873143db72ca3ba744bc895519719525bb03177d22a987e0e66894890bd",
+      "subjectSide": "right",
+      "safeTextSide": "left",
+      "desktopObjectPosition": "70% 50%",
+      "mobile390": "image object-position 73% 50%; preserve representative equipment cluster; text in separate lower panel",
+      "overlay": "none or local subtle tint behind text"
+    }
+  ]
+}

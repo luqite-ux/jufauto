@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "assetRoot": "C:\\Users\\Grandlin\\.codex\\visualizations\\2026\\10\\30\\01a18c28-a91f-7aa0-b82e-ccd5faff89a3\\jufauto-v0-assets",
+  "assets": [
+    {"file":"logo.png","bytes":691158,"sha256":"e63b488fa3a1367844f1682d149a6b52959e565a4936db052ef5c7e95063953f","use":"official-latest-logo"},
+    {"file":"banner-1.jpg","bytes":935340,"sha256":"bbd848ce0ac9046120b6c6951c1a9f4e0d48feaee085cecda986275b398b0584","use":"hero-slide-1"},
+    {"file":"banner-2.jpg","bytes":755423,"sha256":"efa425256f03e505e90de53e2f11a08655b64594b3fade18fba41ed7c57c1cbb","use":"hero-slide-2"},
+    {"file":"banner-3.jpg","bytes":975335,"sha256":"7786b873143db72ca3ba744bc895519719525bb03177d22a987e0e66894890bd","use":"hero-slide-3"},
+    {"file":"product-custom-automation.jpg","bytes":786127,"sha256":"72a3e837cb40c63ad07f3c888f5eb1aea8c9c33e7285df1b03d8ccbc8fcff168","use":"representative-custom-automation"},
+    {"file":"product-tightening.jpg","bytes":344094,"sha256":"89ea116742fade5b02a729916c101167faf3551b7a2756e31bcab4f651095ccd","use":"representative-tightening"},
+    {"file":"product-feeder.jpg","bytes":483930,"sha256":"689c55fdee814cc80ab9f5a7fcff983585832cba87fb44c1e14402d7620345ed","use":"representative-feeding"},
+    {"file":"product-rugged-tablet.jpg","bytes":375897,"sha256":"4d8aa09d3f25310508dc7a7a15dd0c3876d9537ccccc70d16acb4112948e25c1","use":"representative-rugged-tablet"},
+    {"file":"product-forming.jpg","bytes":749883,"sha256":"2cb5bd0548e07bf9c1399b0100d59ff934854d23d857bc42e3708fc871950735","use":"representative-forming-machine"},
+    {"file":"product-heavy-machining.jpg","bytes":907150,"sha256":"d513f0e555285412e2e6c2f38a34ddffeb39c629fdd2579f9671847e6ebd18b6","use":"representative-heavy-machining"}
+  ],
+  "excluded": [
+    "All 108 videos: VIDEO-DEFAULT-OFF",
+    "Robot images with visible third-party branding are not needed for v0",
+    "Control cabinets and screenshots exposing third-party names or internal data are excluded from v0"
+  ]
+}

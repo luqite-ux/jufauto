@@ -1,0 +1,1649 @@
+{
+  "schema_version": 1,
+  "generated_from": {
+    "workbook": "Y:\\客户资料1\\1569-环球出海苏州工业园区九峰\\企业资料&产品&FAQ问题收集表20261010.xlsx",
+    "workbook_sha256": "5b1d2861d7544803282c351429d25c08230b129d2f7a2e4776d6299dc8084dc6",
+    "inventory": "D:\\Cursor\\Grand\\dulizhan\\jufauto\\.codex-delivery\\evidence\\product-identity-inventory.json",
+    "inventory_sha256": "238183d265ccb1175244000ea79e06fef2e94094fdf70ca77ac6983979e68e91"
+  },
+  "site": {
+    "legal_name_zh": "苏州工业园区九峰自动化技术有限公司",
+    "legal_name_en": "Suzhou Industrial Park Jiufeng Automation Technology Co., Ltd.",
+    "legal_name_en_status": "derived_direct_translation",
+    "brand": "JUF / JUFTECH",
+    "formal_domain": "jufauto.com",
+    "contact_email": "info@jufauto.com",
+    "contact_phone": [
+      "0512-67678265",
+      "18913596766"
+    ],
+    "address_zh": "苏州工业园区东富路33号",
+    "founded_year": 2014,
+    "facility_area_sqm_approx": 9000,
+    "workshop_count": 3,
+    "source_overrides": {
+      "legacy_email_excluded": "gavinwang@juftech.com",
+      "legacy_domain_excluded": "www.juftech.com"
+    }
+  },
+  "categories": [
+    {
+      "zh": "非标自动化定制设备",
+      "en": "Non-standard automated customized equipment",
+      "slug": "non-standard-automated-customized-equipment"
+    },
+    {
+      "zh": "拧紧装配模组及工具",
+      "en": "Tighten the assembly module and tools",
+      "slug": "tighten-the-assembly-module-and-tools"
+    },
+    {
+      "zh": "送料机",
+      "en": "Feeder",
+      "slug": "feeder"
+    },
+    {
+      "zh": "拧紧功能附件",
+      "en": "Tighten function attachments",
+      "slug": "tighten-function-attachments"
+    },
+    {
+      "zh": "无人机车载操控平板",
+      "en": "Unmanned aerial vehicle onboard control tablet",
+      "slug": "unmanned-aerial-vehicle-onboard-control-tablet"
+    },
+    {
+      "zh": "机器人系统集成",
+      "en": "Robot system integration",
+      "slug": "robot-system-integration"
+    },
+    {
+      "zh": "成型机",
+      "en": "forming machine",
+      "slug": "forming-machine"
+    },
+    {
+      "zh": "重工机械加工",
+      "en": "Heavy Machinery Processing",
+      "slug": "heavy-machinery-processing"
+    },
+    {
+      "zh": "控制软件(PLC/Labview/C#)外包服务",
+      "en": "Outsourcing services for control software (PLC/Labview/C #)",
+      "slug": "outsourcing-services-for-control-software-plc-labview-c"
+    }
+  ],
+  "products": [
+    {
+      "source_row": 4,
+      "source_locator": "产品信息!row:4",
+      "product_code": "JA",
+      "category": {
+        "zh": "非标自动化定制设备",
+        "en": "Non-standard automated customized equipment",
+        "slug": "non-standard-automated-customized-equipment"
+      },
+      "slug": "gear-shifter-production-line",
+      "name_i18n": {
+        "zh": "换挡器生产线JA15030001",
+        "en": "Gear Shifter Production Line"
+      },
+      "description_i18n": {
+        "zh": "汽车换挡器自动化装配生产线：实现换挡器壳体、五金、PCB 组件自动压装、螺丝拧紧、气密检测、换挡力与电信号全性能在线测试，支持多型号柔性共线生产与产品全生命周期数据追溯。",
+        "en": ""
+      },
+      "specifications_source_zh": "根据客户要求定制",
+      "moq_source": "1",
+      "source_assets": [
+        "\\\\100.125.53.22\\环球出海代理商\\客户资料1\\1569-环球出海苏州工业园区九峰\\产品优化（优化完成\\1-非标自动化设备\\1-换挡器生产线\\1.jpg"
+      ],
+      "image_status": "mapped_unique_customer_asset",
+      "publication_status": "source_ready"
+    },
+    {
+      "source_row": 5,
+      "source_locator": "产品信息!row:5",
+      "product_code": "JA",
+      "category": {
+        "zh": "非标自动化定制设备",
+        "en": "Non-standard automated customized equipment",
+        "slug": "non-standard-automated-customized-equipment"
+      },
+      "slug": "pump-core-production-line",
+      "name_i18n": {
+        "zh": "泵芯生产线JA16070001",
+        "en": "Pump core production line"
+      },
+      "description_i18n": {
+        "zh": "汽车泵芯自动化装配生产线：实现泵芯转子、磁瓦、轴承、叶轮、刷架组件自动上料、伺服压装、涂胶、拧紧、气密检测、流量压力与电性能在线测试，支持多型号柔性共线生产，全流程数据采集与产品追溯。",
+        "en": ""
+      },
+      "specifications_source_zh": "根据客户要求定制",
+      "moq_source": "1",
+      "source_assets": [
+        "\\\\100.125.53.22\\环球出海代理商\\客户资料1\\1569-环球出海苏州工业园区九峰\\产品优化（优化完成\\1-非标自动化设备\\2-泵芯生产线\\1.jpg"
+      ],
+      "image_status": "mapped_unique_customer_asset",
+      "publication_status": "source_ready"
+    },
+    {
+      "source_row": 6,
+      "source_locator": "产品信息!row:6",
+      "product_code": "JA",
+      "category": {
+        "zh": "非标自动化定制设备",
+        "en": "Non-standard automated customized equipment",
+        "slug": "non-standard-automated-customized-equipment"
+      },
+      "slug": "welding-of-motor-stator",
+      "name_i18n": {
+        "zh": "马达定子焊接JA17090001",
+        "en": "Welding of motor stator"
+      },
+      "description_i18n": {
+        "zh": "马达定子自动化焊接工作站：完成电机定子漆包线剥漆、线头定位、超声波 / 激光焊接，配套焊后视觉检测与导通电阻测试，焊接参数存储，支持 MES 对接与产品追溯，可集成至泵芯自动化装配线。",
+        "en": ""
+      },
+      "specifications_source_zh": "根据客户要求定制",
+      "moq_source": "1",
+      "source_assets": [
+        "\\\\100.125.53.22\\环球出海代理商\\客户资料1\\1569-环球出海苏州工业园区九峰\\产品优化（优化完成\\1-非标自动化设备\\3-马达定子焊接设备\\1.jpg"
+      ],
+      "image_status": "mapped_unique_customer_asset",
+      "publication_status": "source_ready"
+    },
+    {
+      "source_row": 7,
+      "source_locator": "产品信息!row:7",
+      "product_code": "JA",
+      "category": {
+        "zh": "非标自动化定制设备",
+        "en": "Non-standard automated customized equipment",
+        "slug": "non-standard-automated-customized-equipment"
+      },
+      "slug": "horn-assembly-production-line",
+      "name_i18n": {
+        "zh": "喇叭组装生产线JA21050001",
+        "en": "Horn assembly production line"
+      },
+      "description_i18n": {
+        "zh": "汽车喇叭自动化装配生产线：实现喇叭壳体、铁芯、线圈、膜片、触点组件自动上料、点胶、伺服压装、铆接 / 拧紧、气密检测，集成电性能与声学在线测试，自动判别异音、音量不良，支持产品扫码追溯及 MES 对接。",
+        "en": ""
+      },
+      "specifications_source_zh": "根据客户要求定制",
+      "moq_source": "1",
+      "source_assets": [
+        "\\\\100.125.53.22\\环球出海代理商\\客户资料1\\1569-环球出海苏州工业园区九峰\\产品优化（优化完成\\1-非标自动化设备\\4-喇叭组装生产线\\1.jpg"
+      ],
+      "image_status": "mapped_unique_customer_asset",
+      "publication_status": "source_ready"
+    },
+    {
+      "source_row": 8,
+      "source_locator": "产品信息!row:8",
+      "product_code": "JA",
+      "category": {
+        "zh": "非标自动化定制设备",
+        "en": "Non-standard automated customized equipment",
+        "slug": "non-standard-automated-customized-equipment"
+      },
+      "slug": "valve-plate-production-line",
+      "name_i18n": {
+        "zh": "阀板生产线JA25090001",
+        "en": "Valve Plate Production Line"
+      },
+      "description_i18n": {
+        "zh": "阀板自动化生产线：非标整线集成设备，包含上料、机加工、清洗、检测、装配、打标、下料工作站，配套控制电柜、PLC、C# 上位机、MES 对接接口；",
+        "en": ""
+      },
+      "specifications_source_zh": "根据客户要求定制",
+      "moq_source": "1",
+      "source_assets": [
+        "\\\\100.125.53.22\\环球出海代理商\\客户资料1\\1569-环球出海苏州工业园区九峰\\产品优化（优化完成\\1-非标自动化设备\\5-阀板生产线\\1.jpg"
+      ],
+      "image_status": "mapped_unique_customer_asset",
+      "publication_status": "source_ready"
+    },
+    {
+      "source_row": 9,
+      "source_locator": "产品信息!row:9",
+      "product_code": "JSS",
+      "category": {
+        "zh": "拧紧装配模组及工具",
+        "en": "Tighten the assembly module and tools",
+        "slug": "tighten-the-assembly-module-and-tools"
+      },
+      "slug": "blow-type-tightening-module",
+      "name_i18n": {
+        "zh": "吹送型拧紧模组",
+        "en": "Blow type tightening module"
+      },
+      "description_i18n": {
+        "zh": "气吹直接送钉到枪头：集成送钉、导向、伺服拧紧、检测于一体的标准化锁付单元；依靠压缩空气，把螺钉从供料器通过管路直接吹送到枪嘴夹爪位置，随即执行拧紧。",
+        "en": ""
+      },
+      "specifications_source_zh": "1.扭 矩 段 范 围0.008 N.m - 500 N.m\n                                   2.标 准 化 设 计 ， 拥 有 1200 余 种 不 同 形 式 、 功 能 的 图 库\n． 轻 量 化 、 高 效 化 、 洁 净 化\n3.结 构 紧 凑 ， 拆 装 、 维 护 方 便 简 单\n4.可 与 任 意 品 牌 的 机 械 手 、 XYZ 伺 服 平 台 搭 配 ， 实 现 移 载 及 各 个 角 度 的 螺 钉 拧 紧",
+      "moq_source": "1",
+      "source_assets": [
+        "\\\\100.125.53.22\\环球出海代理商\\客户资料1\\1569-环球出海苏州工业园区九峰\\产品优化（优化完成\\2-拧紧装配模组及工具\\吹送型拧紧模组\\1.jpg"
+      ],
+      "image_status": "mapped_unique_customer_asset",
+      "publication_status": "source_ready"
+    },
+    {
+      "source_row": 10,
+      "source_locator": "产品信息!row:10",
+      "product_code": "JSS",
+      "category": {
+        "zh": "拧紧装配模组及工具",
+        "en": "Tighten the assembly module and tools",
+        "slug": "tighten-the-assembly-module-and-tools"
+      },
+      "slug": "vacuum-adsorption-type",
+      "name_i18n": {
+        "zh": "真空吸附型",
+        "en": "Vacuum adsorption type"
+      },
+      "description_i18n": {
+        "zh": "电批前端吸钉：智能拧紧模组，依靠真空负压在批头前端吸住螺钉，模组带着螺钉移动到锁付位置完成拧紧。",
+        "en": ""
+      },
+      "specifications_source_zh": "1.扭 矩 段 范 围0.008 N.m - 500 N.m\n                                   2.标 准 化 设 计 ， 拥 有 1200 余 种 不 同 形 式 、 功 能 的 图 库\n． 轻 量 化 、 高 效 化 、 洁 净 化\n3.结 构 紧 凑 ， 拆 装 、 维 护 方 便 简 单\n4.可 与 任 意 品 牌 的 机 械 手 、 XYZ 伺 服 平 台 搭 配 ， 实 现 移 载 及 各 个 角 度 的 螺 钉 拧 紧",
+      "moq_source": "1",
+      "source_assets": [
+        "\\\\100.125.53.22\\环球出海代理商\\客户资料1\\1569-环球出海苏州工业园区九峰\\产品优化（优化完成\\2-拧紧装配模组及工具\\吹送+真空吸附型拧紧\\1.jpg"
+      ],
+      "image_status": "mapped_unique_customer_asset",
+      "publication_status": "source_ready"
+    },
+    {
+      "source_row": 11,
+      "source_locator": "产品信息!row:11",
+      "product_code": "JSS",
+      "category": {
+        "zh": "拧紧装配模组及工具",
+        "en": "Tighten the assembly module and tools",
+        "slug": "tighten-the-assembly-module-and-tools"
+      },
+      "slug": "blow-and-vacuum-adsorption-type-tightening",
+      "name_i18n": {
+        "zh": "吹送+真空吸附型拧紧",
+        "en": "Blow and vacuum adsorption type tightening"
+      },
+      "description_i18n": {
+        "zh": "吹送到前端再真空吸附：结合吹送供料 + 真空吸附双重机制。压缩空气先把螺钉吹送到枪头前端，再由真空负压吸住螺钉，兼具吹送的快节拍和吸附式多角度锁付、防掉钉能力。",
+        "en": ""
+      },
+      "specifications_source_zh": "1.扭 矩 段 范 围0.008 N.m - 500 N.m\n                                   2.标 准 化 设 计 ， 拥 有 1200 余 种 不 同 形 式 、 功 能 的 图 库\n． 轻 量 化 、 高 效 化 、 洁 净 化\n3.结 构 紧 凑 ， 拆 装 、 维 护 方 便 简 单\n4.可 与 任 意 品 牌 的 机 械 手 、 XYZ 伺 服 平 台 搭 配 ， 实 现 移 载 及 各 个 角 度 的 螺 钉 拧 紧",
+      "moq_source": "1",
+      "source_assets": [],
+      "image_status": "no_customer_image",
+      "publication_status": "image_pending_do_not_publish"
+    },
+    {
+      "source_row": 12,
+      "source_locator": "产品信息!row:12",
+      "product_code": "JSS",
+      "category": {
+        "zh": "拧紧装配模组及工具",
+        "en": "Tighten the assembly module and tools",
+        "slug": "tighten-the-assembly-module-and-tools"
+      },
+      "slug": "special-customized-tightening-module",
+      "name_i18n": {
+        "zh": "特殊定制型拧紧模组",
+        "en": "Special customized tightening module"
+      },
+      "description_i18n": {
+        "zh": "客户产品工艺要求定制：针对常规吹送 / 真空 / 吹吸一体拧紧模组无法满足的特殊工况，做全维度定制开发的伺服拧紧单元；从枪头结构、送钉方式、扭矩范围、空间布局、防错逻辑到防爆 / 防腐 / 洁净等级按需设计，适配各类异形工件、特殊螺钉、极限装配场景。",
+        "en": ""
+      },
+      "specifications_source_zh": "1.扭 矩 段 范 围0.008 N.m - 500 N.m\n                                   2.标 准 化 设 计 ， 拥 有 1200 余 种 不 同 形 式 、 功 能 的 图 库\n． 轻 量 化 、 高 效 化 、 洁 净 化\n3.结 构 紧 凑 ， 拆 装 、 维 护 方 便 简 单\n4.可 与 任 意 品 牌 的 机 械 手 、 XYZ 伺 服 平 台 搭 配 ， 实 现 移 载 及 各 个 角 度 的 螺 钉 拧 紧",
+      "moq_source": "1",
+      "source_assets": [
+        "\\\\100.125.53.22\\环球出海代理商\\客户资料1\\1569-环球出海苏州工业园区九峰\\产品优化（优化完成\\2-拧紧装配模组及工具\\特殊定制型拧紧模组\\1.jpg"
+      ],
+      "image_status": "mapped_unique_customer_asset",
+      "publication_status": "source_ready"
+    },
+    {
+      "source_row": 13,
+      "source_locator": "产品信息!row:13",
+      "product_code": "JSF",
+      "category": {
+        "zh": "送料机",
+        "en": "Feeder",
+        "slug": "feeder"
+      },
+      "slug": "vibrating-disc-feeder",
+      "name_i18n": {
+        "zh": "振动盘式送料机",
+        "en": "Vibrating disc feeder"
+      },
+      "description_i18n": {
+        "zh": "振动盘式：依靠电磁振动 + 螺旋料道，把杂乱堆叠的零件自动定向、排序、分离，按固定姿态连续送出，常配套拧紧模组、装配产线使用。可对接各类拧紧模组。",
+        "en": ""
+      },
+      "specifications_source_zh": "1.容量(L)：0.6、2.0、4.0\n                                   2.适用于螺钉规格：M2-M6、M3-M10、M6-M14\n3.最大螺钉长度(mm)：30、50、90\n4.最大螺钉头部直径(mm)：12、18、26              5.最大出料速度(pcs/min)：35、35、25       6.重量(kg)：22、40、60      7.电源(V)：220           8.功率(W)：400          9.噪音(db)：75以内(不包含螺钉吹料瞬间)",
+      "moq_source": "1",
+      "source_assets": [
+        "\\\\100.125.53.22\\环球出海代理商\\客户资料1\\1569-环球出海苏州工业园区九峰\\产品优化（优化完成\\3-送料机\\振动盘式送料机\\2.jpg"
+      ],
+      "image_status": "mapped_unique_customer_asset",
+      "publication_status": "source_ready"
+    },
+    {
+      "source_row": 14,
+      "source_locator": "产品信息!row:14",
+      "product_code": "JSF",
+      "category": {
+        "zh": "送料机",
+        "en": "Feeder",
+        "slug": "feeder"
+      },
+      "slug": "ladder-type-feeder",
+      "name_i18n": {
+        "zh": "阶梯式送料机",
+        "en": "Ladder type feeder"
+      },
+      "description_i18n": {
+        "zh": "阶梯式：依靠机械阶梯往复推举实现工件逐级抬升与姿态筛选，无持续振动，可保护镀层、精密零件不被刮伤；集成料满缺料检测、长短料甄别，出料稳定、低噪音、低卡料率。可对接各类拧紧模组。",
+        "en": ""
+      },
+      "specifications_source_zh": "1.容量(L)：0.8、1.2、2.0、4.0\n                                   2.适用于螺钉规格：M2-M5、M2-M8、M2-M12、M3-M12\n3.最大螺钉长度(mm)：12、50、60、80\n4.最大螺钉头部直径(mm)：12、14、20、24              5.最大出料速度(pcs/min)：35、40、35、30                      6.重量(kg)：20、35、50、75                     7.电源(V)：220           8.功率(W)：400          9.噪音(db)：75以内(不包含螺钉吹料瞬间)",
+      "moq_source": "1",
+      "source_assets": [
+        "\\\\100.125.53.22\\环球出海代理商\\客户资料1\\1569-环球出海苏州工业园区九峰\\产品优化（优化完成\\3-送料机\\阶梯式送料机\\2.jpg"
+      ],
+      "image_status": "mapped_unique_customer_asset",
+      "publication_status": "source_ready"
+    },
+    {
+      "source_row": 15,
+      "source_locator": "产品信息!row:15",
+      "product_code": "JSF",
+      "category": {
+        "zh": "送料机",
+        "en": "Feeder",
+        "slug": "feeder"
+      },
+      "slug": "drum-type-feeder",
+      "name_i18n": {
+        "zh": "滚筒式送料机",
+        "en": "Drum type feeder"
+      },
+      "description_i18n": {
+        "zh": "滚筒式：采用旋转滚筒卡槽拾取工件，配合毛刷姿态筛选，实现螺钉自动排序、单颗出料；卡料率低、结构紧凑、出料稳定，可对接吹送型拧紧模组。",
+        "en": ""
+      },
+      "specifications_source_zh": "1.容量(L)：1.2、0.9\n                                   2.适用于螺钉规格：M2-M8、M2-M5\n3.最大螺钉长度(mm)：25、25\n4.最大螺钉头部直径(mm)：3-16、3-10              5.最大出料速度(pcs/min)：50、50                    6.重量(kg)：11、5             7.电源(V)：220           8.功率(W)：84                                                                              9.噪音(db)：75以内(不包含螺钉吹料瞬间)",
+      "moq_source": "1",
+      "source_assets": [
+        "\\\\100.125.53.22\\环球出海代理商\\客户资料1\\1569-环球出海苏州工业园区九峰\\产品优化（优化完成\\3-送料机\\滚筒式送料机\\1.jpg"
+      ],
+      "image_status": "mapped_unique_customer_asset",
+      "publication_status": "source_ready"
+    },
+    {
+      "source_row": 16,
+      "source_locator": "产品信息!row:16",
+      "product_code": "JSF",
+      "category": {
+        "zh": "送料机",
+        "en": "Feeder",
+        "slug": "feeder"
+      },
+      "slug": "screw-alignment-machine",
+      "name_i18n": {
+        "zh": "螺钉整列机",
+        "en": "Screw alignment machine"
+      },
+      "description_i18n": {
+        "zh": "螺钉整列机(螺丝排列机)：是将散装螺钉自动定向、姿态矫正、单颗有序输出的专用送料设备，常和吹送 / 真空吸附拧紧模组配套，用于自动锁付工位。",
+        "en": ""
+      },
+      "specifications_source_zh": "1.尺寸(mm)：160(L)*82(W)*112(H)、182(L)*124(W)*150(H)\n                                   2.重量(kg)：1.53(不包含变压器)、3.1(不包含变压器)                                          3.电源(V)：AC100-240V              4.开关配件：AC12V变压器       5.适用于螺丝：M1.2-M2、M1.2-M5\n6.适用螺丝长度(mm)：≤7mm、≤12mm\n7.适用螺丝头部直径(mm)：≤5mm、≤9mm                                        8.水平供给速度(pcs/min)：42-90pcs/min(0.7-1.3s)、42-90pcs/min(0.7-1.5s)                    9.螺丝供应方式：落料供给                                                                              10.装盛容量：4000(M1.4*4)1200颗(M2.0*4)、200-220c.c",
+      "moq_source": "1",
+      "source_assets": [
+        "\\\\100.125.53.22\\环球出海代理商\\客户资料1\\1569-环球出海苏州工业园区九峰\\产品优化（优化完成\\3-送料机\\螺钉整列机\\1.jpg"
+      ],
+      "image_status": "mapped_unique_customer_asset",
+      "publication_status": "source_ready"
+    },
+    {
+      "source_row": 17,
+      "source_locator": "产品信息!row:17",
+      "product_code": "JSF",
+      "category": {
+        "zh": "送料机",
+        "en": "Feeder",
+        "slug": "feeder"
+      },
+      "slug": "non-standard-customized-feeding-equipment",
+      "name_i18n": {
+        "zh": "非标定制送料设备",
+        "en": "Non standard customized feeding equipment"
+      },
+      "description_i18n": {
+        "zh": "定制送料设备：依据客户工件特性、生产节拍与现场布局定制开发，涵盖振动盘、阶梯式、滚筒式送料机及螺钉整列机（可选 200c.c 等多规格料仓）。实现零件自动存储、姿态校正、定向分料出料，集成缺料、卡料智能检测报警，可与各类拧紧模组、机器人装配系统联动。",
+        "en": ""
+      },
+      "specifications_source_zh": "根据客户要求定制",
+      "moq_source": "1",
+      "source_assets": [
+        "\\\\100.125.53.22\\环球出海代理商\\客户资料1\\1569-环球出海苏州工业园区九峰\\产品优化（优化完成\\3-送料机\\非标定制送料设备\\1.jpg"
+      ],
+      "image_status": "mapped_unique_customer_asset",
+      "publication_status": "source_ready"
+    },
+    {
+      "source_row": 18,
+      "source_locator": "产品信息!row:18",
+      "product_code": "JSF",
+      "category": {
+        "zh": "送料机",
+        "en": "Feeder",
+        "slug": "feeder"
+      },
+      "slug": "desktop-material-receiving-table",
+      "name_i18n": {
+        "zh": "桌面接料台",
+        "en": "Desktop material receiving table"
+      },
+      "description_i18n": {
+        "zh": "桌面接料台：1.配套真空吸附；2.搭配自动快换型拧紧模组；3.优化安装空间。非标模块化工位接料工装，用于装配、拧紧工作站成品承接与暂存。可集成物料检测、计数功能，支持滑槽、料盒式接料方案，信号可接入PLC，适配小型桌面自动化装配单元，保护工件避免磕碰损伤。",
+        "en": ""
+      },
+      "specifications_source_zh": "根据客户要求定制",
+      "moq_source": "1",
+      "source_assets": [
+        "\\\\100.125.53.22\\环球出海代理商\\客户资料1\\1569-环球出海苏州工业园区九峰\\产品优化（优化完成\\3-送料机\\桌面接料台\\1.jpg"
+      ],
+      "image_status": "mapped_unique_customer_asset",
+      "publication_status": "source_ready"
+    },
+    {
+      "source_row": 19,
+      "source_locator": "产品信息!row:19",
+      "product_code": "JSF",
+      "category": {
+        "zh": "送料机",
+        "en": "Feeder",
+        "slug": "feeder"
+      },
+      "slug": "screw-distributor",
+      "name_i18n": {
+        "zh": "螺钉分配器",
+        "en": "Screw distributor"
+      },
+      "description_i18n": {
+        "zh": "螺钉分配器：标准化模块设计，多合一分配器和一分多分配器",
+        "en": ""
+      },
+      "specifications_source_zh": "根据客户要求定制",
+      "moq_source": "1",
+      "source_assets": [
+        "\\\\100.125.53.22\\环球出海代理商\\客户资料1\\1569-环球出海苏州工业园区九峰\\产品优化（优化完成\\3-送料机\\螺钉分配器\\1.jpg"
+      ],
+      "image_status": "mapped_unique_customer_asset",
+      "publication_status": "source_ready"
+    },
+    {
+      "source_row": 20,
+      "source_locator": "产品信息!row:20",
+      "product_code": "JSF",
+      "category": {
+        "zh": "送料机",
+        "en": "Feeder",
+        "slug": "feeder"
+      },
+      "slug": "cleaning-agency",
+      "name_i18n": {
+        "zh": "清洁机构",
+        "en": "Cleaning Agency"
+      },
+      "description_i18n": {
+        "zh": "清洁机构：1.真空吸尘，满足清洁装配需求；2.紧凑化设计，安装空间小；3.快插式设计，可方便更换过滤器。",
+        "en": ""
+      },
+      "specifications_source_zh": "根据客户要求定制",
+      "moq_source": "1",
+      "source_assets": [
+        "\\\\100.125.53.22\\环球出海代理商\\客户资料1\\1569-环球出海苏州工业园区九峰\\产品优化（优化完成\\3-送料机\\清洁机构\\1.jpg"
+      ],
+      "image_status": "mapped_unique_customer_asset",
+      "publication_status": "source_ready"
+    },
+    {
+      "source_row": 21,
+      "source_locator": "产品信息!row:21",
+      "product_code": "JSF",
+      "category": {
+        "zh": "送料机",
+        "en": "Feeder",
+        "slug": "feeder"
+      },
+      "slug": "testing-agency",
+      "name_i18n": {
+        "zh": "检测机构",
+        "en": "testing agency"
+      },
+      "description_i18n": {
+        "zh": "检测机构：1.检测螺钉长度是否符合要求；2.检测螺纹是否损坏；3.可增配模拟量位移传感器；4.可增配视觉系统；5.废料自动剔除。",
+        "en": ""
+      },
+      "specifications_source_zh": "根据客户要求定制",
+      "moq_source": "1",
+      "source_assets": [
+        "\\\\100.125.53.22\\环球出海代理商\\客户资料1\\1569-环球出海苏州工业园区九峰\\产品优化（优化完成\\3-送料机\\检测机构\\1.jpg"
+      ],
+      "image_status": "mapped_unique_customer_asset",
+      "publication_status": "source_ready"
+    },
+    {
+      "source_row": 22,
+      "source_locator": "产品信息!row:22",
+      "product_code": "JSF",
+      "category": {
+        "zh": "送料机",
+        "en": "Feeder",
+        "slug": "feeder"
+      },
+      "slug": "automatic-replenishment-bin",
+      "name_i18n": {
+        "zh": "自动补料仓",
+        "en": "Automatic replenishment bin"
+      },
+      "description_i18n": {
+        "zh": "自动补料仓：1.延长加料周期；2.PLC外部控制/送料器直控；3.皮带式、直线振动式；4.10L、20L；5.可增配电子锁。",
+        "en": ""
+      },
+      "specifications_source_zh": "1.H10：形式为皮带式，容量为10L，外形尺寸(mm)=670(L)*355(W)*270(H)，功率(W)40                                    2.H20：形式为皮带式，容量为20L，外形尺寸(mm)=1144(L)*462(W)*331(H)，功率(W)90                                    3.V4：形式为振动式，容量为4L，外形尺寸(mm)=630(L)*320(W)*400(H)，功率(W)330                          4.V6：形式为振动式，容量为6L，外形尺寸(mm)=880(L)*450(W)*500(H)，功率(W)330",
+      "moq_source": "1",
+      "source_assets": [
+        "\\\\100.125.53.22\\环球出海代理商\\客户资料1\\1569-环球出海苏州工业园区九峰\\产品优化（优化完成\\3-送料机\\自动补料仓\\1.jpg"
+      ],
+      "image_status": "mapped_unique_customer_asset",
+      "publication_status": "source_ready"
+    },
+    {
+      "source_row": 23,
+      "source_locator": "产品信息!row:23",
+      "product_code": "JSA",
+      "category": {
+        "zh": "拧紧功能附件",
+        "en": "Tighten function attachments",
+        "slug": "tighten-function-attachments"
+      },
+      "slug": "vibrating-disc-feeder-23",
+      "name_i18n": {
+        "zh": "振动盘式送料机",
+        "en": "Vibrating disc feeder"
+      },
+      "description_i18n": {
+        "zh": "振动盘式：依靠电磁振动 + 螺旋料道，把杂乱堆叠的零件自动定向、排序、分离，按固定姿态连续送出，常配套拧紧模组、装配产线使用。可对接各类拧紧模组。",
+        "en": ""
+      },
+      "specifications_source_zh": "1.容量(L)：0.6、2.0、4.0\n                                   2.适用于螺钉规格：M2-M6、M3-M10、M6-M14\n3.最大螺钉长度(mm)：30、50、90\n4.最大螺钉头部直径(mm)：12、18、26              5.最大出料速度(pcs/min)：35、35、25       6.重量(kg)：22、40、60      7.电源(V)：220           8.功率(W)：400          9.噪音(db)：75以内(不包含螺钉吹料瞬间)",
+      "moq_source": "1",
+      "source_assets": [
+        "\\\\100.125.53.22\\环球出海代理商\\客户资料1\\1569-环球出海苏州工业园区九峰\\产品优化（优化完成\\3-送料机\\振动盘式送料机\\2.jpg"
+      ],
+      "image_status": "mapped_unique_customer_asset",
+      "publication_status": "source_ready"
+    },
+    {
+      "source_row": 24,
+      "source_locator": "产品信息!row:24",
+      "product_code": "JSA",
+      "category": {
+        "zh": "拧紧功能附件",
+        "en": "Tighten function attachments",
+        "slug": "tighten-function-attachments"
+      },
+      "slug": "ladder-type-feeder-24",
+      "name_i18n": {
+        "zh": "阶梯式送料机",
+        "en": "Ladder type feeder"
+      },
+      "description_i18n": {
+        "zh": "阶梯式：依靠机械阶梯往复推举实现工件逐级抬升与姿态筛选，无持续振动，可保护镀层、精密零件不被刮伤；集成料满缺料检测、长短料甄别，出料稳定、低噪音、低卡料率。可对接各类拧紧模组。",
+        "en": ""
+      },
+      "specifications_source_zh": "1.容量(L)：0.8、1.2、2.0、4.0\n                                   2.适用于螺钉规格：M2-M5、M2-M8、M2-M12、M3-M12\n3.最大螺钉长度(mm)：12、50、60、80\n4.最大螺钉头部直径(mm)：12、14、20、24              5.最大出料速度(pcs/min)：35、40、35、30                      6.重量(kg)：20、35、50、75                     7.电源(V)：220           8.功率(W)：400          9.噪音(db)：75以内(不包含螺钉吹料瞬间)",
+      "moq_source": "1",
+      "source_assets": [
+        "\\\\100.125.53.22\\环球出海代理商\\客户资料1\\1569-环球出海苏州工业园区九峰\\产品优化（优化完成\\3-送料机\\阶梯式送料机\\2.jpg"
+      ],
+      "image_status": "mapped_unique_customer_asset",
+      "publication_status": "source_ready"
+    },
+    {
+      "source_row": 25,
+      "source_locator": "产品信息!row:25",
+      "product_code": "JSA",
+      "category": {
+        "zh": "拧紧功能附件",
+        "en": "Tighten function attachments",
+        "slug": "tighten-function-attachments"
+      },
+      "slug": "return-type-balancing-arm",
+      "name_i18n": {
+        "zh": "折返式平衡力臂",
+        "en": "Return-type balancing arm"
+      },
+      "description_i18n": {
+        "zh": "折返式：1.高自由度；2.高舒适性；3.高精度性；4.拧紧顺序控制；5.拧紧策略切换；6.定位引导；7.批头选择。",
+        "en": ""
+      },
+      "specifications_source_zh": "1.LS-Z20：最大承受扭矩(Nm)20，工作区域(mm)0-500，外形尺寸(mm)(可定制)=20(主轴直径)*1040(总高度)*620(水平臂高度)，水平臂重量(kg)1.5，位置监控不含。                                     2.LS-Z25：最大承受扭矩(Nm)30，工作区域(mm)0-600，外形尺寸(mm)(可定制)=25(主轴直径)*1040(总高度)*620(水平臂高度)，水平臂重量(kg)2.6，位置监控不含。                                     3.LS-Z30：最大承受扭矩(Nm)50，工作区域(mm)0-700，外形尺寸(mm)(可定制)=30(主轴直径)*1040(总高度)*620(水平臂高度)，水平臂重量(kg)5.3，位置监控不含。                                     4.PMS-Z25：最大承受扭矩(Nm)30，工作区域(mm)0-600，外形尺寸(mm)(可定制)=25(主轴直径)*1040(总高度)*620(水平臂高度)，水平臂重量(kg)2.6，位置监控含。",
+      "moq_source": "1",
+      "source_assets": [
+        "\\\\100.125.53.22\\环球出海代理商\\客户资料1\\1569-环球出海苏州工业园区九峰\\产品优化（优化完成\\4-拧紧功能附件\\折返式平衡力臂\\1.jpg"
+      ],
+      "image_status": "mapped_unique_customer_asset",
+      "publication_status": "source_ready"
+    },
+    {
+      "source_row": 26,
+      "source_locator": "产品信息!row:26",
+      "product_code": "JSA",
+      "category": {
+        "zh": "拧紧功能附件",
+        "en": "Tighten function attachments",
+        "slug": "tighten-function-attachments"
+      },
+      "slug": "push-pull-balance-arm",
+      "name_i18n": {
+        "zh": "推拉式平衡力臂",
+        "en": "Push-pull balance arm"
+      },
+      "description_i18n": {
+        "zh": "推拉式：1.高自由度；2.高舒适性；3.高精度性；4.拧紧顺序控制；5.拧紧策略切换；6.定位引导；7.批头选择。",
+        "en": ""
+      },
+      "specifications_source_zh": "1.LS-L20：最大承受扭矩(Nm)20，工作区域(mm)200-500，外形尺寸(mm)(可定制)=20(主轴直径)*1040(总高度)*620(水平臂高度)，水平臂重量(kg)1.5，位置监控不含。                                     2.LS-L25：最大承受扭矩(Nm)30，工作区域(mm)200-600，外形尺寸(mm)(可定制)=25(主轴直径)*1040(总高度)*620(水平臂高度)，水平臂重量(kg)2.6，位置监控不含。                                     3.LS-L30：最大承受扭矩(Nm)50，工作区域(mm)200-700，外形尺寸(mm)(可定制)=30(主轴直径)*1040(总高度)*620(水平臂高度)，水平臂重量(kg)5.3，位置监控不含。                                     4.PMS-L25：最大承受扭矩(Nm)30，工作区域(mm)200-600，外形尺寸(mm)(可定制)=25(主轴直径)*1040(总高度)*620(水平臂高度)，水平臂重量(kg)2.6，位置监控含。",
+      "moq_source": "1",
+      "source_assets": [
+        "\\\\100.125.53.22\\环球出海代理商\\客户资料1\\1569-环球出海苏州工业园区九峰\\产品优化（优化完成\\4-拧紧功能附件\\推拉式平衡力臂\\1.jpg"
+      ],
+      "image_status": "mapped_unique_customer_asset",
+      "publication_status": "source_ready"
+    },
+    {
+      "source_row": 27,
+      "source_locator": "产品信息!row:27",
+      "product_code": "JSA",
+      "category": {
+        "zh": "拧紧功能附件",
+        "en": "Tighten function attachments",
+        "slug": "tighten-function-attachments"
+      },
+      "slug": "parallelogram-balanced-force-arm",
+      "name_i18n": {
+        "zh": "平行四边形平衡力臂",
+        "en": "Parallelogram balanced force arm"
+      },
+      "description_i18n": {
+        "zh": "平行四边形：1.高自由度；2.高舒适性；3.高精度性；4.拧紧顺序控制；5.拧紧策略切换；6.定位引导；7.批头选择。",
+        "en": ""
+      },
+      "specifications_source_zh": "1.LS-N15(铝合金)：最大承受扭矩(Nm)15，工作区域(mm)35-885，外形尺寸(mm)(可定制)=425(横臂长度)*460(折臂长度)*500(伸缩支架长度)，水平臂重量(kg)2.2，折臂最大折角(θ)>60°,位置监控不含。                                     2.LS-C25(碳纤维)：最大承受扭矩(Nm)30，工作区域(mm)270-775，外形尺寸(mm)(可定制)=245(横臂长度)*530(折臂长度)*X(伸缩支架长度)，水平臂重量(kg)3.5，折臂最大折角(θ)>70°,位置监控不含。",
+      "moq_source": "1",
+      "source_assets": [
+        "\\\\100.125.53.22\\环球出海代理商\\客户资料1\\1569-环球出海苏州工业园区九峰\\产品优化（优化完成\\4-拧紧功能附件\\平行四边形平衡力臂\\1.jpg"
+      ],
+      "image_status": "mapped_unique_customer_asset",
+      "publication_status": "source_ready"
+    },
+    {
+      "source_row": 28,
+      "source_locator": "产品信息!row:28",
+      "product_code": "JSA",
+      "category": {
+        "zh": "拧紧功能附件",
+        "en": "Tighten function attachments",
+        "slug": "tighten-function-attachments"
+      },
+      "slug": "gantry-style-balance-arm",
+      "name_i18n": {
+        "zh": "龙门式平衡力臂",
+        "en": "Gantry style balance arm"
+      },
+      "description_i18n": {
+        "zh": "龙门式：1.高自由度；2.高舒适性；3.高精度性；4.拧紧顺序控制；5.拧紧策略切换；6.定位引导；7.批头选择。",
+        "en": ""
+      },
+      "specifications_source_zh": "1.LG-L1XL2：最大承受扭矩(Nm)30，工作区域(mm)AXB可定制，外形尺寸(mm)L1XL2可定制,位置监控不含。                                     2.PMG-L1XL2：最大承受扭矩(Nm)30，工作区域(mm)AXB可定制，外形尺寸(mm)L1XL2可定制,位置监控不含。",
+      "moq_source": "1",
+      "source_assets": [
+        "\\\\100.125.53.22\\环球出海代理商\\客户资料1\\1569-环球出海苏州工业园区九峰\\产品优化（优化完成\\4-拧紧功能附件\\龙门式平衡力臂\\1.jpg"
+      ],
+      "image_status": "mapped_unique_customer_asset",
+      "publication_status": "source_ready"
+    },
+    {
+      "source_row": 29,
+      "source_locator": "产品信息!row:29",
+      "product_code": "JSA",
+      "category": {
+        "zh": "拧紧功能附件",
+        "en": "Tighten function attachments",
+        "slug": "tighten-function-attachments"
+      },
+      "slug": "screw-distributor-29",
+      "name_i18n": {
+        "zh": "批头选择器",
+        "en": "Screw distributor"
+      },
+      "description_i18n": {
+        "zh": "批头选择器：拧紧工位智能防错工装，支持多规格批头集中存放与工艺联动。接收 PLC 信号，灯光 / 电磁锁引导选取对应批头，取错报警并锁止电批输出，同步自动切换拧紧工艺参数；可选半自动提示款或伺服全自动换刀库方案，有效规避混料锁付缺陷。",
+        "en": ""
+      },
+      "specifications_source_zh": "1.TS-4-NL：位数4，功率(W)100，锁定功能不含。                                     2.TS-6-NL：位数6，功率(W)100，锁定功能不含。       3.TS-8-NL：位数8，功率(W)100，锁定功能不含。        4.TS-4-L：位数4，功率(W)100，锁定功能含。                                     2.TS-6-L：位数6，功率(W)100，锁定功能含。       3.TS-8-L：位数8，功率(W)100，锁定功能含。",
+      "moq_source": "1",
+      "source_assets": [
+        "\\\\100.125.53.22\\环球出海代理商\\客户资料1\\1569-环球出海苏州工业园区九峰\\产品优化（优化完成\\4-拧紧功能附件\\批头选择器\\1.jpg"
+      ],
+      "image_status": "mapped_unique_customer_asset",
+      "publication_status": "source_ready"
+    },
+    {
+      "source_row": 30,
+      "source_locator": "产品信息!row:30",
+      "product_code": "JSA",
+      "category": {
+        "zh": "拧紧功能附件",
+        "en": "Tighten function attachments",
+        "slug": "tighten-function-attachments"
+      },
+      "slug": "bit",
+      "name_i18n": {
+        "zh": "批头",
+        "en": "Bit"
+      },
+      "description_i18n": {
+        "zh": "批头：1.可匹配各种形式拧紧工具；2.各种尺寸、长度、直径可定制，满足各种手动、自动拧紧要求；3.各种内外花型可定制。",
+        "en": ""
+      },
+      "specifications_source_zh": "根据客户要求定制",
+      "moq_source": "10",
+      "source_assets": [
+        "\\\\100.125.53.22\\环球出海代理商\\客户资料1\\1569-环球出海苏州工业园区九峰\\产品优化（优化完成\\4-拧紧功能附件\\批头\\1.jpg"
+      ],
+      "image_status": "mapped_unique_customer_asset",
+      "publication_status": "source_ready"
+    },
+    {
+      "source_row": 31,
+      "source_locator": "产品信息!row:31",
+      "product_code": "JSA",
+      "category": {
+        "zh": "拧紧功能附件",
+        "en": "Tighten function attachments",
+        "slug": "tighten-function-attachments"
+      },
+      "slug": "feed-hose",
+      "name_i18n": {
+        "zh": "送钉管",
+        "en": "Feed Hose"
+      },
+      "description_i18n": {
+        "zh": "送钉管：1.材质PUR；2.壁厚≥2.5mm；3.硬度90左右。",
+        "en": ""
+      },
+      "specifications_source_zh": "根据客户要求定制",
+      "moq_source": "10",
+      "source_assets": [
+        "\\\\100.125.53.22\\环球出海代理商\\客户资料1\\1569-环球出海苏州工业园区九峰\\产品优化（优化完成\\4-拧紧功能附件\\送钉管\\1.jpg"
+      ],
+      "image_status": "mapped_unique_customer_asset",
+      "publication_status": "source_ready"
+    },
+    {
+      "source_row": 32,
+      "source_locator": "产品信息!row:32",
+      "product_code": "JSP",
+      "category": {
+        "zh": "无人机车载操控平板",
+        "en": "Unmanned aerial vehicle onboard control tablet",
+        "slug": "unmanned-aerial-vehicle-onboard-control-tablet"
+      },
+      "slug": "three-proof-reinforced-notebook",
+      "name_i18n": {
+        "zh": "三防加固笔记本",
+        "en": "Three proof reinforced notebook"
+      },
+      "description_i18n": {
+        "zh": "1.轻薄机身，坚如磐石；2.采用八核处理器2.0GHZ，IP65级防尘防水四周防撞角设计，1920*1080分辨率，14英寸700nit高清高亮屏，16GB高速内存+1TB固态，丰富接口，配备HDMI，RS232串口，以太网口，USB口以及3.5m 耳机孔，更好的兼容性可连接多种外设，即插即用。",
+        "en": ""
+      },
+      "specifications_source_zh": "",
+      "moq_source": "10",
+      "source_assets": [
+        "\\\\100.125.53.22\\环球出海代理商\\客户资料1\\1569-环球出海苏州工业园区九峰\\产品优化（优化完成\\5-无人机车载操控平板\\加固笔记本\\1.jpg"
+      ],
+      "image_status": "mapped_unique_customer_asset",
+      "publication_status": "source_ready"
+    },
+    {
+      "source_row": 33,
+      "source_locator": "产品信息!row:33",
+      "product_code": "JSP",
+      "category": {
+        "zh": "无人机车载操控平板",
+        "en": "Unmanned aerial vehicle onboard control tablet",
+        "slug": "unmanned-aerial-vehicle-onboard-control-tablet"
+      },
+      "slug": "8-inch-beidou-3-short-message-industrial-three-proof-tablet",
+      "name_i18n": {
+        "zh": "8寸北斗三代短报文工业三防平板",
+        "en": "8-inch Beidou-3 Short Message Industrial Three-Proof Tablet"
+      },
+      "description_i18n": {
+        "zh": "主要特点: \n1.标配Android 11.0 智能操作系统（可选装Win10操作系统）\n2.支持语言通话，4G全网通，同时具备北斗二代和三代短报文通信\n3.支持北斗三代定位，采用国产独立定位模块，可选配单频或双频高精度模块                                                   4.支持导航/采点/轨迹/测量/地图/等功能\n5.支持WIFI及蓝牙功能\n6.尊享8寸大高清钢化硬屏\n7.具备户外防尘防水IP68等级，1.2米防摔",
+        "en": ""
+      },
+      "specifications_source_zh": "",
+      "moq_source": "100",
+      "source_assets": [
+        "\\\\100.125.53.22\\环球出海代理商\\客户资料1\\1569-环球出海苏州工业园区九峰\\产品优化（优化完成\\5-无人机车载操控平板\\三防平板\\8寸北斗三代短报文工业三防平板\\1.jpg"
+      ],
+      "image_status": "mapped_unique_customer_asset",
+      "publication_status": "source_ready"
+    },
+    {
+      "source_row": 34,
+      "source_locator": "产品信息!row:34",
+      "product_code": "JSP",
+      "category": {
+        "zh": "无人机车载操控平板",
+        "en": "Unmanned aerial vehicle onboard control tablet",
+        "slug": "unmanned-aerial-vehicle-onboard-control-tablet"
+      },
+      "slug": "10-inch-short-message-spreadtrum-p7885-three-proof-tablet",
+      "name_i18n": {
+        "zh": "10寸短报文展锐P7885三防平板",
+        "en": "10 inch short message Spreadtrum P7885 three proof tablet"
+      },
+      "description_i18n": {
+        "zh": "主要特点: \n1.标配Android 11.0 智能操作系统（可选装Win10操作系统）\n2.支持语言通话，4G全网通，同时具备北斗二代和三代短报文通信\n3.支持北斗三代定位，采用国产独立定位模块，可选配单频或双频高精度模块                                                   4.支持导航/采点/轨迹/测量/地图/等功能\n5.支持WIFI及蓝牙功能\n6.尊享8寸大高清钢化硬屏\n7.具备户外防尘防水IP68等级，1.2米防摔",
+        "en": ""
+      },
+      "specifications_source_zh": "",
+      "moq_source": "100",
+      "source_assets": [
+        "\\\\100.125.53.22\\环球出海代理商\\客户资料1\\1569-环球出海苏州工业园区九峰\\产品优化（优化完成\\5-无人机车载操控平板\\三防平板\\10寸 短报文平板展锐P7885三防平板\\1.jpg"
+      ],
+      "image_status": "mapped_unique_customer_asset",
+      "publication_status": "source_ready"
+    },
+    {
+      "source_row": 35,
+      "source_locator": "产品信息!row:35",
+      "product_code": "JSP",
+      "category": {
+        "zh": "无人机车载操控平板",
+        "en": "Unmanned aerial vehicle onboard control tablet",
+        "slug": "unmanned-aerial-vehicle-onboard-control-tablet"
+      },
+      "slug": "beisan-4g-short-message-three-proof-tablet",
+      "name_i18n": {
+        "zh": "北三4G短报文三防平板",
+        "en": "Beisan 4G short message three proof tablet"
+      },
+      "description_i18n": {
+        "zh": "主要特点: \n1.北三RDSS+北三RNSS\n2.国产紫光展锐⼋核CPU\n3.4G LTE全⽹通                                                     4.IP67防护等级",
+        "en": ""
+      },
+      "specifications_source_zh": "",
+      "moq_source": "100",
+      "source_assets": [
+        "\\\\100.125.53.22\\环球出海代理商\\客户资料1\\1569-环球出海苏州工业园区九峰\\产品优化（优化完成\\5-无人机车载操控平板\\三防平板\\LLBP8-B001 北三4G短报文三防平板\\1.jpg"
+      ],
+      "image_status": "mapped_unique_customer_asset",
+      "publication_status": "source_ready"
+    },
+    {
+      "source_row": 36,
+      "source_locator": "产品信息!row:36",
+      "product_code": "JSP",
+      "category": {
+        "zh": "无人机车载操控平板",
+        "en": "Unmanned aerial vehicle onboard control tablet",
+        "slug": "unmanned-aerial-vehicle-onboard-control-tablet"
+      },
+      "slug": "rk3568-5g-10-inch-three-proof-tablet",
+      "name_i18n": {
+        "zh": "RK3568-5G 10寸三防平板",
+        "en": "RK3568-5G 10 inch three proof tablet"
+      },
+      "description_i18n": {
+        "zh": "EX二类石化防爆、KA矿安一类防爆、MA煤安一类防爆",
+        "en": ""
+      },
+      "specifications_source_zh": "",
+      "moq_source": "100",
+      "source_assets": [
+        "\\\\100.125.53.22\\环球出海代理商\\客户资料1\\1569-环球出海苏州工业园区九峰\\产品优化（优化完成\\5-无人机车载操控平板\\三防平板\\RK3568-5G  10寸三防平板\\1.jpg"
+      ],
+      "image_status": "mapped_unique_customer_asset",
+      "publication_status": "source_ready"
+    },
+    {
+      "source_row": 37,
+      "source_locator": "产品信息!row:37",
+      "product_code": "JSP",
+      "category": {
+        "zh": "无人机车载操控平板",
+        "en": "Unmanned aerial vehicle onboard control tablet",
+        "slug": "unmanned-aerial-vehicle-onboard-control-tablet"
+      },
+      "slug": "rk3588-5g-10-inch-three-proof-tablet",
+      "name_i18n": {
+        "zh": "RK3588-5G 10寸三防平板",
+        "en": "RK3588-5G 10 inch three proof tablet"
+      },
+      "description_i18n": {
+        "zh": "",
+        "en": ""
+      },
+      "specifications_source_zh": "",
+      "moq_source": "100",
+      "source_assets": [
+        "\\\\100.125.53.22\\环球出海代理商\\客户资料1\\1569-环球出海苏州工业园区九峰\\产品优化（优化完成\\5-无人机车载操控平板\\三防平板\\RK3588-5G 10寸三防平板\\1.jpg"
+      ],
+      "image_status": "mapped_unique_customer_asset",
+      "publication_status": "source_ready"
+    },
+    {
+      "source_row": 38,
+      "source_locator": "产品信息!row:38",
+      "product_code": "JSP",
+      "category": {
+        "zh": "无人机车载操控平板",
+        "en": "Unmanned aerial vehicle onboard control tablet",
+        "slug": "unmanned-aerial-vehicle-onboard-control-tablet"
+      },
+      "slug": "r05h-8-inch-handheld-tablet",
+      "name_i18n": {
+        "zh": "R05H 8寸手持式平板",
+        "en": "R05H 8-inch handheld tablet"
+      },
+      "description_i18n": {
+        "zh": "8英寸高清触摸屏，双屏便携终端，防水、防尘、抗震。R05H支持16GB运行内存，搭配1TB存储空间，多任务运行依旧强悍迅猛。海量视频，图片存储无忧。大空间，带来非凡速度。IP65级防尘防水。",
+        "en": ""
+      },
+      "specifications_source_zh": "",
+      "moq_source": "100",
+      "source_assets": [
+        "\\\\100.125.53.22\\环球出海代理商\\客户资料1\\1569-环球出海苏州工业园区九峰\\产品优化（优化完成\\5-无人机车载操控平板\\手持式平板\\R05H 8寸手持式平板\\1.jpg"
+      ],
+      "image_status": "mapped_unique_customer_asset",
+      "publication_status": "source_ready"
+    },
+    {
+      "source_row": 39,
+      "source_locator": "产品信息!row:39",
+      "product_code": "JSP",
+      "category": {
+        "zh": "无人机车载操控平板",
+        "en": "Unmanned aerial vehicle onboard control tablet",
+        "slug": "unmanned-aerial-vehicle-onboard-control-tablet"
+      },
+      "slug": "r05g-10-inch-handheld-tablet",
+      "name_i18n": {
+        "zh": "R05G 10寸手持式平板",
+        "en": "R05G 10 inch handheld tablet"
+      },
+      "description_i18n": {
+        "zh": "",
+        "en": ""
+      },
+      "specifications_source_zh": "",
+      "moq_source": "100",
+      "source_assets": [
+        "\\\\100.125.53.22\\环球出海代理商\\客户资料1\\1569-环球出海苏州工业园区九峰\\产品优化（优化完成\\5-无人机车载操控平板\\手持式平板\\R05G 10寸手持式平板\\1.jpg"
+      ],
+      "image_status": "mapped_unique_customer_asset",
+      "publication_status": "source_ready"
+    },
+    {
+      "source_row": 40,
+      "source_locator": "产品信息!row:40",
+      "product_code": "JSP",
+      "category": {
+        "zh": "无人机车载操控平板",
+        "en": "Unmanned aerial vehicle onboard control tablet",
+        "slug": "unmanned-aerial-vehicle-onboard-control-tablet"
+      },
+      "slug": "s01l-search-and-rescue-vehicle-tablet",
+      "name_i18n": {
+        "zh": "S01L搜救车载平板",
+        "en": "S01L search and rescue vehicle tablet"
+      },
+      "description_i18n": {
+        "zh": "10寸车载显控终端，定位智搜，芯速度。",
+        "en": ""
+      },
+      "specifications_source_zh": "",
+      "moq_source": "100",
+      "source_assets": [
+        "\\\\100.125.53.22\\环球出海代理商\\客户资料1\\1569-环球出海苏州工业园区九峰\\产品优化（优化完成\\5-无人机车载操控平板\\搜救车载平板\\1.jpg"
+      ],
+      "image_status": "mapped_unique_customer_asset",
+      "publication_status": "source_ready"
+    },
+    {
+      "source_row": 41,
+      "source_locator": "产品信息!row:41",
+      "product_code": "JSP",
+      "category": {
+        "zh": "无人机车载操控平板",
+        "en": "Unmanned aerial vehicle onboard control tablet",
+        "slug": "unmanned-aerial-vehicle-onboard-control-tablet"
+      },
+      "slug": "iantong-and-low-earth-orbit-satellite-telephone",
+      "name_i18n": {
+        "zh": "天通和低轨卫星电话",
+        "en": "iantong and Low Earth Orbit Satellite Telephone"
+      },
+      "description_i18n": {
+        "zh": "星网窄带手持终端",
+        "en": ""
+      },
+      "specifications_source_zh": "",
+      "moq_source": "100",
+      "source_assets": [
+        "\\\\100.125.53.22\\环球出海代理商\\客户资料1\\1569-环球出海苏州工业园区九峰\\产品优化（优化完成\\5-无人机车载操控平板\\天通和低轨卫星电话\\1.jpg"
+      ],
+      "image_status": "mapped_unique_customer_asset",
+      "publication_status": "source_ready"
+    },
+    {
+      "source_row": 42,
+      "source_locator": "产品信息!row:42",
+      "product_code": "JSP",
+      "category": {
+        "zh": "无人机车载操控平板",
+        "en": "Unmanned aerial vehicle onboard control tablet",
+        "slug": "unmanned-aerial-vehicle-onboard-control-tablet"
+      },
+      "slug": "s04l-10-inch-helicopter-onboard-tablet",
+      "name_i18n": {
+        "zh": "S04L 10寸直升机机载平板",
+        "en": "S04L 10 inch helicopter onboard tablet"
+      },
+      "description_i18n": {
+        "zh": "",
+        "en": ""
+      },
+      "specifications_source_zh": "",
+      "moq_source": "100",
+      "source_assets": [
+        "\\\\100.125.53.22\\环球出海代理商\\客户资料1\\1569-环球出海苏州工业园区九峰\\产品优化（优化完成\\5-无人机车载操控平板\\直升机机载平板\\1.jpg"
+      ],
+      "image_status": "mapped_unique_customer_asset",
+      "publication_status": "source_ready"
+    },
+    {
+      "source_row": 43,
+      "source_locator": "产品信息!row:43",
+      "product_code": "JR",
+      "category": {
+        "zh": "机器人系统集成",
+        "en": "Robot system integration",
+        "slug": "robot-system-integration"
+      },
+      "slug": "gear-shifter-production-line-43",
+      "name_i18n": {
+        "zh": "机器人系统集成",
+        "en": "Gear Shifter Production Line"
+      },
+      "description_i18n": {
+        "zh": "机器人系统集成：根据工艺需求完成工业机器人选型、工装夹具设计、电气配套、控制程序开发、现场安装联调；",
+        "en": ""
+      },
+      "specifications_source_zh": "根据客户要求定制",
+      "moq_source": "1",
+      "source_assets": [
+        "\\\\100.125.53.22\\环球出海代理商\\客户资料1\\1569-环球出海苏州工业园区九峰\\产品优化（优化完成\\6-机器人系统集成\\1.jpg"
+      ],
+      "image_status": "mapped_unique_customer_asset",
+      "publication_status": "source_ready"
+    },
+    {
+      "source_row": 44,
+      "source_locator": "产品信息!row:44",
+      "product_code": "JSM",
+      "category": {
+        "zh": "成型机",
+        "en": "forming machine",
+        "slug": "forming-machine"
+      },
+      "slug": "automobile-belt-forming-machine",
+      "name_i18n": {
+        "zh": "汽车带成型机",
+        "en": "Automobile belt forming machine"
+      },
+      "description_i18n": {
+        "zh": "汽车带成型机：用于汽车传动 V 带、多楔带带坯自动贴合成型；",
+        "en": ""
+      },
+      "specifications_source_zh": "根据客户要求定制",
+      "moq_source": "1",
+      "source_assets": [
+        "\\\\100.125.53.22\\环球出海代理商\\客户资料1\\1569-环球出海苏州工业园区九峰\\产品优化（优化完成\\7-成型机\\1.jpg"
+      ],
+      "image_status": "mapped_unique_customer_asset",
+      "publication_status": "source_ready"
+    },
+    {
+      "source_row": 45,
+      "source_locator": "产品信息!row:45",
+      "product_code": "JSM",
+      "category": {
+        "zh": "成型机",
+        "en": "forming machine",
+        "slug": "forming-machine"
+      },
+      "slug": "compression-molding-machine",
+      "name_i18n": {
+        "zh": "模压成型机",
+        "en": "Compression molding machine"
+      },
+      "description_i18n": {
+        "zh": "模压成型机：非标模压成型设备，配置主机机架、液压系统、模具安装工位、控制电柜、PLC 控制系统；实现物料合模、加压、保压、泄压、开模、脱模自动时序控制，压力与位移实时采集监控、超限报警；",
+        "en": ""
+      },
+      "specifications_source_zh": "根据客户要求定制",
+      "moq_source": "1",
+      "source_assets": [
+        "\\\\100.125.53.22\\环球出海代理商\\客户资料1\\1569-环球出海苏州工业园区九峰\\产品优化（优化完成\\7-成型机\\10.jpg"
+      ],
+      "image_status": "mapped_unique_customer_asset",
+      "publication_status": "source_ready"
+    },
+    {
+      "source_row": 46,
+      "source_locator": "产品信息!row:46",
+      "product_code": "HMP",
+      "category": {
+        "zh": "重工机械加工",
+        "en": "Heavy Machinery Processing",
+        "slug": "heavy-machinery-processing"
+      },
+      "slug": "heavy-machinery-processing",
+      "name_i18n": {
+        "zh": "重工机械加工",
+        "en": "Heavy Machinery Processing"
+      },
+      "description_i18n": {
+        "zh": "面向核电、港口、船舶、汽轮机及辅机、水轮机及辅机、海洋工程装备领域重工构件机械加工，包含下料、焊接、热处理、精密机加工、无损检测、表面防护处理；严格遵循行业专用规范，满足重载、耐腐蚀、抗疲劳、高可靠性要求，提供全流程检验资料。",
+        "en": ""
+      },
+      "specifications_source_zh": "根据客户要求定制",
+      "moq_source": "10",
+      "source_assets": [
+        "\\\\100.125.53.22\\环球出海代理商\\客户资料1\\1569-环球出海苏州工业园区九峰\\产品优化（优化完成\\8-重工机械加工\\1.jpg"
+      ],
+      "image_status": "mapped_unique_customer_asset",
+      "publication_status": "source_ready"
+    },
+    {
+      "source_row": 47,
+      "source_locator": "产品信息!row:47",
+      "product_code": "JP",
+      "category": {
+        "zh": "控制软件(PLC/Labview/C#)外包服务",
+        "en": "Outsourcing services for control software (PLC/Labview/C #)",
+        "slug": "outsourcing-services-for-control-software-plc-labview-c"
+      },
+      "slug": "control-cabinet",
+      "name_i18n": {
+        "zh": "控制电柜",
+        "en": "Control cabinet"
+      },
+      "description_i18n": {
+        "zh": "自动化控制电柜、测试软件配套电控柜：成套电气集成，搭载 PLC、配电及安全保护器件，提供工装驱动与信号接口；配合 PLC/LabVIEW/C# 测试软件，实现设备动作控制、产品自动化检测、数据采集判定与生产数据追溯。",
+        "en": ""
+      },
+      "specifications_source_zh": "根据客户要求定制",
+      "moq_source": "10",
+      "source_assets": [
+        "\\\\100.125.53.22\\环球出海代理商\\客户资料1\\1569-环球出海苏州工业园区九峰\\产品优化（优化完成\\9-控制软件(PLCLabviewC#)外包服务\\1-控制电柜\\1.jpg"
+      ],
+      "image_status": "mapped_unique_customer_asset",
+      "publication_status": "source_ready"
+    },
+    {
+      "source_row": 48,
+      "source_locator": "产品信息!row:48",
+      "product_code": "JP",
+      "category": {
+        "zh": "控制软件(PLC/Labview/C#)外包服务",
+        "en": "Outsourcing services for control software (PLC/Labview/C #)",
+        "slug": "outsourcing-services-for-control-software-plc-labview-c"
+      },
+      "slug": "industrial-control-software-development",
+      "name_i18n": {
+        "zh": "工控软件开发",
+        "en": "Industrial control software development"
+      },
+      "description_i18n": {
+        "zh": "PLC、LabVIEW、C# 工控软件开发：开发 PLC 底层控制程序实现工装时序、伺服及安全联锁；LabVIEW 完成信号采集、自动化测试、指标判定与报告生成；C# 上位机实现设备监控、SN 追溯、数据存储及 MES 对接；",
+        "en": ""
+      },
+      "specifications_source_zh": "根据客户要求定制",
+      "moq_source": "1",
+      "source_assets": [
+        "\\\\100.125.53.22\\环球出海代理商\\客户资料1\\1569-环球出海苏州工业园区九峰\\产品优化（优化完成\\9-控制软件(PLCLabviewC#)外包服务\\2-工控软件开发\\19：30的时候拍的原来程序界面 (2).JPG"
+      ],
+      "image_status": "mapped_unique_customer_asset",
+      "publication_status": "source_ready"
+    },
+    {
+      "source_row": 49,
+      "source_locator": "产品信息!row:49",
+      "product_code": "JP",
+      "category": {
+        "zh": "控制软件(PLC/Labview/C#)外包服务",
+        "en": "Outsourcing services for control software (PLC/Labview/C #)",
+        "slug": "outsourcing-services-for-control-software-plc-labview-c"
+      },
+      "slug": "factory-air-conditioning-monitoring-system",
+      "name_i18n": {
+        "zh": "厂房空调监控系统",
+        "en": "Factory air conditioning monitoring system"
+      },
+      "description_i18n": {
+        "zh": "厂房空调监控系统：对厂房空调机组、温湿度、设备运行状态集中监测与远程控制；采集温度、湿度、风机、压缩机、故障告警等参数，具备超限报警、历史数据存储、报表查询功能，支持上位机展示，可对接厂区平台。",
+        "en": ""
+      },
+      "specifications_source_zh": "根据客户要求定制",
+      "moq_source": "1",
+      "source_assets": [
+        "\\\\100.125.53.22\\环球出海代理商\\客户资料1\\1569-环球出海苏州工业园区九峰\\产品优化（优化完成\\9-控制软件(PLCLabviewC#)外包服务\\3-厂房空调监控系统\\空调控制1.JPG"
+      ],
+      "image_status": "mapped_unique_customer_asset",
+      "publication_status": "source_ready"
+    },
+    {
+      "source_row": 50,
+      "source_locator": "产品信息!row:50",
+      "product_code": "JP",
+      "category": {
+        "zh": "控制软件(PLC/Labview/C#)外包服务",
+        "en": "Outsourcing services for control software (PLC/Labview/C #)",
+        "slug": "outsourcing-services-for-control-software-plc-labview-c"
+      },
+      "slug": "water-treatment-monitoring-system",
+      "name_i18n": {
+        "zh": "水处理监控系统",
+        "en": "Water treatment monitoring system"
+      },
+      "description_i18n": {
+        "zh": "水处理监控系统：对水处理设备运行参数集中采集与远程监控，监测液位、pH、电导率、压力、泵阀运行状态，超限声光告警；支持流程画面、历史曲线、数据存储报表，可远程启停设备，支持对接厂区上位平台。",
+        "en": ""
+      },
+      "specifications_source_zh": "根据客户要求定制",
+      "moq_source": "1",
+      "source_assets": [
+        "\\\\100.125.53.22\\环球出海代理商\\客户资料1\\1569-环球出海苏州工业园区九峰\\产品优化（优化完成\\9-控制软件(PLCLabviewC#)外包服务\\4-水处理监控系统\\1_副本_副本.png"
+      ],
+      "image_status": "mapped_unique_customer_asset",
+      "publication_status": "source_ready"
+    },
+    {
+      "source_row": 51,
+      "source_locator": "产品信息!row:51",
+      "product_code": "JP",
+      "category": {
+        "zh": "控制软件(PLC/Labview/C#)外包服务",
+        "en": "Outsourcing services for control software (PLC/Labview/C #)",
+        "slug": "outsourcing-services-for-control-software-plc-labview-c"
+      },
+      "slug": "mes-system-development",
+      "name_i18n": {
+        "zh": "MES系统开发",
+        "en": "MES system development"
+      },
+      "description_i18n": {
+        "zh": "MES 系统开发：面向车间生产管理，实现工单管理、物料管控、生产报工、产品 SN 全流程追溯、质量检验管理、设备数据采集、生产报表统计与告警管理；",
+        "en": ""
+      },
+      "specifications_source_zh": "根据客户要求定制",
+      "moq_source": "1",
+      "source_assets": [
+        "\\\\100.125.53.22\\环球出海代理商\\客户资料1\\1569-环球出海苏州工业园区九峰\\产品优化（优化完成\\9-控制软件(PLCLabviewC#)外包服务\\5-MES系统开发\\MES1.jpg"
+      ],
+      "image_status": "mapped_unique_customer_asset",
+      "publication_status": "source_ready"
+    }
+  ],
+  "faqs": [
+    {
+      "source_row": 4,
+      "category_zh": "产品与规格类",
+      "question_i18n": {
+        "zh": "你们的产品有哪些规格/型号可选？",
+        "en": "What specifications or models are available?"
+      },
+      "answer_i18n": {
+        "zh": "拧紧模组、各类送料设备提供多规格标准型号可选，覆盖不同扭矩、料仓容量与工件尺寸；支持 200c.c 等多种料仓配置，批头选择器可实现 2~8 种批头自动切换。无人机车载操控平板提供多规格标准型号可选。自动化整线、成型设备、重工机械加工、控制软件(PLC/Labview/C#)外包服务为非标定制，根据产品工艺、产能需求单独设计；同时支持 OEM/ODM，可按客户工况调整结构、参数与外观。",
+        "en": ""
+      }
+    },
+    {
+      "source_row": 5,
+      "category_zh": "产品与规格类",
+      "question_i18n": {
+        "zh": "是否支持定制尺寸 / 材质 / 颜色 / 工艺？",
+        "en": "Do you support customized size, material, color, or process?"
+      },
+      "answer_i18n": {
+        "zh": "支持设备尺寸、结构材质、外观颜色、加工工艺定制。标准模组可按需调整安装尺寸与材料配置；非标自动化产线、工装治具可根据现场工况，选用碳钢、铝合金、不锈钢、工程塑料等材质；钣金外壳可按客户色卡喷涂企业专属颜色；支持喷塑、阳极氧化、包胶、精密机加工等多种工艺，电控逻辑与检测工艺同步定制，满足汽车、新能源、光伏、核电、船舶等多行业特殊使用要求。",
+        "en": ""
+      }
+    },
+    {
+      "source_row": 6,
+      "category_zh": "产品与规格类",
+      "question_i18n": {
+        "zh": "是否可以提供样品？",
+        "en": "Can you provide samples?"
+      },
+      "answer_i18n": {
+        "zh": "标准化拧紧模组、送料单元可提供样品 / 样机出借，支持客户来料工艺验证；自动化整线、成型专机等大型非标设备不提供整机样品，可安排客户来厂参观同类项目、来料打样并出具工艺测试报告。样品费用可在后续量产订单中按约定抵扣，可签订保密协议保障客户技术资料安全。",
+        "en": ""
+      }
+    },
+    {
+      "source_row": 7,
+      "category_zh": "产品与规格类",
+      "question_i18n": {
+        "zh": "产品是否有技术参数表 / 检测报告？",
+        "en": "Do you provide technical data sheets or test reports?"
+      },
+      "answer_i18n": {
+        "zh": "标准模块化产品提供配套技术参数表与出厂检测报告；非标自动化产线与专机项目，方案确认后出具项目专属技术规格书及出厂验收报告。设备元器件附带原厂合格证书，可根据客户要求委托第三方机构开展计量、安全、EMC 等检测（相关费用另行协商），同时交付操作手册、电气图纸等全套技术资料。",
+        "en": ""
+      }
+    },
+    {
+      "source_row": 8,
+      "category_zh": "产品与规格类",
+      "question_i18n": {
+        "zh": "产品适用于哪些行业或应用场景？",
+        "en": "What industries or applications are your products suitable for?"
+      },
+      "answer_i18n": {
+        "zh": "汽车、新能源、光伏、无人机、船舶、海洋工程、航空航天、橡胶制品、重工 / 工程机械",
+        "en": ""
+      }
+    },
+    {
+      "source_row": 9,
+      "category_zh": "产品与规格类",
+      "question_i18n": {
+        "zh": "是否支持 OEM / ODM？",
+        "en": "Do you support OEM / ODM services?"
+      },
+      "answer_i18n": {
+        "zh": "支持OEM、ODM",
+        "en": ""
+      }
+    },
+    {
+      "source_row": 11,
+      "category_zh": "起订量与价格类",
+      "question_i18n": {
+        "zh": "最小起订量（MOQ）是多少？",
+        "en": "What is the minimum order quantity (MOQ)?"
+      },
+      "answer_i18n": {
+        "zh": "非标件MOQ=1,标准件MOQ=10-100",
+        "en": ""
+      }
+    },
+    {
+      "source_row": 12,
+      "category_zh": "起订量与价格类",
+      "question_i18n": {
+        "zh": "价格是否为阶梯报价？",
+        "en": "Do you offer tiered pricing?"
+      },
+      "answer_i18n": {
+        "zh": "模块化标准产品采用阶梯报价，采购数量越大单价越优；非标自动化产线、成型设备、机器人集成项目根据工艺方案单独核算，多项目打包或年度框架订单可享受项目批量优惠。支持 OEM/ODM 定制，可提供分项明细报价，报价条款可协商",
+        "en": ""
+      }
+    },
+    {
+      "source_row": 13,
+      "category_zh": "起订量与价格类",
+      "question_i18n": {
+        "zh": "报价是否包含包装、运输或税费？",
+        "en": "Does the price include packaging, shipping, or taxes?"
+      },
+      "answer_i18n": {
+        "zh": "报价不含产品包装、运输费用；报价含增值税，包装、运输费用另行单独计价。",
+        "en": ""
+      }
+    },
+    {
+      "source_row": 14,
+      "category_zh": "起订量与价格类",
+      "question_i18n": {
+        "zh": "是否支持长期合作价格 / 批量折扣？",
+        "en": "Do you offer long-term cooperation pricing or bulk discounts?"
+      },
+      "answer_i18n": {
+        "zh": "支持长期战略合作价及批量采购折扣；采购数量、年度框架采购量按项目另行协商确定。",
+        "en": ""
+      }
+    },
+    {
+      "source_row": 15,
+      "category_zh": "起订量与价格类",
+      "question_i18n": {
+        "zh": "价格是否会随原材料或汇率波动？",
+        "en": "Will prices fluctuate due to raw materials or exchange rates?"
+      },
+      "answer_i18n": {
+        "zh": "合同签订后订单价格固定；若合同未锁定原材料价格，原材料、汇率大幅波动超过约定阈值时，双方可协商调整合同价格。",
+        "en": ""
+      }
+    },
+    {
+      "source_row": 16,
+      "category_zh": "样品与打样类",
+      "question_i18n": {
+        "zh": "是否可以寄送样品？",
+        "en": "Can samples be shipped?"
+      },
+      "answer_i18n": {
+        "zh": "可提供样品寄送；样品费用、运输费及交付周期另行协商，样品不代表最终成套设备性能。",
+        "en": ""
+      }
+    },
+    {
+      "source_row": 17,
+      "category_zh": "样品与打样类",
+      "question_i18n": {
+        "zh": "样品是否收费？是否可退？",
+        "en": "Are samples charged? Are they refundable?"
+      },
+      "answer_i18n": {
+        "zh": "样品收取制作成本费；满足约定采购条件可按协议退还样品费，未达成采购则不予退还。",
+        "en": ""
+      }
+    },
+    {
+      "source_row": 18,
+      "category_zh": "样品与打样类",
+      "question_i18n": {
+        "zh": "样品交期是多久？",
+        "en": "What is the sample lead time?"
+      },
+      "answer_i18n": {
+        "zh": "样品交期根据样品工艺、规格确认后核算，常规样品交期 15 工作日，具体以双方确认的样品方案为准。",
+        "en": ""
+      }
+    },
+    {
+      "source_row": 19,
+      "category_zh": "样品与打样类",
+      "question_i18n": {
+        "zh": "定制产品是否支持先打样确认？",
+        "en": "Do you support sample approval before mass production?"
+      },
+      "answer_i18n": {
+        "zh": "定制产品支持先行打样确认，待样品技术指标、工艺效果双方确认后，再开展正式产品生产。",
+        "en": ""
+      }
+    },
+    {
+      "source_row": 20,
+      "category_zh": "样品与打样类",
+      "question_i18n": {
+        "zh": "样品与大货是否一致？",
+        "en": "Are samples consistent with mass production?"
+      },
+      "answer_i18n": {
+        "zh": "样品与大货采用相同材料、工艺及技术标准制作；因样品为单件试制，局部细节存在微小差异，核心性能指标保持一致，详细差异双方提前书面确认。",
+        "en": ""
+      }
+    },
+    {
+      "source_row": 21,
+      "category_zh": "生产与交期类",
+      "question_i18n": {
+        "zh": "下单后的生产周期是多久？",
+        "en": "What is the production lead time after ordering?"
+      },
+      "answer_i18n": {
+        "zh": "合同、技术协议确认及预付款到账后启动生产；常规生产周期为 60～90 个工作日，复杂定制机型周期另行评估，以双方书面约定为准。",
+        "en": ""
+      }
+    },
+    {
+      "source_row": 22,
+      "category_zh": "生产与交期类",
+      "question_i18n": {
+        "zh": "大货交期是否稳定？",
+        "en": "Is the delivery time for bulk orders stable?"
+      },
+      "answer_i18n": {
+        "zh": "在技术方案、物料需求确认且款项按合同履约前提下，大货交期稳定；如遇不可抗力、客户需求变更、关键物料延期等特殊情况，将提前同步并协商调整交期。",
+        "en": ""
+      }
+    },
+    {
+      "source_row": 23,
+      "category_zh": "生产与交期类",
+      "question_i18n": {
+        "zh": "旺季是否会延长交期？",
+        "en": "Will lead time be extended during peak seasons?"
+      },
+      "answer_i18n": {
+        "zh": "生产旺季存在交期延长风险，下单时提前锁定排产计划可最大程度规避延期；如遇产能紧张，将提前告知预估延期时长，双方协商确认。",
+        "en": ""
+      }
+    },
+    {
+      "source_row": 24,
+      "category_zh": "生产与交期类",
+      "question_i18n": {
+        "zh": "是否支持加急生产？",
+        "en": "Do you support urgent or expedited production?"
+      },
+      "answer_i18n": {
+        "zh": "支持加急生产，需评估设备方案与车间产能；加急会产生相应加急费用，交期、费用经双方确认后锁定。",
+        "en": ""
+      }
+    },
+    {
+      "source_row": 25,
+      "category_zh": "生产与交期类",
+      "question_i18n": {
+        "zh": "生产过程中是否可提供进度反馈？",
+        "en": "Can you provide production progress updates?"
+      },
+      "answer_i18n": {
+        "zh": "生产过程可定期提供项目进度反馈，按约定方式同步生产照片、阶段节点信息，重大节点主动通知客户。",
+        "en": ""
+      }
+    },
+    {
+      "source_row": 26,
+      "category_zh": "质量与质检类",
+      "question_i18n": {
+        "zh": "是否有质量控制流程？",
+        "en": "Do you have a quality control process?"
+      },
+      "answer_i18n": {
+        "zh": "具备完整全流程质量控制体系，原材料入厂检验、工序巡检、整机出厂检测，关键工序留存检验记录，出厂附带检验报告。",
+        "en": ""
+      }
+    },
+    {
+      "source_row": 27,
+      "category_zh": "质量与质检类",
+      "question_i18n": {
+        "zh": "是否支持第三方验货？",
+        "en": "Do you support third-party inspection?"
+      },
+      "answer_i18n": {
+        "zh": "支持第三方验货；验货时间、地点、检验项目及标准双方提前约定，第三方检验产生的相关费用由委托方承担。",
+        "en": ""
+      }
+    },
+    {
+      "source_row": 28,
+      "category_zh": "质量与质检类",
+      "question_i18n": {
+        "zh": "是否提供质检报告 / 出厂检验？",
+        "en": "Do you provide inspection or quality reports?"
+      },
+      "answer_i18n": {
+        "zh": "提供出厂检验及配套质检报告，按技术协议项目逐项检测，检验报告随设备一同交付。",
+        "en": ""
+      }
+    }
+  ],
+  "excluded_faqs": [
+    {
+      "source_row": 10,
+      "category_zh": "产品与规格类",
+      "question_i18n": {
+        "zh": "产品的使用寿命 / 性能优势是什么？",
+        "en": "What is the service life or performance advantage of the product?"
+      },
+      "answer_i18n": {
+        "zh": "设备主体设计使用寿命 8～10 年，核心电控、易损件支持单独更换与维保升级。产品采用模块化设计，具备高重复定位精度、稳定的工艺控制能力，可实现生产数据采集与 MES 对接；支持多规格工件快速换型，适配汽车、新能源、光伏、船舶、核电等多行业严苛工况。自研电控软件，元器件选型可靠，可提供定制化 ODM 方案与 OEM 代工，配套完善的售前工艺评估、现场调试及全生命周期售后服务，降低客户长期运维成本。",
+        "en": ""
+      },
+      "exclusion_reason": "unsupported_lifetime_claim_requires_owner_confirmation"
+    },
+    {
+      "source_row": 29,
+      "category_zh": "质量与质检类",
+      "exclusion_reason": "prohibited_commitment",
+      "source_text_omitted": true
+    },
+    {
+      "source_row": 30,
+      "category_zh": "质量与质检类",
+      "exclusion_reason": "prohibited_commitment",
+      "source_text_omitted": true
+    }
+  ],
+  "counts": {
+    "categories": 9,
+    "products": 48,
+    "products_with_customer_assets": 47,
+    "products_without_customer_assets": 1,
+    "faqs_public_candidate": 24,
+    "faqs_excluded": 3
+  }
+}

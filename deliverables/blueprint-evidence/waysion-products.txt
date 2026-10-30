@@ -1,0 +1,2 @@
+Reviewed 2026-10-30: https://www.waysion.com/product-type/rugged-tablet/ and https://www.waysion.com/v7s-rugged-android-tablet/
+The category page surfaces model, operating system, interfaces and application; the detail page uses quick facts, structured specifications, use cases, FAQ and quote CTA. JUFTECH adopts specification-led details but excludes unsupported certifications, comparisons, prices, lifecycle claims and failure-rate claims.

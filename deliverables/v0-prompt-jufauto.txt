@@ -1,0 +1,95 @@
+# Build a complete English B2B industrial automation website for JUFTECH
+
+Create a production-quality responsive multi-page Next.js website for **JUFTECH**, the public brand of **Suzhou Industrial Park Jiufeng Automation Technology Co., Ltd.** The company is based at No. 33 Dongfu Road, Suzhou Industrial Park, China. Verified facts available for the design: founded in 2014, approximately 9,000 m², three workshops. Contact: `info@jufauto.com`, `0512-67678265`, `18913596766`. Formal domain: `jufauto.com`.
+
+Use every attached customer asset according to the attachment binding below. Do not invent products, specifications, certifications, client names, prices, stock, testimonials, awards, equipment counts, service promises or business claims. Never use the words **warranty**, **warranties**, **guarantee**, **guaranteed**, or any equivalent promise. Do not expose customer names, contacts or project-private information visible inside source imagery.
+
+## Visual direction
+
+Create a credible, technically precise industrial B2B identity using the official blue/orange JUFTECH logo as the color anchor. The visual language should feel like engineered automation and control systems: clean light backgrounds, disciplined blue structure, restrained orange signals, strong grid alignment, readable specification-led cards and real customer product images. Avoid generic neon SaaS, floating blobs, excessive glow, dark sci-fi dashboards, template-like white cards over unrelated stock imagery, and full-width black/gray overlays that suppress the equipment.
+
+The site should look designed for overseas engineers, integrators and procurement teams. Use real HTML text and controls; do not generate important text inside images. Maintain WCAG AA contrast. All product images must use `object-fit: contain` on a clean continuous light stage so the full subject remains visible; do not crop equipment to fill cards.
+
+## Required routes and navigation
+
+Header navigation must explicitly include: **Home, Products, Solutions, Capabilities, About, News, Contact**. The logo also links to Home. Build complete routes:
+
+- `/`
+- `/products`
+- `/products/[slug]`
+- `/solutions`
+- `/capabilities`
+- `/about`
+- `/news` with a professional empty state when there are no published articles
+- `/news/[slug]`
+- `/contact`
+
+Use centralized representative static data only for this design stage so Codex can later replace it with Supabase data. Do not implement Supabase, R2, Vercel environment variables, authentication or admin integration in v0.
+
+## Product architecture
+
+Organize the catalogue into these procurement families:
+
+1. Custom Automation Equipment
+2. Automatic Tightening Modules & Tools
+3. Feeding Systems & Tightening Accessories
+4. Rugged & Vehicle-Mounted Tablets
+5. Robotic System Integration
+6. Forming Machines
+7. Heavy Machining
+8. Industrial Control Software Services
+
+Products must support category filtering and clear detail pages with overview, supplied specifications only, applications, image gallery and an RFQ CTA. Do not use one image for multiple unrelated products. One known catalogue item has no unique customer image; provide a neutral “Image pending” state instead of borrowing another image.
+
+## Homepage narrative
+
+Build a rich homepage with at least these distinct sections: three-slide Hero, product-family procurement paths, featured real products, engineering/integration capabilities, automation project workflow, manufacturing evidence, applications/solutions, verified company facts, grouped FAQ, news empty/published state and contact/RFQ.
+
+The three supplied 3840×1600 Banner images must all appear in the Hero carousel:
+
+- Banner 1: subject right, text left, desktop focus 72% center.
+- Banner 2: subject left, text right, desktop focus 34% center.
+- Banner 3: subject right, text left, desktop focus 70% center.
+
+Treat these as customer-supplied advertising compositions, not documentary photos of the company factory. On 390px, preserve the main equipment/building subject and move text into a separate lower panel if needed; do not simply center-crop. Use no full-width dark overlay. Each slide needs an independent heading, concise benefit statement and relevant CTA.
+
+Suggested factual, non-promissory slide themes: “Automation Engineered Around Your Process”, “Integrated Equipment and Manufacturing Capability”, and “From Tightening Modules to Industrial Control Systems”.
+
+## Components and information design
+
+- Product-family and capability cards must use semantically related, consistent line icons; no emoji.
+- FAQ should be grouped by project planning, product selection, integration and technical communication. Use native accessible accordion behavior.
+- News cards must be equal height when real articles exist; no fabricated news.
+- Contact and every RFQ entry point must visually include fields for name, email, phone, company, subject/product and message, plus a clearly designed 4-character image CAPTCHA area and refresh control. This is visual-only in v0; Codex will implement server-side issuance and atomic consumption.
+- Footer copyright: `© {current year} Suzhou Industrial Park Jiufeng Automation Technology Co., Ltd. All rights reserved.` Normalize punctuation so there is only one final period.
+- Footer logo must be larger than a token icon, maintain aspect ratio with `contain`, remain legible on desktop and mobile, and link Home.
+
+## Motion direction
+
+Implement four restrained scenes:
+
+1. Hero 400–500ms crossfade with independent web-text entrance, manual controls and pause.
+2. Every major section and repeated card enters only when that exact element reaches the viewport: 20px desktop / 12px mobile, around 550ms, bounded stagger no more than 240ms.
+3. A short control-signal workflow for Requirement Analysis → Solution Design → Assembly & Integration → Debugging & Verification → Delivery Support; horizontal desktop, vertical mobile.
+4. 150–220ms hover/focus/press feedback for navigation, filters, cards, FAQ, gallery, CTA, CAPTCHA refresh and form controls.
+
+Critical implementation rule: base content is visible by default. Never use a fixed/global timeout to mark off-screen sections as revealed or completed. Failure fallback may make content visible but must not consume future viewport animation. Under `prefers-reduced-motion`, stop autoplay and nonessential movement, and keep all content immediately visible.
+
+## Responsive and quality requirements
+
+Design desktop and 390px deliberately. No horizontal overflow. Mobile navigation, filters, Hero controls, specification tables, galleries, CAPTCHA and footer must remain usable. Provide clear loading, empty, hover, focus, active, disabled and form error/success visual states. Keep one H1 per page and meaningful heading hierarchy. Use descriptive alt text without inventing product claims.
+
+Return the complete website source, not a screenshot or image-only result.
+
+## Attachment binding
+
+- `logo.png`: official latest logo; use in header and footer; derive the favicon from the same mark.
+- `banner-1.jpg`, `banner-2.jpg`, `banner-3.jpg`: mandatory Hero slides in this exact set.
+- `product-custom-automation.jpg`: Custom Automation Equipment representative.
+- `product-tightening.jpg`: Automatic Tightening representative.
+- `product-feeder.jpg`: Feeding Systems representative.
+- `product-rugged-tablet.jpg`: Rugged & Vehicle-Mounted Tablets representative.
+- `product-forming.jpg`: Forming Machines representative.
+- `product-heavy-machining.jpg`: Heavy Machining representative.
+
+Do not replace these attached assets with generic stock images. Do not add video.

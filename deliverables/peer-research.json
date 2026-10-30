@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "customerIndustry": "Industrial automation equipment, automatic tightening and rugged vehicle-mounted control terminals",
+  "products": ["Custom automation equipment", "Automatic tightening modules", "Feeding systems", "Rugged vehicle-mounted tablets", "Robotic integration", "Forming machines", "Heavy machining", "Industrial control software"],
+  "targetBuyers": ["Overseas manufacturing engineers", "Automation system integrators", "Industrial equipment procurement teams", "Fleet and rugged terminal solution providers"],
+  "peers": [
+    {
+      "url": "https://www.weber-online.com/en/", "source": "web", "normalizedDomain": "weber-online.com",
+      "pagesReviewed": [
+        {"kind":"home","url":"https://www.weber-online.com/en/","observation":"Product groups lead into technology principles, industrial use and capability evidence.","checkedAt":"2026-10-30T11:00:00+08:00","evidence":{"path":"deliverables/blueprint-evidence/weber-home.txt","sha256":"03361f51ffa026b6a75271612f4ecf7e37497fe0f0d975348fa74e073920130e"}},
+        {"kind":"navigation","url":"https://www.weber-online.com/en/","observation":"Navigation separates products, technology, industries, company and contact paths.","checkedAt":"2026-10-30T11:00:00+08:00","evidence":{"path":"deliverables/blueprint-evidence/weber-navigation.txt","sha256":"be34a5bc22bf4134771b9791c5454184f306377e1b2d1e92c25ec2f3d41fdf36"}},
+        {"kind":"products","url":"https://www.weber-online.com/en/fixtured-screwdriving-systems/","observation":"Category introduction is followed by concrete unit families and application differences.","checkedAt":"2026-10-30T11:00:00+08:00","evidence":{"path":"deliverables/blueprint-evidence/weber-products.txt","sha256":"c12a98a73b6c76d15e371c0904f00707f264a98223e828c6398d46d34f6d349c"}}
+      ],
+      "overseasEvidence":{"country":"Germany","whyCompetitor":"Official overseas manufacturer serving automatic screwdriving, feeding and assembly automation procurement.","sourceUrl":"https://www.weber-online.com/en/"},
+      "homeSections":["Product groups","Technology principle","Industrial capability","References","News","FAQ"], "navigation":["Products","Technology","Industries","Company","Contact"], "productTaxonomy":["Fixtured screwdriving","Handheld screwdriving","Feeding","Control","System solutions"], "adopt":["Product-first procurement navigation","Technology-to-product cross-links","Concise category summaries"], "reject":["Warranty language","Unverified leadership claims","Third-party brand content"],
+      "evidence":[{"url":"https://www.weber-online.com/en/","observation":"Homepage product groups and technology narrative reviewed."},{"url":"https://www.weber-online.com/en/fixtured-screwdriving-systems/","observation":"Category and unit-family structure reviewed."}]
+    },
+    {
+      "url": "https://www.carlsoneng.com/", "source": "web", "normalizedDomain": "carlsoneng.com",
+      "pagesReviewed": [
+        {"kind":"home","url":"https://www.carlsoneng.com/","observation":"Buyers can enter by industry, application or product family.","checkedAt":"2026-10-30T11:00:00+08:00","evidence":{"path":"deliverables/blueprint-evidence/carlson-home.txt","sha256":"c82a522a7f1d52e00d121516363f7ccdaad6ebcdca5f7d0fa963287ea900d649"}},
+        {"kind":"navigation","url":"https://www.carlsoneng.com/","observation":"Products, Industries, Applications, Company and Contact are separate top-level paths.","checkedAt":"2026-10-30T11:00:00+08:00","evidence":{"path":"deliverables/blueprint-evidence/carlson-navigation.txt","sha256":"b30970d6daae58dc5fc6b177331cd2d057cc7e813eb1a55ac6eb3edfaafd4260"}},
+        {"kind":"products","url":"https://www.carlsoneng.com/products/","observation":"The catalogue groups drive heads, feeders and accessories before concrete types.","checkedAt":"2026-10-30T11:00:00+08:00","evidence":{"path":"deliverables/blueprint-evidence/carlson-products.txt","sha256":"759295b068c2358db4a0f06697e3f169107c976de12eb70bbeb79da6a38d6c96"}}
+      ],
+      "overseasEvidence":{"country":"United States","whyCompetitor":"Official overseas manufacturer focused on automatic screwdriving, feeding and automation integration.","sourceUrl":"https://www.carlsoneng.com/"},
+      "homeSections":["Industries","Applications","Product families","Company capability","Contact","News"], "navigation":["Products","Industries","Applications","Company","Contact"], "productTaxonomy":["Fixtured drive heads","Handheld drive heads","Screw feeders","Accessories"], "adopt":["Industry and application dual entry","Product-family hierarchy","Visible RFQ path"], "reject":["World-leading claims","Competitor disparagement","Unverified installation counts"],
+      "evidence":[{"url":"https://www.carlsoneng.com/","observation":"Homepage and navigation reviewed."},{"url":"https://www.carlsoneng.com/products/","observation":"Product-family hierarchy reviewed."}]
+    },
+    {
+      "url": "https://www.waysion.com/", "source": "web", "normalizedDomain": "waysion.com",
+      "pagesReviewed": [
+        {"kind":"home","url":"https://www.waysion.com/","observation":"Featured terminals connect to browsing by application, size and operating system.","checkedAt":"2026-10-30T11:00:00+08:00","evidence":{"path":"deliverables/blueprint-evidence/waysion-home.txt","sha256":"a7bb8de6d95a5f5c437bafcdc2704fb8303d8ea0de803533fdfb3c148597c89c"}},
+        {"kind":"navigation","url":"https://www.waysion.com/","observation":"Product, solution, company, resource and contact paths are cross-linked.","checkedAt":"2026-10-30T11:00:00+08:00","evidence":{"path":"deliverables/blueprint-evidence/waysion-navigation.txt","sha256":"77982094874a2eec8a7be0340087335bbc27e658e37b39b0fcd236eb95ddd60f"}},
+        {"kind":"products","url":"https://www.waysion.com/product-type/rugged-tablet/","observation":"Model cards expose key interfaces and uses; details use quick facts, specifications, use cases and FAQ.","checkedAt":"2026-10-30T11:00:00+08:00","evidence":{"path":"deliverables/blueprint-evidence/waysion-products.txt","sha256":"d396fdb271e5432a82ecc4d61d782e4d8e4d4f3594651cb12cc0a8a62ae1ec54"}}
+      ],
+      "overseasEvidence":{"country":"China, export-oriented overseas market website","whyCompetitor":"Official English-language manufacturer site for rugged vehicle-mounted and industrial tablets sold to overseas buyers.","sourceUrl":"https://www.waysion.com/"},
+      "homeSections":["Featured models","Application solutions","Browse by size","Browse by operating system","Industry capability","Contact"], "navigation":["Products","Solutions","About","Resources","Contact"], "productTaxonomy":["Screen size","Operating system","Vehicle application","Model"], "adopt":["Multiple rugged-terminal buying dimensions","Specification-led details","Use-case and FAQ support"], "reject":["Competitor disparagement","Unsupported certifications","Prices, lifecycle and failure-rate claims"],
+      "evidence":[{"url":"https://www.waysion.com/","observation":"Homepage and model-entry structure reviewed."},{"url":"https://www.waysion.com/product-type/rugged-tablet/","observation":"Category structure reviewed."},{"url":"https://www.waysion.com/v7s-rugged-android-tablet/","observation":"Specification-led detail structure reviewed."}]
+    }
+  ],
+  "caseIntake": []
+}

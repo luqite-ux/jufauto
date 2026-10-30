@@ -1,0 +1,42 @@
+{
+  "context": {
+    "projectId": "project-c29b783d-656c-498c-8d24-e84d54970a5b",
+    "runId": "run-5a872148-33a5-4dca-973f-08d9d28aa9d9",
+    "purpose": "build"
+  },
+  "scope": "current-run-only",
+  "otherRunIds": [],
+  "checkedAt": "2026-10-30T13:00:04.451Z",
+  "complete": false,
+  "issues": [
+    "QUERY_FAILED",
+    "DELIVERY_UNRECORDED"
+  ],
+  "pending": 0,
+  "failedQueryCount": 1,
+  "queries": [
+    {
+      "receiptPath": "D:\\Cursor\\Grand\\dulizhan\\jufauto\\deliverables\\case-query-failed-a107d88b-defb-4e26-a5b3-f8cfc68ae75e.json",
+      "requestId": "failed-a107d88b-defb-4e26-a5b3-f8cfc68ae75e",
+      "request": {
+        "match": "fuzzy",
+        "sort": "relevance",
+        "limit": "5",
+        "query": "industrial automation screwdriving rugged vehicle tablet",
+        "industry": "Industrial Automation Equipment"
+      },
+      "status": 0,
+      "decision": "none",
+      "decisionSent": true,
+      "caseSlugs": [],
+      "reason": "Internal case search was attempted and returned NETWORK_UNAVAILABLE; no internal case is claimed. Information architecture references only, no copied brand, layout, media, claims or code.",
+      "externalReferences": [
+        "https://www.weber-online.com/en/",
+        "https://www.carlsoneng.com/",
+        "https://www.waysion.com/"
+      ]
+    }
+  ],
+  "deliveries": [],
+  "note": "Current run only; other runs are not certified. Adoption is agent-reported, not Owner acceptance or proven design improvement."
+}
