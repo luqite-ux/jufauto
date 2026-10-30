@@ -7,7 +7,7 @@ import type { NewsArticle } from '@/lib/site-data'
 import { btnOutline } from '@/lib/ui'
 import { cn } from '@/lib/utils'
 
-export function FaqSection({ headingId = 'faq-title' }: { headingId?: string }) {
+export function FaqSection({ headingId = 'faq-title', groups }: { headingId?: string; groups?: { title: string; items: { q: string; a: string }[] }[] }) {
   return (
     <section aria-labelledby={headingId} className="py-16 md:py-24">
       <div className="wrap">
@@ -19,7 +19,7 @@ export function FaqSection({ headingId = 'faq-title' }: { headingId?: string }) 
           />
         </div>
         <div className="mt-10">
-          <FaqGroups />
+          <FaqGroups groups={groups} />
         </div>
       </div>
     </section>

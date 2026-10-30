@@ -1,0 +1,11 @@
+{
+  "pages": { "home": { "order": ["hero", "faq", "seo"], "modules": {
+    "hero": { "hidden": false, "values": { "slides": [
+      { "id": "process", "eyebrow": { "en": "Custom automation equipment" }, "title": { "en": "Automation Engineered Around Your Process" }, "body": { "en": "Share the part, the process steps and the plant layout. JUFTECH engineers review them and propose equipment, tightening, feeding and controls to fit." }, "primary_label": { "en": "Request a Quote" }, "primary_href": "/contact#rfq", "secondary_label": { "en": "Browse Products" }, "secondary_href": "/products" },
+      { "id": "integrated", "eyebrow": { "en": "Capability" }, "title": { "en": "Integrated Equipment and Manufacturing Capability" }, "body": { "en": "Equipment integration, machining and assembly organised across three workshops and approximately 9,000 m² in Suzhou Industrial Park." }, "primary_label": { "en": "View Capabilities" }, "primary_href": "/capabilities", "secondary_label": { "en": "About JUFTECH" }, "secondary_href": "/about" },
+      { "id": "systems", "eyebrow": { "en": "Nine product families" }, "title": { "en": "From Tightening Modules to Industrial Control Systems" }, "body": { "en": "Source tightening, feeding, robotic, forming, machining, tablet and software items through one engineering contact." }, "primary_label": { "en": "Product Families" }, "primary_href": "/products", "secondary_label": { "en": "Control Software Services" }, "secondary_href": "/products?family=outsourcing-services-for-control-software-plc-labview-c" }
+    ]}},
+    "faq": { "hidden": false, "values": { "items": [] } },
+    "seo": { "hidden": false, "values": { "title": { "en": "Custom Automation & Assembly Systems | JUFTECH" }, "description": { "en": "Explore custom automation lines, tightening modules, feeding systems, robot integration and industrial control services from JUFTECH in Suzhou." } }
+  }}}}
+}

@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "fontFamilies": [{ "key": "site-sans", "label": "Site default sans" }, { "key": "site-mono", "label": "Site technical mono" }],
+  "pages": [{
+    "key": "home", "path": "/", "label": "Homepage",
+    "modules": [
+      { "key": "hero", "type": "hero", "label": "Hero carousel", "canHide": false, "canReorder": false, "fields": [
+        { "key": "slides", "type": "repeat", "label": "Slides", "maxItems": 3, "fields": [
+          { "key": "eyebrow", "type": "text", "label": "Eyebrow", "localized": true, "required": true, "maxLength": 80 },
+          { "key": "title", "type": "text", "label": "Title", "localized": true, "required": true, "maxLength": 100, "typography": { "fontFamilies": ["site-sans"], "fontWeights": [500, 600, 700], "fontSize": { "min": 26, "max": 48 }, "defaults": { "fontFamily": "site-sans", "fontWeight": 600, "fontSizeDesktop": 40, "fontSizeMobile": 28 } } },
+          { "key": "body", "type": "textarea", "label": "Body", "localized": true, "required": true, "maxLength": 280 },
+          { "key": "primary_label", "type": "text", "label": "Primary CTA", "localized": true, "required": true, "maxLength": 40 },
+          { "key": "primary_href", "type": "link", "label": "Primary link", "required": true },
+          { "key": "secondary_label", "type": "text", "label": "Secondary CTA", "localized": true, "required": true, "maxLength": 40 },
+          { "key": "secondary_href", "type": "link", "label": "Secondary link", "required": true }
+        ]}
+      ]},
+      { "key": "faq", "type": "faq", "label": "Homepage FAQ", "canHide": false, "canReorder": false, "fields": [
+        { "key": "items", "type": "repeat", "label": "FAQ items", "maxItems": 24, "fields": [
+          { "key": "group", "type": "text", "label": "Group", "localized": true, "required": true, "maxLength": 60 },
+          { "key": "question", "type": "text", "label": "Question", "localized": true, "required": true, "maxLength": 180 },
+          { "key": "answer", "type": "textarea", "label": "Answer", "localized": true, "required": true, "maxLength": 800 }
+        ]}
+      ]},
+      { "key": "seo", "type": "seo", "label": "Homepage SEO", "canHide": false, "canReorder": false, "fields": [
+        { "key": "title", "type": "text", "label": "SEO title", "localized": true, "required": true, "maxLength": 70 },
+        { "key": "description", "type": "textarea", "label": "SEO description", "localized": true, "required": true, "maxLength": 170 }
+      ]}
+    ]
+  }]
+}

@@ -4,18 +4,18 @@ import { useEffect, useState, type CSSProperties } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ChevronLeft, ChevronRight, Pause, Play } from 'lucide-react'
-import { HERO_SLIDES } from '@/lib/site-data'
+import { HERO_SLIDES, type HeroSlide } from '@/lib/site-data'
 import { btnOutline, btnSignal } from '@/lib/ui'
 import { cn } from '@/lib/utils'
 
 const controlButton =
   'inline-flex size-11 items-center justify-center rounded-md text-ink transition-[background-color,color,transform] duration-200 hover:bg-accent hover:text-primary active:scale-95 focus-visible:outline-2 focus-visible:outline-ring'
 
-export function HeroCarousel() {
+export function HeroCarousel({ slides = HERO_SLIDES }: { slides?: HeroSlide[] }) {
   const [index, setIndex] = useState(0)
   const [playing, setPlaying] = useState(true)
   const [held, setHeld] = useState(false)
-  const total = HERO_SLIDES.length
+  const total = slides.length
 
   useEffect(() => {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) setPlaying(false)
@@ -37,7 +37,7 @@ export function HeroCarousel() {
       <h1 className="sr-only">JUFTECH industrial automation equipment and control systems</h1>
 
       <div className="grid" aria-live={playing ? 'off' : 'polite'}>
-        {HERO_SLIDES.map((slide, i) => {
+        {slides.map((slide, i) => {
           const active = i === index
           const imageStyle = {
             '--fx-d': `${slide.focusDesktop}%`,
@@ -138,7 +138,7 @@ export function HeroCarousel() {
             </button>
 
             <ul className="ml-1 flex items-center border-l border-border pl-1">
-              {HERO_SLIDES.map((slide, i) => {
+              {slides.map((slide, i) => {
                 const active = i === index
                 return (
                   <li key={slide.id}>

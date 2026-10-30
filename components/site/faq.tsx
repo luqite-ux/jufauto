@@ -2,10 +2,10 @@ import { ChevronDown } from 'lucide-react'
 import { Reveal } from '@/components/site/reveal'
 import { FAQ_GROUPS } from '@/lib/site-data'
 
-export function FaqGroups() {
+export function FaqGroups({ groups = FAQ_GROUPS }: { groups?: typeof FAQ_GROUPS }) {
   return (
     <div className="grid gap-x-10 gap-y-10 lg:grid-cols-2">
-      {FAQ_GROUPS.map((group, gi) => (
+      {groups.map((group, gi) => (
         <Reveal key={group.title} index={gi % 2} as="div">
           <h3 className="flex items-center gap-3 font-mono text-xs font-medium uppercase tracking-[0.16em] text-signal-ink">
             <span className="tabular-nums text-primary">{String(gi + 1).padStart(2, '0')}</span>
