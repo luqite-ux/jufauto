@@ -4,6 +4,7 @@ import { RfqSection } from '@/components/site/rfq-section'
 
 export const metadata: Metadata = {
   title: 'Contact',
+  alternates: { canonical: '/contact' },
   description:
     'Contact JUFTECH engineers or send a request for quotation. Email info@jufauto.com or call 0512-67678265.',
 }

@@ -5,6 +5,7 @@ import { RfqSection } from '@/components/site/rfq-section'
 
 export const metadata: Metadata = {
   title: 'Solutions',
+  alternates: { canonical: '/solutions' },
   description:
     'Application areas where JUFTECH combines automation equipment, tightening modules, feeding systems, robotic integration and control software.',
 }

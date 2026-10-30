@@ -9,6 +9,7 @@ import { COMPANY, PRODUCT_FAMILIES } from '@/lib/site-data'
 
 export const metadata: Metadata = {
   title: 'About',
+  alternates: { canonical: '/about' },
   description:
     'About JUFTECH, the public brand of Suzhou Industrial Park Jiufeng Automation Technology Co., Ltd., an industrial automation company founded in 2014.',
 }

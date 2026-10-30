@@ -7,6 +7,7 @@ export const revalidate = 60
 
 export const metadata: Metadata = {
   title: 'News',
+  alternates: { canonical: '/news' },
   description: 'Company and product news from JUFTECH.',
 }
 

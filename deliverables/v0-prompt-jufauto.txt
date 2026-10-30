@@ -2,7 +2,7 @@
 
 Create a production-quality responsive multi-page Next.js website for **JUFTECH**, the public brand of **Suzhou Industrial Park Jiufeng Automation Technology Co., Ltd.** The company is based at No. 33 Dongfu Road, Suzhou Industrial Park, China. Verified facts available for the design: founded in 2014, approximately 9,000 m², three workshops. Contact: `info@jufauto.com`, `0512-67678265`, `18913596766`. Formal domain: `jufauto.com`.
 
-Use every attached customer asset according to the attachment binding below. Do not invent products, specifications, certifications, client names, prices, stock, testimonials, awards, equipment counts, service promises or business claims. Never use the words **warranty**, **warranties**, **guarantee**, **guaranteed**, or any equivalent promise. Do not expose customer names, contacts or project-private information visible inside source imagery.
+Use every attached customer asset according to the attachment binding below. Do not invent products, specifications, certifications, client names, prices, stock, testimonials, awards, equipment counts, service promises or business claims. Do not use prohibited service-commitment vocabulary or any equivalent promise. Do not expose customer names, contacts or project-private information visible inside source imagery.
 
 ## Visual direction
 

@@ -15,6 +15,7 @@ import { getSiteContent } from '@/lib/site-content/site-content'
 import { HERO_SLIDES, FAQ_GROUPS, type HeroSlide } from '@/lib/site-data'
 
 export const revalidate = 60
+export const metadata: Metadata = { alternates: { canonical: '/' } }
 
 export default async function HomePage() {
   const [{ products, families }, articles] = await Promise.all([fetchProductsData(), getPublishedArticles()])
@@ -45,3 +46,4 @@ export default async function HomePage() {
     </>
   )
 }
+import type { Metadata } from 'next'

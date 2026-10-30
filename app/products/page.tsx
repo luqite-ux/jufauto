@@ -8,6 +8,7 @@ export const revalidate = 60
 
 export const metadata: Metadata = {
   title: 'Products',
+  alternates: { canonical: '/products' },
   description:
     'Browse JUFTECH product families: custom automation equipment, automatic tightening modules, feeding systems, rugged tablets, robotic integration, forming machines, heavy machining and control software.',
 }

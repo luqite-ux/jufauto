@@ -5,6 +5,7 @@ import { RfqSection } from '@/components/site/rfq-section'
 
 export const metadata: Metadata = {
   title: 'Capabilities',
+  alternates: { canonical: '/capabilities' },
   description:
     'JUFTECH engineering and integration capabilities: custom equipment design, tightening and feeding, robotic integration, control software, forming and heavy machining.',
 }
