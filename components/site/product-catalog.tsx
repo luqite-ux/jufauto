@@ -43,8 +43,8 @@ export function ProductCatalog({
     )
 
   return (
-    <div className="grid gap-8 lg:grid-cols-[290px_1fr] lg:gap-10">
-      <div className="lg:sticky lg:top-28 lg:self-start">
+    <div className="grid w-full min-w-0 gap-8 lg:grid-cols-[290px_minmax(0,1fr)] lg:gap-10">
+      <div className="min-w-0 lg:sticky lg:top-28 lg:self-start">
         <h2 className="mb-3 font-mono text-xs font-medium uppercase tracking-[0.16em] text-signal-ink">
           Filter by family
         </h2>
@@ -75,7 +75,7 @@ export function ProductCatalog({
         </div>
       </div>
 
-      <div>
+      <div className="min-w-0">
         <p className="mb-5 text-sm text-muted-foreground" role="status" aria-live="polite">
           Showing <span className="font-semibold text-ink">{visible.length}</span>{' '}
           {visible.length === 1 ? 'item' : 'items'}
