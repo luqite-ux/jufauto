@@ -377,7 +377,7 @@ export const HERO_SLIDES: HeroSlide[] = [
     image: '/images/banner-3.jpg',
     imageAlt:
       'Advertising illustration of tiered platforms showing automation equipment, machine tools, a rugged tablet, machined parts and a control software screen',
-    eyebrow: 'Eight product families',
+    eyebrow: 'Nine product families',
     title: 'From Tightening Modules to Industrial Control Systems',
     body: 'Source tightening, feeding, robotic, forming, machining, tablet and software items through one engineering contact.',
     primary: { label: 'Product Families', href: '/products' },
@@ -502,7 +502,7 @@ export const FACTS: { value: string; label: string; note: string }[] = [
   { value: '2014', label: 'Founded', note: 'Operating in Suzhou Industrial Park' },
   { value: '≈ 9,000 m²', label: 'Facility area', note: 'Approximate figure' },
   { value: '3', label: 'Workshops', note: 'Equipment, assembly and machining resources' },
-  { value: '8', label: 'Product families', note: 'Catalogue organised for procurement' },
+  { value: '9', label: 'Product families', note: 'Catalogue organised for procurement' },
 ]
 
 export const EVIDENCE: { src: string; alt: string; caption: string }[] = [

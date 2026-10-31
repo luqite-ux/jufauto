@@ -65,4 +65,7 @@ test('fallback product families mirror the nine production family slugs', async 
   ]) {
     assert.match(fallback, new RegExp(`slug: '${slug}'`))
   }
+  assert.doesNotMatch(fallback, /eyebrow: 'Eight product families'/)
+  assert.doesNotMatch(fallback, /\{ value: '8', label: 'Product families'/)
+  assert.match(fallback, /\{ value: '9', label: 'Product families'/)
 })
