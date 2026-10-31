@@ -132,6 +132,7 @@ export type Product = {
   summary: string
   overview: string[]
   specs: { label: string; value: string }[]
+  features?: string[]
   applications: string[]
   images: ProductImage[]
   featured?: boolean

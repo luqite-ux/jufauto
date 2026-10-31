@@ -96,6 +96,7 @@ export async function fetchProductsData(): Promise<{ products: Product[]; famili
       summary,
       overview: overview ? [overview] : [summary],
       specs,
+      features: strings(row.features_i18n?.en ?? row.features),
       applications: strings(row.applications_i18n?.en ?? row.applications),
       images,
       featured: Number(row.sort_order) <= 6,

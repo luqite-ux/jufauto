@@ -26,6 +26,9 @@ yarn-error.log*
 # Codex delivery evidence (kept locally until final retention/cleanup)
 .codex-delivery/
 
+# Temporary source-material staging; final catalogue images are served from R2.
+/public/images/catalogue/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

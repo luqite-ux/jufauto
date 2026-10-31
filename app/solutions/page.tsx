@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { ProcessSection, SolutionsPreview } from '@/components/home/engineering-sections'
+import { CaseStudiesSection, ProcessSection, SolutionsPreview } from '@/components/home/engineering-sections'
 import { PageHeader } from '@/components/site/page-header'
 import { RfqSection } from '@/components/site/rfq-section'
 
@@ -20,6 +20,7 @@ export default function SolutionsPage() {
         crumbs={[{ label: 'Solutions' }]}
       />
       <SolutionsPreview detailed />
+      <CaseStudiesSection />
       <ProcessSection />
       <RfqSection />
     </>

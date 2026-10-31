@@ -2,6 +2,7 @@ import { FamilyPaths, FeaturedProducts } from '@/components/home/catalogue-secti
 import {
   CapabilityGrid,
   EvidenceSection,
+  CaseStudiesSection,
   FactsBand,
   ProcessSection,
   SolutionsPreview,
@@ -12,7 +13,8 @@ import { RfqSection } from '@/components/site/rfq-section'
 import { fetchProductsData } from '@/lib/products-db'
 import { getPublishedArticles } from '@/lib/articles-db'
 import { getSiteContent } from '@/lib/site-content/site-content'
-import { HERO_SLIDES, FAQ_GROUPS, type HeroSlide } from '@/lib/site-data'
+import { HERO_SLIDES, type HeroSlide } from '@/lib/site-data'
+import { PROCUREMENT_FAQ } from '@/content/juftech-content.mjs'
 
 export const revalidate = 60
 export const metadata: Metadata = { alternates: { canonical: '/' } }
@@ -22,14 +24,18 @@ export default async function HomePage() {
   const snapshot = await getSiteContent('en').catch(() => null)
   const home = snapshot?.pages.find((page) => page.path === '/')
   const heroValues = home?.modules.find((module) => module.key === 'hero')?.values
-  const faqValues = home?.modules.find((module) => module.key === 'faq')?.values
   const configuredSlides = Array.isArray(heroValues?.slides) ? heroValues.slides : []
   const slides: HeroSlide[] = configuredSlides.length === HERO_SLIDES.length ? HERO_SLIDES.map((fallback, index) => {
     const value = configuredSlides[index] as Record<string, unknown>
     return { ...fallback, eyebrow: String(value.eyebrow || fallback.eyebrow), title: String(value.title || fallback.title), body: String(value.body || fallback.body), primary: { label: String(value.primary_label || fallback.primary.label), href: String(value.primary_href || fallback.primary.href) }, secondary: { label: String(value.secondary_label || fallback.secondary.label), href: String(value.secondary_href || fallback.secondary.href) } }
   }) : HERO_SLIDES
-  const faqItems = Array.isArray(faqValues?.items) ? faqValues.items as Record<string, unknown>[] : []
-  const groups = faqItems.length ? Object.values(Object.groupBy(faqItems, (item) => String(item.group || 'General'))).map((items) => ({ title: String(items?.[0]?.group || 'General'), items: (items || []).map((item) => ({ q: String(item.question || ''), a: String(item.answer || '') })) })) : FAQ_GROUPS
+  const sourceGroups = [
+    { title: 'Project fit', items: PROCUREMENT_FAQ.slice(0, 6) },
+    { title: 'Quotation & commercial terms', items: PROCUREMENT_FAQ.slice(6, 12) },
+    { title: 'Schedule & quality', items: PROCUREMENT_FAQ.slice(12, 19) },
+    { title: 'Engineering integration', items: PROCUREMENT_FAQ.slice(19) },
+  ]
+  const groups = sourceGroups
   return (
     <>
       <HeroCarousel slides={slides} />
@@ -38,6 +44,7 @@ export default async function HomePage() {
       <CapabilityGrid />
       <ProcessSection />
       <EvidenceSection />
+      <CaseStudiesSection />
       <SolutionsPreview />
       <FactsBand />
       <FaqSection groups={groups} />

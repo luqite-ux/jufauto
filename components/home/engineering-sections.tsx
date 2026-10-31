@@ -8,6 +8,7 @@ import { Workflow } from '@/components/site/workflow'
 import { CAPABILITIES, EVIDENCE, FACTS, SOLUTIONS } from '@/lib/site-data'
 import { btnOutline, btnSignal } from '@/lib/ui'
 import { cn } from '@/lib/utils'
+import { CASE_STUDIES } from '@/content/juftech-content.mjs'
 
 export function CapabilityGrid({ titleId = 'capabilities-title', heading = true }: { titleId?: string; heading?: boolean }) {
   return (
@@ -146,6 +147,36 @@ export function SolutionsPreview({ detailed = false }: { detailed?: boolean }) {
                     <ArrowRight className="size-4" strokeWidth={1.75} aria-hidden="true" />
                   </Link>
                 )}
+              </article>
+            </Reveal>
+          ))}
+        </ul>
+      </div>
+    </section>
+  )
+}
+
+export function CaseStudiesSection() {
+  return (
+    <section aria-labelledby="case-studies-title" className="border-y border-border bg-stage py-16 md:py-24">
+      <div className="wrap">
+        <div id="case-studies-title">
+          <SectionHeading
+            eyebrow="Selected project types"
+            title="Engineering experience shown without exposing customer identities"
+            description="Representative scopes reconstructed from supplied project records. Customer names, plant locations and confidential parameters are intentionally omitted."
+          />
+        </div>
+        <ul className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          {CASE_STUDIES.map((item, index) => (
+            <Reveal as="li" key={item.title} index={index % 3} className="h-full">
+              <article className="flex h-full flex-col rounded-lg border border-border bg-white p-6">
+                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">{item.sector}</p>
+                <h3 className="mt-3 text-lg font-semibold text-ink">{item.title}</h3>
+                <p className="mt-5 text-xs font-semibold uppercase tracking-wide text-muted-foreground">Process</p>
+                <ul className="mt-2 space-y-2 text-sm text-ink">{item.process.map((value) => <li key={value}>• {value}</li>)}</ul>
+                <p className="mt-5 border-t border-border pt-4 text-xs font-semibold uppercase tracking-wide text-muted-foreground">JUFTECH scope</p>
+                <ul className="mt-2 space-y-2 text-sm text-ink">{item.scope.map((value) => <li key={value}>• {value}</li>)}</ul>
               </article>
             </Reveal>
           ))}

@@ -67,6 +67,18 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
               </div>
             </Reveal>
 
+            {(product.features?.length ?? 0) > 0 && <Reveal>
+              <h2 className="text-2xl font-semibold text-ink">Key features</h2>
+              <ul className="mt-4 grid gap-3 sm:grid-cols-2">
+                {(product.features ?? []).map((item) => (
+                  <li key={item} className="flex gap-3 rounded-md border border-border bg-white p-3.5 text-sm text-ink">
+                    <Check className="mt-0.5 size-4 shrink-0 text-primary" strokeWidth={2} aria-hidden="true" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </Reveal>}
+
             <Reveal>
               <h2 className="text-2xl font-semibold text-ink">Specifications</h2>
               <p className="mt-2 text-sm text-muted-foreground">Only the parameters supplied for this item are listed.</p>
