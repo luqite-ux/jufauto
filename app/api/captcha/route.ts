@@ -18,14 +18,14 @@ type CaptchaRouteDependencies = {
 
 const FORM_SCOPE_PATTERN = /^[A-Za-z0-9_-]{16,160}$/
 const NO_STORE_HEADERS = { 'Cache-Control': 'no-store, max-age=0' }
-const SERVICE_UNAVAILABLE = { error: '验证码服务暂时不可用，请稍后重试' }
+const SERVICE_UNAVAILABLE = { error: 'The security-code service is temporarily unavailable. Please try again later.' }
 
 export function createCaptchaGetHandler(dependencies: CaptchaRouteDependencies = {}) {
   return async function GET(request: Request) {
     const scope = new URL(request.url).searchParams.get('scope')?.trim() ?? ''
     if (!FORM_SCOPE_PATTERN.test(scope)) {
       return Response.json(
-        { error: '验证码请求无效' },
+        { error: 'The security-code request is invalid.' },
         { status: 400, headers: NO_STORE_HEADERS },
       )
     }

@@ -50,7 +50,7 @@ export function InquiryCaptchaField({
       setChallenge(body)
     } catch {
       if (!requests.isCurrent(request)) return
-      setError('验证码加载失败，请点击“换一张”重试')
+      setError('The security code could not be loaded. Select “Refresh code” to try again.')
     } finally {
       if (requests.isCurrent(request)) setLoading(false)
     }
@@ -64,7 +64,7 @@ export function InquiryCaptchaField({
   return (
     <div className={className}>
       <label htmlFor={answerName} className="mb-2 block text-sm font-medium">
-        验证码
+        Security check
       </label>
       <div className="flex flex-wrap items-center gap-3">
         <div className="flex h-14 w-40 items-center justify-center overflow-hidden rounded-lg border bg-slate-50">
@@ -73,12 +73,12 @@ export function InquiryCaptchaField({
             // eslint-disable-next-line @next/next/no-img-element
             <img
               src={`data:image/svg+xml;charset=utf-8,${encodeURIComponent(challenge.svg)}`}
-              alt="4 位验证码图片"
+              alt="Four-character security code"
               width={160}
               height={56}
             />
           ) : (
-            <span className="px-2 text-center text-xs text-slate-500">{loading ? '正在加载…' : '加载失败'}</span>
+            <span className="px-2 text-center text-xs text-slate-500">{loading ? 'Loading…' : 'Unable to load'}</span>
           )}
         </div>
         <input type="hidden" name={scopeName} value={scope} />
@@ -97,8 +97,9 @@ export function InquiryCaptchaField({
           spellCheck={false}
           inputMode="text"
           aria-describedby={error ? `${answerName}-error` : undefined}
-          className="h-11 w-32 rounded-lg border border-slate-300 bg-white px-3 text-base uppercase tracking-[0.25em] text-slate-950 outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-600/20 disabled:cursor-not-allowed disabled:bg-slate-100"
-          placeholder="输入验证码"
+          className="h-11 w-full rounded-lg border border-slate-300 bg-white px-3 text-base uppercase tracking-[0.18em] text-slate-950 outline-none placeholder:normal-case placeholder:tracking-normal focus:border-blue-600 focus:ring-2 focus:ring-blue-600/20 disabled:cursor-not-allowed disabled:bg-slate-100 sm:w-64"
+          placeholder="Enter the 4-character code"
+          aria-label="Enter the 4-character security code"
         />
         <button
           type="button"
@@ -106,7 +107,7 @@ export function InquiryCaptchaField({
           disabled={loading}
           className="h-11 rounded-lg border border-slate-300 bg-white px-3 text-sm font-medium text-slate-800 hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-600 disabled:cursor-not-allowed disabled:opacity-60"
         >
-          换一张
+          Refresh code
         </button>
       </div>
       {error ? (

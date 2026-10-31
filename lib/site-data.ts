@@ -58,63 +58,66 @@ export type ProductFamily = {
 
 export const PRODUCT_FAMILIES: ProductFamily[] = [
   {
-    slug: 'custom-automation-equipment',
+    slug: 'non-standard-automated-customized-equipment',
     name: 'Custom Automation Equipment',
-    short: 'Purpose-built equipment and assembly lines configured around your part and process.',
-    description:
-      'Equipment designed from the part, the process steps and the plant layout you describe, from single stations to multi-station lines.',
+    short: 'Purpose-built assembly equipment and production lines configured around your part, process and plant layout.',
+    description: 'Custom stations and lines developed around the workpiece, process sequence and available production space.',
     icon: 'cog',
   },
   {
-    slug: 'automatic-tightening',
-    name: 'Automatic Tightening Modules & Tools',
-    short: 'Automatic screw-fastening modules and tools for integration into assembly stations.',
-    description:
-      'Fastening modules and tools that are built into automated stations alongside feeding and control.',
+    slug: 'tighten-the-assembly-module-and-tools',
+    name: 'Assembly Tightening Modules & Tools',
+    short: 'Automatic screw-fastening modules and tools for integration into assembly stations and production lines.',
+    description: 'Fastening modules and tools integrated with feeding, controls and the surrounding assembly process.',
     icon: 'wrench',
   },
   {
-    slug: 'feeding-systems',
-    name: 'Feeding Systems & Tightening Accessories',
-    short: 'Bowl feeders and supporting accessories that present fasteners and small parts to a station.',
-    description:
-      'Feeding units and accessories that supply fasteners and small parts to tightening and assembly stations.',
+    slug: 'feeder',
+    name: 'Feeding Systems',
+    short: 'Feeding equipment that presents fasteners and small parts reliably to automated assembly stations.',
+    description: 'Feeding systems configured for the part geometry, required orientation and downstream process.',
     icon: 'funnel',
   },
   {
-    slug: 'rugged-tablets',
+    slug: 'tighten-function-attachments',
+    name: 'Tightening Accessories',
+    short: 'Supporting accessories for screw feeding, positioning, alignment and controlled fastening operations.',
+    description: 'Accessories selected to support stable fastening, part presentation and operator or machine access.',
+    icon: 'workflow',
+  },
+  {
+    slug: 'unmanned-aerial-vehicle-onboard-control-tablet',
     name: 'Rugged & Vehicle-Mounted Tablets',
-    short: 'Ruggedised tablet terminals for field work and in-vehicle use.',
-    description: 'Tablet terminals built for field and vehicle-mounted environments.',
+    short: 'Rugged tablet terminals for vehicle-mounted, field-control and demanding mobile applications.',
+    description: 'Tablet terminals designed for field work, vehicle installation and industrial control interfaces.',
     icon: 'tablet',
   },
   {
-    slug: 'robotic-integration',
+    slug: 'robot-system-integration',
     name: 'Robotic System Integration',
-    short: 'Robot cells and handling systems integrated with tooling, feeding and controls.',
-    description:
-      'Robot-based cells combined with tooling, feeding and control components into a single working system.',
+    short: 'Robot cells and handling systems integrated with tooling, feeding, safety and production controls.',
+    description: 'Robot-based systems assembled with the tooling, controls and safeguards required by the application.',
     icon: 'bot',
   },
   {
-    slug: 'forming-machines',
+    slug: 'forming-machine',
     name: 'Forming Machines',
-    short: 'Forming equipment with electrical control cabinets and guarded machine structures.',
-    description: 'Forming equipment supplied with its electrical control and guarding.',
+    short: 'Forming equipment supplied with electrical controls, guarded structures and application-specific tooling.',
+    description: 'Forming machines configured around the material, process requirements and plant operating conditions.',
     icon: 'hammer',
   },
   {
-    slug: 'heavy-machining',
+    slug: 'heavy-machinery-processing',
     name: 'Heavy Machining',
-    short: 'Large-format machining of heavy parts on gantry-type machine tools.',
-    description: 'Machining of large and heavy workpieces on gantry-type machine tools.',
+    short: 'Large-format machining services for heavy components using gantry-type machine tools.',
+    description: 'Machining support for large and heavy workpieces that require substantial travel and load capacity.',
     icon: 'drill',
   },
   {
-    slug: 'industrial-control-software',
-    name: 'Industrial Control Software Services',
-    short: 'Software and control programming services for automated equipment.',
-    description: 'Control programming and software services that support automated equipment.',
+    slug: 'outsourcing-services-for-control-software-plc-labview-c',
+    name: 'Industrial Control Software Development',
+    short: 'PLC, LabVIEW and C# development services for automated equipment, monitoring and production systems.',
+    description: 'Control and industrial software developed around equipment logic, data collection and operator workflows.',
     icon: 'braces',
   },
 ]
@@ -138,7 +141,7 @@ export const PRODUCTS: Product[] = [
   {
     slug: 'custom-automation-line',
     name: 'Custom Automation Line',
-    familySlug: 'custom-automation-equipment',
+    familySlug: 'non-standard-automated-customized-equipment',
     summary:
       'Framed, guarded multi-station automation line with an operator control panel and integrated conveyance.',
     overview: [
@@ -166,7 +169,7 @@ export const PRODUCTS: Product[] = [
   {
     slug: 'automatic-tightening-module',
     name: 'Automatic Tightening Module',
-    familySlug: 'automatic-tightening',
+    familySlug: 'tighten-the-assembly-module-and-tools',
     summary:
       'Electric screwdriver mounted on a pneumatic slide, intended for integration into automated fastening stations.',
     overview: [
@@ -194,7 +197,7 @@ export const PRODUCTS: Product[] = [
   {
     slug: 'bowl-feeding-system',
     name: 'Bowl Feeding System',
-    familySlug: 'feeding-systems',
+    familySlug: 'feeder',
     summary:
       'Bowl-type feeder on a mounting base with a control unit, valve island and pneumatic fittings.',
     overview: [
@@ -221,7 +224,7 @@ export const PRODUCTS: Product[] = [
   {
     slug: 'rugged-vehicle-mounted-tablet',
     name: 'Rugged Tablet',
-    familySlug: 'rugged-tablets',
+    familySlug: 'unmanned-aerial-vehicle-onboard-control-tablet',
     summary:
       'Ruggedised tablet with a protective housing, shown with a positioning information screen.',
     overview: [
@@ -245,7 +248,7 @@ export const PRODUCTS: Product[] = [
   {
     slug: 'forming-machine',
     name: 'Forming Machine',
-    familySlug: 'forming-machines',
+    familySlug: 'forming-machine',
     summary:
       'Frame-built forming machine with pneumatic actuation, a separate control cabinet and mesh guarding.',
     overview: [
@@ -269,7 +272,7 @@ export const PRODUCTS: Product[] = [
   {
     slug: 'heavy-machining-equipment',
     name: 'Heavy Machining Equipment',
-    familySlug: 'heavy-machining',
+    familySlug: 'heavy-machinery-processing',
     summary:
       'Gantry-type machine tool with a long travelling bed protected by steel telescopic covers.',
     overview: [
@@ -293,7 +296,7 @@ export const PRODUCTS: Product[] = [
   {
     slug: 'robotic-system-integration',
     name: 'Robotic System Integration',
-    familySlug: 'robotic-integration',
+    familySlug: 'robot-system-integration',
     summary:
       'Robot cells integrated with tooling, feeding and control components for handling, assembly or processing tasks.',
     overview: [

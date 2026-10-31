@@ -16,7 +16,7 @@ export function FamilyPaths({ products, families }: { products: Product[]; famil
           <SectionHeading
             eyebrow="Procurement paths"
             title={`${families.length} product families, one engineering contact`}
-            description="Start from the family that matches your sourcing need. Each path lists the catalogue items published for it."
+            description="Choose the family that matches your application, then review the available products or send the engineering team your requirements."
             action={
               <Link href="/products" className={cn(btnOutline, 'self-start md:self-auto')}>
                 All products
@@ -25,23 +25,23 @@ export function FamilyPaths({ products, families }: { products: Product[]; famil
             }
           />
         </div>
-        <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <ul className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {families.map((family, i) => {
             const count = products.filter((item) => item.familySlug === family.slug).length
             return (
-              <Reveal as="li" key={family.slug} index={i % 4} className="h-full">
+              <Reveal as="li" key={family.slug} index={i % 3} className="h-full">
                 <Link
                   href={`/products?family=${family.slug}`}
-                  className="group flex h-full flex-col rounded-lg border border-border bg-white p-5 transition-[border-color,box-shadow,transform] duration-200 hover:-translate-y-0.5 hover:border-primary hover:shadow-[0_16px_36px_-22px_rgba(10,74,158,0.55)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
+                  className="group flex h-full min-h-72 flex-col rounded-lg border border-border bg-white p-6 transition-[border-color,box-shadow,transform] duration-200 hover:-translate-y-0.5 hover:border-primary hover:shadow-[0_16px_36px_-22px_rgba(10,74,158,0.55)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
                 >
                   <div className="flex items-start justify-between">
                     <IconTile name={family.icon} />
                     <span className="font-mono text-xs tabular-nums text-muted-foreground">{String(i + 1).padStart(2, '0')}</span>
                   </div>
-                  <h3 className="mt-5 text-base font-semibold leading-snug text-ink">{family.name}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{family.short}</p>
+                  <h3 className="mt-6 text-lg font-semibold leading-snug text-ink">{family.name}</h3>
+                  <p className="mt-3 text-[15px] leading-relaxed text-muted-foreground">{family.short}</p>
                   <span className="mt-auto flex items-center justify-between pt-5 text-sm font-semibold text-primary">
-                    <span>{count > 0 ? `${count} catalogue ${count === 1 ? 'item' : 'items'}` : 'Request via RFQ'}</span>
+                    <span>{count > 0 ? `${count} ${count === 1 ? 'product' : 'products'}` : 'Request via RFQ'}</span>
                     <ArrowUpRight
                       className="size-4 transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
                       strokeWidth={1.75}
