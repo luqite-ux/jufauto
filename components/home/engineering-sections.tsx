@@ -81,13 +81,13 @@ export function EvidenceSection() {
           {EVIDENCE.map((item, i) => (
             <Reveal as="li" key={item.src} index={i} className="h-full">
               <figure className="h-full overflow-hidden rounded-lg border border-border bg-white">
-                <div className="relative aspect-[4/3] bg-white">
+                <div className="relative aspect-[4/3] overflow-hidden">
                   <Image
                     src={item.src || '/placeholder.svg'}
                     alt={item.alt}
                     fill
                     sizes="(min-width: 768px) 380px, 94vw"
-                    className="object-contain p-2"
+                    className="object-cover transition-transform duration-300 hover:scale-[1.02]"
                   />
                 </div>
                 <figcaption className="border-t border-border px-4 py-3 text-sm text-ink">{item.caption}</figcaption>

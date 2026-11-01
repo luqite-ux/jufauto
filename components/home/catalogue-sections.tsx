@@ -37,8 +37,14 @@ export function FamilyPaths({ products, families }: { products: Product[]; famil
                   href={`/products?family=${family.slug}`}
                   className="group grid h-full grid-cols-[7.5rem_1fr] overflow-hidden rounded-lg border border-border bg-white transition-[border-color,box-shadow,transform] duration-200 hover:-translate-y-0.5 hover:border-primary hover:shadow-[0_16px_36px_-22px_rgba(10,74,158,0.55)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring sm:grid-cols-1"
                 >
-                  <div className="relative flex min-h-32 items-center justify-center bg-stage sm:aspect-[16/9]">
-                    {image ? <Image src={image.src} alt={image.alt} fill sizes="(min-width: 1024px) 360px, (min-width: 640px) 50vw, 120px" className="object-contain p-3 transition-transform duration-300 group-hover:scale-[1.03]" /> : <IconTile name={family.icon} />}
+                  <div className="relative min-h-32 overflow-hidden sm:aspect-[16/9]">
+                    {image ? (
+                      <Image src={image.src} alt={image.alt} fill sizes="(min-width: 1024px) 360px, (min-width: 640px) 50vw, 120px" className="object-cover transition-transform duration-300 group-hover:scale-[1.03]" />
+                    ) : (
+                      <div className="absolute inset-0 flex items-center justify-center bg-stage">
+                        <IconTile name={family.icon} />
+                      </div>
+                    )}
                   </div>
                   <div className="flex min-w-0 flex-col p-4 sm:p-5">
                     <span className="font-mono text-[11px] tabular-nums text-muted-foreground">{String(i + 1).padStart(2, '0')}</span>
