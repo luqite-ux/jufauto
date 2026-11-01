@@ -1,10 +1,9 @@
+import type { Metadata } from 'next'
 import { FamilyPaths, FeaturedProducts } from '@/components/home/catalogue-sections'
 import {
-  CapabilityGrid,
   EvidenceSection,
   CaseStudiesSection,
   FactsBand,
-  ProcessSection,
   SolutionsPreview,
 } from '@/components/home/engineering-sections'
 import { FaqSection, NewsSection } from '@/components/home/faq-news-sections'
@@ -29,28 +28,19 @@ export default async function HomePage() {
     const value = configuredSlides[index] as Record<string, unknown>
     return { ...fallback, eyebrow: String(value.eyebrow || fallback.eyebrow), title: String(value.title || fallback.title), body: String(value.body || fallback.body), primary: { label: String(value.primary_label || fallback.primary.label), href: String(value.primary_href || fallback.primary.href) }, secondary: { label: String(value.secondary_label || fallback.secondary.label), href: String(value.secondary_href || fallback.secondary.href) } }
   }) : HERO_SLIDES
-  const sourceGroups = [
-    { title: 'Project fit', items: PROCUREMENT_FAQ.slice(0, 6) },
-    { title: 'Quotation & commercial terms', items: PROCUREMENT_FAQ.slice(6, 12) },
-    { title: 'Schedule & quality', items: PROCUREMENT_FAQ.slice(12, 19) },
-    { title: 'Engineering integration', items: PROCUREMENT_FAQ.slice(19) },
-  ]
-  const groups = sourceGroups
+  const groups = [{ title: 'Key procurement questions', items: PROCUREMENT_FAQ.slice(0, 6) }]
   return (
     <>
       <HeroCarousel slides={slides} />
+      <FactsBand />
       <FamilyPaths products={products} families={families} />
       <FeaturedProducts products={products} />
-      <CapabilityGrid />
-      <ProcessSection />
+      <SolutionsPreview products={products} limit={3} />
+      <CaseStudiesSection products={products} limit={3} />
       <EvidenceSection />
-      <CaseStudiesSection />
-      <SolutionsPreview />
-      <FactsBand />
       <FaqSection groups={groups} />
-      <NewsSection articles={articles.slice(0, 3)} />
+      {articles.length > 0 ? <NewsSection articles={articles.slice(0, 3)} /> : null}
       <RfqSection />
     </>
   )
 }
-import type { Metadata } from 'next'

@@ -72,12 +72,12 @@ export const PRODUCT_CONTENT = rows.map(([slug, name, category, sourceDirs]) => 
 }))
 
 export const CASE_STUDIES = [
-  { title: 'Multi-station component assembly line', sector: 'Automotive components', process: ['Part feeding and positioning', 'Assembly, inspection and traceability'], scope: ['Mechanical stations and guarding', 'Electrical controls and operator interface'] },
-  { title: 'Motor stator welding equipment', sector: 'Electric drive components', process: ['Stator positioning', 'Controlled welding and result collection'], scope: ['Process tooling', 'Control sequence and safety integration'] },
-  { title: 'Robot loading and unloading cell', sector: 'Industrial manufacturing', process: ['Workpiece identification', 'Robot transfer between process equipment'], scope: ['Robot and end tooling', 'Guarding, interlocks and controls'] },
-  { title: 'Automatic tightening station', sector: 'Assembly manufacturing', process: ['Fastener presentation', 'Controlled tightening and result recording'], scope: ['Feeder and tightening module', 'Fixture, controls and operator access'] },
-  { title: 'Factory environmental monitoring', sector: 'Plant utilities', process: ['Equipment data collection', 'Alarm and operating-state visualisation'], scope: ['PLC communication', 'Supervisory interface and records'] },
-  { title: 'Water treatment monitoring system', sector: 'Process utilities', process: ['Status acquisition and control', 'Trend, alarm and operating records'], scope: ['Control software', 'Operator screens and system communication'] },
+  { productSlug: 'horn-assembly-production-line', title: 'Multi-station component assembly line', sector: 'Automotive components', process: ['Part feeding and positioning', 'Assembly, inspection and traceability'], scope: ['Mechanical stations and guarding', 'Electrical controls and operator interface'] },
+  { productSlug: 'welding-of-motor-stator', title: 'Motor stator welding equipment', sector: 'Electric drive components', process: ['Stator positioning', 'Controlled welding and result collection'], scope: ['Process tooling', 'Control sequence and safety integration'] },
+  { productSlug: 'gear-shifter-production-line-43', title: 'Robot loading and unloading cell', sector: 'Industrial manufacturing', process: ['Workpiece identification', 'Robot transfer between process equipment'], scope: ['Robot and end tooling', 'Guarding, interlocks and controls'] },
+  { productSlug: 'blow-type-tightening-module', title: 'Automatic tightening station', sector: 'Assembly manufacturing', process: ['Fastener presentation', 'Controlled tightening and result recording'], scope: ['Feeder and tightening module', 'Fixture, controls and operator access'] },
+  { productSlug: 'factory-air-conditioning-monitoring-system', title: 'Factory environmental monitoring', sector: 'Plant utilities', process: ['Equipment data collection', 'Alarm and operating-state visualisation'], scope: ['PLC communication', 'Supervisory interface and records'] },
+  { productSlug: 'water-treatment-monitoring-system', title: 'Water treatment monitoring system', sector: 'Process utilities', process: ['Status acquisition and control', 'Trend, alarm and operating records'], scope: ['Control software', 'Operator screens and system communication'] },
 ]
 
 export const PROCUREMENT_FAQ = [

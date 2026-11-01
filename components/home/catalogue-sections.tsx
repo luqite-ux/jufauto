@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { ArrowRight, ArrowUpRight } from 'lucide-react'
 import { ProductCard } from '@/components/site/product-card'
 import { Reveal } from '@/components/site/reveal'
@@ -28,26 +29,25 @@ export function FamilyPaths({ products, families }: { products: Product[]; famil
         <ul className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {families.map((family, i) => {
             const count = products.filter((item) => item.familySlug === family.slug).length
+            const familyProduct = products.find((item) => item.familySlug === family.slug && item.images?.[0])
+            const image = familyProduct?.images?.[0]
             return (
               <Reveal as="li" key={family.slug} index={i % 3} className="h-full">
                 <Link
                   href={`/products?family=${family.slug}`}
-                  className="group flex h-full min-h-72 flex-col rounded-lg border border-border bg-white p-6 transition-[border-color,box-shadow,transform] duration-200 hover:-translate-y-0.5 hover:border-primary hover:shadow-[0_16px_36px_-22px_rgba(10,74,158,0.55)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
+                  className="group grid h-full grid-cols-[7.5rem_1fr] overflow-hidden rounded-lg border border-border bg-white transition-[border-color,box-shadow,transform] duration-200 hover:-translate-y-0.5 hover:border-primary hover:shadow-[0_16px_36px_-22px_rgba(10,74,158,0.55)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring sm:grid-cols-1"
                 >
-                  <div className="flex items-start justify-between">
-                    <IconTile name={family.icon} />
-                    <span className="font-mono text-xs tabular-nums text-muted-foreground">{String(i + 1).padStart(2, '0')}</span>
+                  <div className="relative flex min-h-32 items-center justify-center bg-stage sm:aspect-[16/9]">
+                    {image ? <Image src={image.src} alt={image.alt} fill sizes="(min-width: 1024px) 360px, (min-width: 640px) 50vw, 120px" className="object-contain p-3 transition-transform duration-300 group-hover:scale-[1.03]" /> : <IconTile name={family.icon} />}
                   </div>
-                  <h3 className="mt-6 text-lg font-semibold leading-snug text-ink">{family.name}</h3>
-                  <p className="mt-3 text-[15px] leading-relaxed text-muted-foreground">{family.short}</p>
-                  <span className="mt-auto flex items-center justify-between pt-5 text-sm font-semibold text-primary">
-                    <span>{count > 0 ? `${count} ${count === 1 ? 'product' : 'products'}` : 'Request via RFQ'}</span>
-                    <ArrowUpRight
-                      className="size-4 transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
-                      strokeWidth={1.75}
-                      aria-hidden="true"
-                    />
-                  </span>
+                  <div className="flex min-w-0 flex-col p-4 sm:p-5">
+                    <span className="font-mono text-[11px] tabular-nums text-muted-foreground">{String(i + 1).padStart(2, '0')}</span>
+                    <h3 className="mt-2 text-base font-semibold leading-snug text-ink">{family.name}</h3>
+                    <span className="mt-auto flex items-center justify-between pt-4 text-sm font-semibold text-primary">
+                      <span>{count > 0 ? `${count} ${count === 1 ? 'product' : 'products'}` : 'Request via RFQ'}</span>
+                      <ArrowUpRight className="size-4 transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" strokeWidth={1.75} aria-hidden="true" />
+                    </span>
+                  </div>
                 </Link>
               </Reveal>
             )

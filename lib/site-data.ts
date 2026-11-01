@@ -439,7 +439,7 @@ export const SOLUTIONS: {
     title: 'Automated Assembly & Fastening',
     text: 'Stations and lines that combine part handling, feeding and automatic screw fastening in one guarded system.',
     icon: 'cog',
-    familySlugs: ['custom-automation-equipment', 'automatic-tightening', 'feeding-systems'],
+    familySlugs: ['non-standard-automated-customized-equipment', 'tighten-the-assembly-module-and-tools', 'feeder'],
     points: ['Multi-station assembly lines', 'Automatic screw fastening', 'Bowl feeding of fasteners and small parts'],
   },
   {
@@ -447,7 +447,7 @@ export const SOLUTIONS: {
     title: 'Robotic Cells',
     text: 'Robot-based cells for handling, assembly or processing tasks, integrated with tooling and controls.',
     icon: 'bot',
-    familySlugs: ['robotic-integration', 'feeding-systems'],
+    familySlugs: ['robot-system-integration', 'feeder'],
     points: ['Robot, gripper and fixture integration', 'Part presentation and feeding', 'Cell-level control logic'],
   },
   {
@@ -455,7 +455,7 @@ export const SOLUTIONS: {
     title: 'Forming & Heavy Machining',
     text: 'Forming machines and large-format machining for equipment frames, bases and structural parts.',
     icon: 'hammer',
-    familySlugs: ['forming-machines', 'heavy-machining'],
+    familySlugs: ['forming-machine', 'heavy-machinery-processing'],
     points: ['Forming machines with control cabinets', 'Gantry-type machining of heavy parts'],
   },
   {
@@ -463,7 +463,7 @@ export const SOLUTIONS: {
     title: 'Field & Vehicle-Mounted Computing',
     text: 'Rugged tablet terminals for data capture, positioning displays and in-vehicle operation.',
     icon: 'tablet',
-    familySlugs: ['rugged-tablets'],
+    familySlugs: ['unmanned-aerial-vehicle-onboard-control-tablet'],
     points: ['Rugged tablet terminals', 'Vehicle-mounted use', 'Application display screens'],
   },
   {
@@ -471,7 +471,7 @@ export const SOLUTIONS: {
     title: 'Industrial Control Software',
     text: 'Control programming and software services that support automated equipment and its operators.',
     icon: 'braces',
-    familySlugs: ['industrial-control-software'],
+    familySlugs: ['outsourcing-services-for-control-software-plc-labview-c'],
     points: ['Equipment control programming', 'Operator interface screens', 'Software support for integrated systems'],
   },
 ]
