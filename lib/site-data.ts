@@ -432,6 +432,7 @@ export const SOLUTIONS: {
   text: string
   icon: IconKey
   familySlugs: string[]
+  imageProductSlug?: string
   points: string[]
 }[] = [
   {
@@ -448,6 +449,7 @@ export const SOLUTIONS: {
     text: 'Robot-based cells for handling, assembly or processing tasks, integrated with tooling and controls.',
     icon: 'bot',
     familySlugs: ['robot-system-integration', 'feeder'],
+    imageProductSlug: 'valve-plate-production-line',
     points: ['Robot, gripper and fixture integration', 'Part presentation and feeding', 'Cell-level control logic'],
   },
   {

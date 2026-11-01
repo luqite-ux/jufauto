@@ -126,13 +126,14 @@ export function SolutionsPreview({ detailed = false, products = [], limit }: { d
         )}
         <ul className={cn('grid gap-5 md:grid-cols-2 lg:grid-cols-3', !detailed && 'mt-10')}>
           {items.map((item, i) => {
-            const product = products.find((entry) => item.familySlugs.includes(entry.familySlug) && entry.images?.[0])
+            const product = products.find((entry) => entry.slug === item.imageProductSlug && entry.images?.[0])
+              ?? products.find((entry) => item.familySlugs.includes(entry.familySlug) && entry.images?.[0])
             const image = product?.images?.[0]
             return (
             <Reveal as="li" key={item.slug} index={i % 3} className="h-full">
               <article id={item.slug} className="flex h-full scroll-mt-28 flex-col overflow-hidden rounded-lg border border-border bg-white transition-[border-color,box-shadow] duration-200 hover:border-primary hover:shadow-[0_16px_36px_-22px_rgba(10,74,158,0.55)]">
-                {image ? <div className="relative aspect-[16/10] bg-white">
-                  <Image src={image.src} alt={image.alt} fill sizes="(min-width: 1024px) 380px, (min-width: 768px) 50vw, 94vw" className="object-contain p-4" />
+                {image ? <div className="relative aspect-[16/10] overflow-hidden">
+                  <Image src={image.src} alt={image.alt} fill sizes="(min-width: 1024px) 380px, (min-width: 768px) 50vw, 94vw" className="object-cover transition-transform duration-300 hover:scale-[1.02]" />
                 </div> : null}
                 <div className="flex flex-1 flex-col border-t border-border p-6">
                 <div className="flex items-center gap-3"><IconTile name={item.icon} /><h3 className="text-lg font-semibold text-ink">{item.title}</h3></div>

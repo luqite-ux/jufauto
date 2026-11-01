@@ -26,6 +26,8 @@ test('product family and proof cards use real catalogue images', () => {
   assert.doesNotMatch(catalogue, /className="object-contain p-3 transition-transform/)
   assert.match(engineering, /product\?\.images\?\.\[0\]/)
   assert.match(engineering, /<Image/)
+  assert.match(engineering, /entry\.slug === item\.imageProductSlug/)
+  assert.match(engineering, /aspect-\[16\/10\] overflow-hidden/)
   assert.match(engineering, /className="object-cover transition-transform duration-300 hover:scale/)
   assert.match(faqNews, /lg:grid-cols-\[minmax\(0,0\.8fr\)_minmax\(0,1\.2fr\)\]/)
   assert.match(faqNews, /Ask the engineering team/)
