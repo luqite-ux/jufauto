@@ -9,6 +9,18 @@ import type { Product, ProductFamily } from '@/lib/site-data'
 import { btnOutline } from '@/lib/ui'
 import { cn } from '@/lib/utils'
 
+const FAMILY_IMAGE_PRODUCT_SLUGS: Record<string, string> = {
+  'non-standard-automated-customized-equipment': 'horn-assembly-production-line',
+  'tighten-the-assembly-module-and-tools': 'screw-distributor-29',
+  feeder: 'vibrating-disc-feeder',
+  'tighten-function-attachments': 'gantry-style-balance-arm',
+  'unmanned-aerial-vehicle-onboard-control-tablet': 'three-proof-reinforced-notebook',
+  'robot-system-integration': 'gear-shifter-production-line-43',
+  'forming-machine': 'automobile-belt-forming-machine',
+  'heavy-machinery-processing': 'heavy-machinery-processing',
+  'outsourcing-services-for-control-software-plc-labview-c': 'control-cabinet',
+}
+
 export function FamilyPaths({ products, families }: { products: Product[]; families: ProductFamily[] }) {
   return (
     <section aria-labelledby="families-title" className="py-16 md:py-24">
@@ -29,7 +41,9 @@ export function FamilyPaths({ products, families }: { products: Product[]; famil
         <ul className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {families.map((family, i) => {
             const count = products.filter((item) => item.familySlug === family.slug).length
-            const familyProduct = products.find((item) => item.familySlug === family.slug && item.images?.[0])
+            const preferredProductSlug = FAMILY_IMAGE_PRODUCT_SLUGS[family.slug]
+            const familyProduct = products.find((item) => item.slug === preferredProductSlug && item.images?.[0])
+              ?? products.find((item) => item.familySlug === family.slug && item.images?.[0])
             const image = familyProduct?.images?.[0]
             return (
               <Reveal as="li" key={family.slug} index={i % 3} className="h-full">

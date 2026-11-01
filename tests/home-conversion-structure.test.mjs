@@ -21,6 +21,9 @@ test('homepage limits decision support content to three solutions, three cases a
 
 test('product family and proof cards use real catalogue images', () => {
   assert.match(catalogue, /familyProduct\?\.images\?\.\[0\]/)
+  assert.match(catalogue, /'tighten-the-assembly-module-and-tools': 'screw-distributor-29'/)
+  assert.match(catalogue, /'tighten-function-attachments': 'gantry-style-balance-arm'/)
+  assert.match(catalogue, /item\.slug === preferredProductSlug/)
   assert.match(catalogue, /<Image/)
   assert.match(catalogue, /className="object-cover transition-transform/)
   assert.doesNotMatch(catalogue, /className="object-contain p-3 transition-transform/)
