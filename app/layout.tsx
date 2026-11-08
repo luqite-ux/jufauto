@@ -1,8 +1,10 @@
 import type { Metadata, Viewport } from 'next'
+import { headers } from 'next/headers'
 import { Analytics } from '@vercel/analytics/next'
 import { SiteHeader } from '@/components/site/site-header'
 import { SiteFooter } from '@/components/site/site-footer'
 import './globals.css'
+import { normalizeLocale } from '@/lib/i18n'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://jufauto.com'),
@@ -25,24 +27,26 @@ export const viewport: Viewport = {
   initialScale: 1,
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const locale = normalizeLocale((await headers()).get('x-site-locale'))
+  const chinese = locale === 'zh-CN'
   const organization = { '@context': 'https://schema.org', '@graph': [
-    { '@type': 'Organization', '@id': 'https://jufauto.com/#organization', name: 'Suzhou Industrial Park Jiufeng Automation Technology Co., Ltd.', alternateName: 'JUFTECH', url: 'https://jufauto.com', logo: 'https://jufauto.com/images/logo.png', email: 'info@jufauto.com', telephone: '+86-512-6767-8265', address: { '@type': 'PostalAddress', streetAddress: 'No. 33 Dongfu Road', addressLocality: 'Suzhou Industrial Park', addressRegion: 'Jiangsu', addressCountry: 'CN' } },
-    { '@type': 'WebSite', '@id': 'https://jufauto.com/#website', url: 'https://jufauto.com', name: 'JUFTECH', publisher: { '@id': 'https://jufauto.com/#organization' }, inLanguage: 'en' },
+    { '@type': 'Organization', '@id': 'https://jufauto.com/#organization', name: chinese ? '苏州工业园区九峰自动化技术有限公司' : 'Suzhou Industrial Park Jiufeng Automation Technology Co., Ltd.', alternateName: 'JUFTECH', url: 'https://jufauto.com', logo: 'https://jufauto.com/images/logo.png', email: 'info@jufauto.com', telephone: '+86-512-6767-8265', address: { '@type': 'PostalAddress', streetAddress: chinese ? '东富路33号' : 'No. 33 Dongfu Road', addressLocality: chinese ? '苏州工业园区' : 'Suzhou Industrial Park', addressRegion: chinese ? '江苏省' : 'Jiangsu', addressCountry: 'CN' } },
+    { '@type': 'WebSite', '@id': 'https://jufauto.com/#website', url: 'https://jufauto.com', name: 'JUFTECH', publisher: { '@id': 'https://jufauto.com/#organization' }, inLanguage: locale },
   ] }
   return (
-    <html lang="en">
+    <html lang={locale}>
       <body className="font-sans antialiased">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organization).replace(/</g, '\\u003c') }} />
         <a
           href="#main"
           className="sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-[100] focus:rounded-md focus:bg-primary focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white"
         >
-          Skip to main content
+          {chinese ? '跳到主要内容' : 'Skip to main content'}
         </a>
         <SiteHeader />
         <main id="main">{children}</main>

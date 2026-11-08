@@ -2,6 +2,7 @@ import { NextResponse, type NextRequest } from 'next/server'
 import { SESSION_COOKIE } from '@/lib/admin-session'
 import { isServiceGuardExcludedPath, isWebsiteServiceAvailable } from '@/lib/service-status'
 import { protectPreviewResponse } from '@/lib/site-content/preview-protection'
+import { localeFromPath } from '@/lib/i18n'
 
 export async function proxy(request: NextRequest) {
   const path = request.nextUrl.pathname
@@ -17,6 +18,8 @@ export async function proxy(request: NextRequest) {
     url.searchParams.set('reason', 'unauthorized')
     return finalize(NextResponse.redirect(url))
   }
-  return finalize(NextResponse.next())
+  const requestHeaders = new Headers(request.headers)
+  requestHeaders.set('x-site-locale', localeFromPath(path))
+  return finalize(NextResponse.next({ request: { headers: requestHeaders } }))
 }
 export const config = { matcher: ['/((?!_next/static|_next/image).*)'] }
