@@ -3,12 +3,14 @@
 import { useLayoutEffect, useRef } from 'react'
 import type { CSSProperties } from 'react'
 import { WORKFLOW_STEPS } from '@/lib/site-data'
+import { WORKFLOW_STEPS_ZH } from '@/lib/messages'
+import type { Locale } from '@/lib/i18n'
 
 /**
  * Default state is `done` (every node lit). If the list is still below the viewport after mount it
  * is set to `idle` and a dedicated IntersectionObserver starts the run once it is reached.
  */
-export function Workflow() {
+export function Workflow({ locale = 'en' }: { locale?: Locale }) {
   const ref = useRef<HTMLOListElement>(null)
 
   useLayoutEffect(() => {
@@ -47,7 +49,7 @@ export function Workflow() {
         <span className="wf-signal absolute left-1/2 top-0 size-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-signal shadow-[0_0_0_4px_rgba(245,130,32,0.25)] lg:left-0 lg:top-1/2 lg:translate-x-0" />
       </div>
 
-      {WORKFLOW_STEPS.map((step, i) => (
+      {(locale === 'zh-CN' ? WORKFLOW_STEPS_ZH : WORKFLOW_STEPS).map((step, i) => (
         <li
           key={step.title}
           className="relative flex gap-4 lg:flex-col lg:items-center lg:gap-5 lg:text-center"

@@ -10,6 +10,7 @@ import { btnOutline, btnSignal } from '@/lib/ui'
 import { cn } from '@/lib/utils'
 import { CASE_STUDIES } from '@/content/juftech-content.mjs'
 import { localePath, type Locale } from '@/lib/i18n'
+import { CAPABILITIES_ZH, CASE_STUDIES_ZH, EVIDENCE_ZH, FACTS_ZH, SOLUTIONS_ZH } from '@/lib/messages'
 
 export function CapabilityGrid({ titleId = 'capabilities-title', heading = true, locale = 'en' }: { titleId?: string; heading?: boolean; locale?: Locale }) {
   const zh = locale === 'zh-CN'
@@ -32,11 +33,11 @@ export function CapabilityGrid({ titleId = 'capabilities-title', heading = true,
           </div>
         ) : (
           <h2 id={titleId} className="sr-only">
-            Engineering and integration capability areas
+            {zh ? '工程与系统集成能力' : 'Engineering and integration capability areas'}
           </h2>
         )}
         <ul className={cn('grid gap-px overflow-hidden rounded-lg border border-border bg-border sm:grid-cols-2 lg:grid-cols-3', heading && 'mt-10')}>
-          {CAPABILITIES.map((item, i) => (
+          {(zh ? CAPABILITIES_ZH : CAPABILITIES).map((item, i) => (
             <Reveal as="li" key={item.title} index={i % 3} className="bg-white p-6 transition-colors duration-200 hover:bg-accent/60 md:p-7">
               <IconTile name={item.icon} />
               <h3 className="mt-5 text-lg font-semibold text-ink">{item.title}</h3>
@@ -62,7 +63,7 @@ export function ProcessSection({ titleId = 'process-title', locale = 'en' }: { t
           />
         </div>
         <Reveal className="mt-12">
-          <Workflow />
+          <Workflow locale={locale} />
         </Reveal>
       </div>
     </section>
@@ -82,7 +83,7 @@ export function EvidenceSection({ locale = 'en' }: { locale?: Locale } = {}) {
           />
         </div>
         <ul className="mt-10 grid gap-5 md:grid-cols-3">
-          {EVIDENCE.map((item, i) => (
+          {(zh ? EVIDENCE_ZH : EVIDENCE).map((item, i) => (
             <Reveal as="li" key={item.src} index={i} className="h-full">
               <figure className="h-full overflow-hidden rounded-lg border border-border bg-white">
                 <div className="relative aspect-[4/3] overflow-hidden">
@@ -106,7 +107,8 @@ export function EvidenceSection({ locale = 'en' }: { locale?: Locale } = {}) {
 
 export function SolutionsPreview({ detailed = false, products = [], limit, locale = 'en' }: { detailed?: boolean; products?: Product[]; limit?: number; locale?: Locale }) {
   const zh = locale === 'zh-CN'
-  const items = typeof limit === 'number' ? SOLUTIONS.slice(0, limit) : SOLUTIONS
+  const sourceItems = (zh ? SOLUTIONS_ZH : SOLUTIONS) as unknown as typeof SOLUTIONS
+  const items = typeof limit === 'number' ? sourceItems.slice(0, limit) : sourceItems
   return (
     <section aria-labelledby="solutions-title" className={cn('py-16 md:py-24', !detailed && 'border-y border-border bg-muted')}>
       <div className="wrap">
@@ -172,7 +174,8 @@ export function SolutionsPreview({ detailed = false, products = [], limit, local
 
 export function CaseStudiesSection({ products = [], limit, locale = 'en' }: { products?: Product[]; limit?: number; locale?: Locale }) {
   const zh = locale === 'zh-CN'
-  const items = typeof limit === 'number' ? CASE_STUDIES.slice(0, limit) : CASE_STUDIES
+  const sourceItems = zh ? CASE_STUDIES_ZH : CASE_STUDIES
+  const items = typeof limit === 'number' ? sourceItems.slice(0, limit) : sourceItems
   return (
     <section aria-labelledby="case-studies-title" className="border-y border-border bg-stage py-16 md:py-24">
       <div className="wrap">
@@ -196,9 +199,9 @@ export function CaseStudiesSection({ products = [], limit, locale = 'en' }: { pr
                 <div className="flex flex-1 flex-col border-t border-border p-6">
                 <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">{item.sector}</p>
                 <h3 className="mt-3 text-lg font-semibold text-ink">{item.title}</h3>
-                <p className="mt-5 text-xs font-semibold uppercase tracking-wide text-muted-foreground">Process</p>
+                <p className="mt-5 text-xs font-semibold uppercase tracking-wide text-muted-foreground">{zh ? '工艺流程' : 'Process'}</p>
                 <ul className="mt-2 space-y-2 text-sm text-ink">{item.process.map((value) => <li key={value}>• {value}</li>)}</ul>
-                <p className="mt-5 border-t border-border pt-4 text-xs font-semibold uppercase tracking-wide text-muted-foreground">JUFTECH scope</p>
+                <p className="mt-5 border-t border-border pt-4 text-xs font-semibold uppercase tracking-wide text-muted-foreground">{zh ? '九峰工作范围' : 'JUFTECH scope'}</p>
                 <ul className="mt-2 space-y-2 text-sm text-ink">{item.scope.map((value) => <li key={value}>• {value}</li>)}</ul>
                 </div>
               </article>
@@ -224,7 +227,7 @@ export function FactsBand({ locale = 'en' }: { locale?: Locale } = {}) {
           />
         </div>
         <dl className="mt-8 grid grid-cols-2 gap-px overflow-hidden rounded-lg border border-white/20 bg-white/20 lg:grid-cols-4">
-          {FACTS.map((fact, i) => (
+          {(zh ? FACTS_ZH : FACTS).map((fact, i) => (
             <Reveal key={fact.label} index={i} className="bg-primary p-4 sm:p-6">
               <dt className="flex items-center gap-2 text-sm text-white/85">
                 <SiteIcon name={i === 0 ? 'workflow' : i === 1 ? 'factory' : i === 2 ? 'layers' : 'cog'} className="size-4 text-signal" />

@@ -15,6 +15,7 @@ function Field({
   id,
   label,
   optional,
+  optionalLabel = 'Optional',
   error,
   hint,
   children,
@@ -23,6 +24,7 @@ function Field({
   id: string
   label: string
   optional?: boolean
+  optionalLabel?: string
   error?: string
   hint?: string
   children: ReactNode
@@ -32,7 +34,7 @@ function Field({
     <div className={cn('space-y-1.5', className)}>
       <label htmlFor={id} className="flex items-baseline justify-between text-sm font-medium text-ink">
         <span>{label}</span>
-        {optional && <span className="text-xs font-normal text-muted-foreground">Optional</span>}
+        {optional && <span className="text-xs font-normal text-muted-foreground">{optionalLabel}</span>}
       </label>
       {children}
       {hint && !error && (
@@ -172,7 +174,7 @@ export function RfqForm({ defaultProduct, products, families, className, locale 
               className={inputClass}
             />
           </Field>
-          <Field id={ids.phone} label={zh ? '电话' : 'Phone'} optional>
+          <Field id={ids.phone} label={zh ? '电话' : 'Phone'} optional optionalLabel={zh ? '选填' : 'Optional'}>
             <input
               id={ids.phone}
               name="phone"
@@ -182,7 +184,7 @@ export function RfqForm({ defaultProduct, products, families, className, locale 
               className={inputClass}
             />
           </Field>
-          <Field id={ids.company} label={zh ? '公司' : 'Company'} optional>
+          <Field id={ids.company} label={zh ? '公司' : 'Company'} optional optionalLabel={zh ? '选填' : 'Optional'}>
             <input
               id={ids.company}
               name="company"
@@ -194,7 +196,7 @@ export function RfqForm({ defaultProduct, products, families, className, locale 
           </Field>
         </div>
 
-        <Field id={ids.subject} label="Subject / product" error={errors.subject}>
+        <Field id={ids.subject} label={zh ? '产品或需求类型' : 'Subject / product'} error={errors.subject}>
           <select
             id={ids.subject}
             name="subject"
@@ -204,9 +206,9 @@ export function RfqForm({ defaultProduct, products, families, className, locale 
             className={cn(inputClass, 'appearance-none bg-[url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2716%27 height=%2716%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27%230b1f3a%27 stroke-width=%271.75%27%3E%3Cpath d=%27m6 9 6 6 6-6%27/%3E%3C/svg%3E")] bg-[length:16px] bg-[right_0.75rem_center] bg-no-repeat pr-10')}
           >
             <option value="" disabled>
-              Select a product or subject
+              {zh ? '请选择产品或需求类型' : 'Select a product or subject'}
             </option>
-            <option value="general">General inquiry</option>
+            <option value="general">{zh ? '一般咨询' : 'General inquiry'}</option>
             {families.map((family) => {
               const items = products.filter((p) => p.familySlug === family.slug)
               return (
@@ -247,14 +249,14 @@ export function RfqForm({ defaultProduct, products, families, className, locale 
             {submitting ? (
               <>
                 <Spinner className="size-4" />
-                Sending
+                {zh ? '提交中' : 'Sending'}
               </>
             ) : (
-              'Send RFQ'
+              zh ? '提交需求' : 'Send RFQ'
             )}
           </button>
           <p className="text-xs leading-relaxed text-muted-foreground sm:max-w-xs">
-            Your details are used only to respond to this request.
+            {zh ? '您填写的信息仅用于回复本次需求。' : 'Your details are used only to respond to this request.'}
           </p>
         </div>
       </fieldset>

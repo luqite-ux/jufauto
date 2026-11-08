@@ -68,3 +68,50 @@ export const ZH_PAGE_COPY = {
   news: { eyebrow: '新闻资讯', title: '企业与产品动态', description: '查看九峰团队发布的企业、产品和技术动态。' },
   contact: { eyebrow: '联系我们', title: '与九峰工程团队沟通', description: '提交询价或技术问题时，请尽量附上工件、工艺、产量和现场条件。' },
 } as const
+
+export const CAPABILITIES_ZH = [
+  { title: '需求工程', text: '在形成方案前，与客户工程团队核对工件、工艺和现场信息。', icon: 'clipboard' },
+  { title: '设备设计', text: '将机械框架、工作站、工装与安全防护作为完整设备协同设计。', icon: 'ruler' },
+  { title: '锁付与供料集成', text: '协同选配锁付模块与振动盘供料系统，使工位形成完整运行单元。', icon: 'wrench' },
+  { title: '机器人单元集成', text: '将机器人、末端工具、零件供给和控制系统组合为可执行单元。', icon: 'bot' },
+  { title: '电气与控制软件', text: '控制柜、PLC 程序和操作界面与机械系统同步开发。', icon: 'cable' },
+  { title: '成型与大型加工', text: '为设备制造及独立订单提供成型设备和大型重型部件加工。', icon: 'drill' },
+] as const
+
+export const SOLUTIONS_ZH = [
+  { slug: 'assembly-and-fastening', title: '自动装配与锁付', text: '在带安全防护的系统中集成零件输送、供料与自动锁螺丝。', icon: 'cog', familySlugs: ['non-standard-automated-customized-equipment', 'tighten-the-assembly-module-and-tools', 'feeder'], points: ['多工位装配生产线', '自动锁螺丝', '紧固件与小型零件振动盘供料'] },
+  { slug: 'robotic-cells', title: '机器人工作单元', text: '将机器人、工装和控制系统集成，用于搬运、装配或加工任务。', icon: 'bot', familySlugs: ['robot-system-integration', 'feeder'], imageProductSlug: 'valve-plate-production-line', points: ['机器人、夹具与工装集成', '零件供给与定位', '单元级控制逻辑'] },
+  { slug: 'forming-and-machining', title: '成型与大型加工', text: '面向设备框架、底座和结构件的成型设备与大型加工。', icon: 'hammer', familySlugs: ['forming-machine', 'heavy-machinery-processing'], points: ['带控制柜的成型设备', '重型零件龙门加工'] },
+  { slug: 'field-terminals', title: '现场与车载计算终端', text: '用于数据采集、定位显示和车载操作的加固型平板终端。', icon: 'tablet', familySlugs: ['unmanned-aerial-vehicle-onboard-control-tablet'], points: ['加固型平板终端', '车载应用', '应用信息显示'] },
+  { slug: 'control-software', title: '工业控制软件', text: '为自动化设备及操作人员提供控制程序与软件服务。', icon: 'braces', familySlugs: ['outsourcing-services-for-control-software-plc-labview-c'], points: ['设备控制程序', '操作界面', '集成系统的软件支持'] },
+] as const
+
+export const WORKFLOW_STEPS_ZH = [
+  { title: '需求分析', text: '核对工件、工艺步骤、现场条件以及客户提供的图纸或样品。' },
+  { title: '方案设计', text: '根据确认的需求形成机械、电气与控制方案。' },
+  { title: '装配与集成', text: '将框架、工装、锁付、供料和控制部件组合为完整系统。' },
+  { title: '调试与验证', text: '根据双方确认的要求对系统功能进行运行检查。' },
+  { title: '交付支持', text: '完成发运准备，并在设备交付过程中保持技术沟通。' },
+] as const
+
+export const FACTS_ZH = [
+  { value: '2014', label: '成立时间', note: '位于苏州工业园区' },
+  { value: '约 9,000 m²', label: '厂区面积', note: '现有资料中的约数' },
+  { value: '3', label: '车间', note: '设备制造、装配与加工资源' },
+  { value: '9', label: '产品分类', note: '按采购需求组织产品目录' },
+] as const
+
+export const EVIDENCE_ZH = [
+  { src: '/images/product-custom-automation.jpg', alt: '带输送工位和安全防护的铝型材自动化生产线', caption: '带操作面板和安全防护的自动化生产线' },
+  { src: '/images/product-forming.jpg', alt: '成型设备及打开的电气控制柜', caption: '成型设备与电气控制柜' },
+  { src: '/images/product-heavy-machining.jpg', alt: '带钢制伸缩防护罩的龙门机床', caption: '龙门大型加工设备' },
+] as const
+
+export const CASE_STUDIES_ZH = [
+  { productSlug: 'horn-assembly-production-line', title: '多工位零部件装配线', sector: '汽车零部件', process: ['零件供料与定位', '装配、检测与追溯'], scope: ['机械工位与防护', '电气控制与操作界面'] },
+  { productSlug: 'welding-of-motor-stator', title: '电机定子焊接设备', sector: '电驱动部件', process: ['定子定位', '受控焊接与结果采集'], scope: ['工艺工装', '控制顺序与安全集成'] },
+  { productSlug: 'gear-shifter-production-line-43', title: '机器人上下料单元', sector: '工业制造', process: ['工件识别', '机器人在工艺设备间转运'], scope: ['机器人与末端工具', '防护、联锁与控制'] },
+  { productSlug: 'blow-type-tightening-module', title: '自动锁付工作站', sector: '装配制造', process: ['紧固件供给', '受控锁付与结果记录'], scope: ['供料器与锁付模块', '夹具、控制与操作空间'] },
+  { productSlug: 'factory-air-conditioning-monitoring-system', title: '工厂环境监控', sector: '工厂公用系统', process: ['设备数据采集', '报警与运行状态可视化'], scope: ['PLC 通信', '监控界面与记录'] },
+  { productSlug: 'water-treatment-monitoring-system', title: '水处理监控系统', sector: '工艺公用系统', process: ['状态采集与控制', '趋势、报警与运行记录'], scope: ['控制软件', '操作界面与系统通信'] },
+] as const

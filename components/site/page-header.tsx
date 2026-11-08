@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { ChevronRight } from 'lucide-react'
 import type { ReactNode } from 'react'
+import type { Locale } from '@/lib/i18n'
 
 export function PageHeader({
   title,
@@ -8,21 +9,25 @@ export function PageHeader({
   eyebrow,
   crumbs,
   children,
+  locale = 'en',
 }: {
   title: string
   description?: string
   eyebrow?: string
   crumbs: { label: string; href?: string }[]
   children?: ReactNode
+  locale?: Locale
 }) {
+  const isChinese = locale === 'zh-CN' || crumbs.some((crumb) => /[\u3400-\u9fff]/u.test(crumb.label))
+
   return (
     <section className="blueprint relative border-b border-border bg-stage">
       <div className="wrap py-10 md:py-14">
         <nav aria-label="Breadcrumb">
           <ol className="flex flex-wrap items-center gap-1.5 text-sm text-muted-foreground">
             <li>
-              <Link href="/" className="transition-colors duration-200 hover:text-primary">
-                Home
+              <Link href={isChinese ? '/zh' : '/'} className="transition-colors duration-200 hover:text-primary">
+                {isChinese ? '首页' : 'Home'}
               </Link>
             </li>
             {crumbs.map((crumb, i) => (
