@@ -50,7 +50,7 @@ export default async function RootLayout({
         </a>
         <SiteHeader />
         <main id="main">{children}</main>
-        <SiteFooter />
+        <SiteFooter locale={locale} />
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>

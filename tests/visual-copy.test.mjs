@@ -8,15 +8,15 @@ async function source(relativePath) {
   return readFile(new URL(relativePath, root), 'utf8')
 }
 
-test('English captcha field contains no Chinese UI copy', async () => {
+test('captcha field keeps English as the default and scopes Chinese copy to zh-CN', async () => {
   const component = [
     await source('components/inquiry-captcha-field.tsx'),
     await source('app/api/captcha/route.ts'),
     await source('lib/inquiry-captcha.ts'),
   ].join('\n')
-  for (const text of ['验证码', '输入验证码', '换一张', '正在加载', '加载失败']) {
-    assert.equal(component.includes(text), false, `unexpected Chinese copy: ${text}`)
-  }
+  assert.match(component, /locale = 'en'/)
+  assert.match(component, /locale === 'zh-CN'/)
+  assert.match(component, /图片验证码/)
   assert.match(component, /Security check/)
   assert.match(component, /Enter the 4-character code/)
   assert.match(component, /Refresh code/)

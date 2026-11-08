@@ -7,11 +7,13 @@ import { ChevronLeft, ChevronRight, Pause, Play } from 'lucide-react'
 import { HERO_SLIDES, type HeroSlide } from '@/lib/site-data'
 import { btnOutline, btnSignal } from '@/lib/ui'
 import { cn } from '@/lib/utils'
+import type { Locale } from '@/lib/i18n'
 
 const controlButton =
   'inline-flex size-11 items-center justify-center rounded-md text-ink transition-[background-color,color,transform] duration-200 hover:bg-accent hover:text-primary active:scale-95 focus-visible:outline-2 focus-visible:outline-ring'
 
-export function HeroCarousel({ slides = HERO_SLIDES }: { slides?: HeroSlide[] }) {
+export function HeroCarousel({ slides = HERO_SLIDES, locale = 'en' }: { slides?: HeroSlide[]; locale?: Locale }) {
+  const chinese = locale === 'zh-CN'
   const [index, setIndex] = useState(0)
   const [playing, setPlaying] = useState(true)
   const [held, setHeld] = useState(false)
@@ -27,14 +29,14 @@ export function HeroCarousel({ slides = HERO_SLIDES }: { slides?: HeroSlide[] })
   return (
     <section
       aria-roledescription="carousel"
-      aria-label="JUFTECH featured capabilities"
+      aria-label={chinese ? 'JUFTECH 主要能力' : 'JUFTECH featured capabilities'}
       className="relative border-b border-border bg-white"
       onMouseEnter={() => setHeld(true)}
       onMouseLeave={() => setHeld(false)}
       onFocusCapture={() => setHeld(true)}
       onBlurCapture={() => setHeld(false)}
     >
-      <h1 className="sr-only">JUFTECH industrial automation equipment and control systems</h1>
+      <h1 className="sr-only">{chinese ? 'JUFTECH 工业自动化设备与控制系统' : 'JUFTECH industrial automation equipment and control systems'}</h1>
 
       <div className="grid" aria-live={playing ? 'off' : 'polite'}>
         {slides.map((slide, i) => {
@@ -117,12 +119,12 @@ export function HeroCarousel({ slides = HERO_SLIDES }: { slides?: HeroSlide[] })
       <div className="border-t border-border bg-white lg:absolute lg:inset-x-0 lg:bottom-6 lg:z-10 lg:border-t-0 lg:bg-transparent">
         <div className="wrap flex flex-wrap items-center justify-between gap-3 py-3 lg:py-0">
           <div className="flex items-center gap-1 rounded-md border border-border bg-white p-1 shadow-sm">
-            <button type="button" aria-label="Previous slide" className={controlButton} onClick={() => go(index - 1)}>
+            <button type="button" aria-label={chinese ? '上一张' : 'Previous slide'} className={controlButton} onClick={() => go(index - 1)}>
               <ChevronLeft className="size-5" strokeWidth={1.5} aria-hidden="true" />
             </button>
             <button
               type="button"
-              aria-label={playing ? 'Pause slideshow' : 'Play slideshow'}
+              aria-label={playing ? (chinese ? '暂停轮播' : 'Pause slideshow') : (chinese ? '播放轮播' : 'Play slideshow')}
               aria-pressed={!playing}
               className={controlButton}
               onClick={() => setPlaying((p) => !p)}
@@ -133,7 +135,7 @@ export function HeroCarousel({ slides = HERO_SLIDES }: { slides?: HeroSlide[] })
                 <Play className="size-5" strokeWidth={1.5} aria-hidden="true" />
               )}
             </button>
-            <button type="button" aria-label="Next slide" className={controlButton} onClick={() => go(index + 1)}>
+            <button type="button" aria-label={chinese ? '下一张' : 'Next slide'} className={controlButton} onClick={() => go(index + 1)}>
               <ChevronRight className="size-5" strokeWidth={1.5} aria-hidden="true" />
             </button>
 
@@ -144,7 +146,7 @@ export function HeroCarousel({ slides = HERO_SLIDES }: { slides?: HeroSlide[] })
                   <li key={slide.id}>
                     <button
                       type="button"
-                      aria-label={`Go to slide ${i + 1}: ${slide.title}`}
+                      aria-label={chinese ? `转到第 ${i + 1} 张：${slide.title}` : `Go to slide ${i + 1}: ${slide.title}`}
                       aria-current={active ? 'true' : undefined}
                       onClick={() => go(i)}
                       className="group flex h-11 w-12 items-center justify-center focus-visible:outline-2 focus-visible:outline-ring sm:w-14"
@@ -176,7 +178,7 @@ export function HeroCarousel({ slides = HERO_SLIDES }: { slides?: HeroSlide[] })
           </div>
 
           <p className="rounded-md bg-white/90 px-2 py-1 text-xs text-muted-foreground lg:border lg:border-border">
-            Concept artwork for application overview
+            {chinese ? '应用场景概念示意图' : 'Concept artwork for application overview'}
           </p>
         </div>
       </div>

@@ -2,12 +2,13 @@ import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import { ProductStage } from '@/components/site/product-image'
 import { getFamily, type Product } from '@/lib/site-data'
+import { localePath, type Locale } from '@/lib/i18n'
 
-export function ProductCard({ product }: { product: Product }) {
+export function ProductCard({ product, locale = 'en' }: { product: Product; locale?: Locale }) {
   const family = getFamily(product.familySlug)
   return (
     <Link
-      href={`/products/${product.slug}`}
+      href={localePath(`/products/${product.slug}`, locale)}
       className="group flex h-full flex-col rounded-lg border border-border bg-white p-3 transition-[border-color,box-shadow,transform] duration-200 hover:-translate-y-0.5 hover:border-primary hover:shadow-[0_16px_36px_-22px_rgba(10,74,158,0.55)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
     >
       <ProductStage
@@ -20,7 +21,7 @@ export function ProductCard({ product }: { product: Product }) {
         <h3 className="mt-2 text-lg font-semibold leading-snug text-ink">{product.name}</h3>
         <p className="mt-2 line-clamp-3 text-sm leading-relaxed text-muted-foreground">{product.summary}</p>
         <span className="mt-auto inline-flex items-center gap-1.5 pt-4 text-sm font-semibold text-primary">
-          View details
+          {locale === 'zh-CN' ? '查看详情' : 'View details'}
           <ArrowRight
             className="size-4 transition-transform duration-200 group-hover:translate-x-1"
             strokeWidth={1.75}

@@ -2,13 +2,15 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+import { usePathname, useSearchParams } from 'next/navigation'
 import { ArrowRight, Mail, MapPin, Menu, Phone } from 'lucide-react'
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet'
 import { LogoLink } from '@/components/site/logo'
 import { COMPANY, NAV_LINKS } from '@/lib/site-data'
 import { btnSignal } from '@/lib/ui'
 import { cn } from '@/lib/utils'
+import { localeFromPath, localePath } from '@/lib/i18n'
+import { NAV_LINKS_ZH, ZH_COMMON } from '@/lib/messages'
 
 function isActive(pathname: string, href: string) {
   return href === '/' ? pathname === '/' : pathname === href || pathname.startsWith(`${href}/`)
@@ -16,6 +18,11 @@ function isActive(pathname: string, href: string) {
 
 export function SiteHeader() {
   const pathname = usePathname()
+  const searchParams = useSearchParams()
+  const chinese = localeFromPath(pathname) === 'zh-CN'
+  const navLinks = chinese ? NAV_LINKS_ZH : NAV_LINKS
+  const translatedPath = localePath(pathname, chinese ? 'en' : 'zh-CN')
+  const switchHref = searchParams.size ? `${translatedPath}?${searchParams.toString()}` : translatedPath
   const [open, setOpen] = useState(false)
 
   return (
@@ -24,7 +31,7 @@ export function SiteHeader() {
         <div className="wrap flex h-9 items-center justify-between text-xs">
           <p className="flex items-center gap-2 text-white/85">
             <MapPin className="size-3.5 text-signal" strokeWidth={1.5} aria-hidden="true" />
-            {COMPANY.address}
+            {chinese ? ZH_COMMON.address : COMPANY.address}
           </p>
           <div className="flex items-center gap-5">
             <a
@@ -53,12 +60,13 @@ export function SiteHeader() {
           <LogoLink className="h-11 lg:h-[52px]" priority />
 
           <nav aria-label="Primary" className="hidden items-center gap-1 lg:flex">
-            {NAV_LINKS.map((link) => {
-              const active = isActive(pathname, link.href)
+            {navLinks.map((link) => {
+              const href = localePath(link.href, chinese ? 'zh-CN' : 'en')
+              const active = isActive(pathname, href)
               return (
                 <Link
                   key={link.href}
-                  href={link.href}
+                  href={href}
                   aria-current={active ? 'page' : undefined}
                   className={cn(
                     'relative rounded-sm px-3 py-2 text-sm font-medium transition-colors duration-200 hover:text-primary',
@@ -73,15 +81,18 @@ export function SiteHeader() {
           </nav>
 
           <div className="flex items-center gap-2">
-            <Link href="/contact#rfq" className={cn(btnSignal, 'hidden h-10 sm:inline-flex')}>
-              Request a Quote
+            <Link href={localePath('/contact#rfq', chinese ? 'zh-CN' : 'en')} className={cn(btnSignal, 'hidden h-10 sm:inline-flex')}>
+              {chinese ? ZH_COMMON.quote : 'Request a Quote'}
+            </Link>
+            <Link href={switchHref} hrefLang={chinese ? 'en' : 'zh-CN'} className="inline-flex h-10 items-center rounded-md border border-border px-3 text-sm font-semibold text-primary transition-colors hover:bg-accent">
+              {chinese ? 'EN' : '中文'}
             </Link>
 
             <Sheet open={open} onOpenChange={setOpen}>
               <SheetTrigger asChild>
                 <button
                   type="button"
-                  aria-label="Open navigation menu"
+                  aria-label={chinese ? '打开导航菜单' : 'Open navigation menu'}
                   className="inline-flex size-11 items-center justify-center rounded-md border border-border text-ink transition-colors duration-200 hover:border-primary hover:bg-accent focus-visible:outline-2 focus-visible:outline-ring lg:hidden"
                 >
                   <Menu className="size-5" strokeWidth={1.5} aria-hidden="true" />
@@ -90,15 +101,16 @@ export function SiteHeader() {
               <SheetContent side="right" className="w-[min(88vw,360px)] gap-0 p-0">
                 <SheetHeader className="border-b border-border p-4 text-left">
                   <SheetTitle className="text-base">JUFTECH</SheetTitle>
-                  <SheetDescription className="text-xs">Industrial automation and control systems</SheetDescription>
+                  <SheetDescription className="text-xs">{chinese ? ZH_COMMON.mobileDescription : 'Industrial automation and control systems'}</SheetDescription>
                 </SheetHeader>
                 <nav aria-label="Mobile primary" className="flex flex-col p-2">
-                  {NAV_LINKS.map((link) => {
-                    const active = isActive(pathname, link.href)
+                  {navLinks.map((link) => {
+                    const href = localePath(link.href, chinese ? 'zh-CN' : 'en')
+                    const active = isActive(pathname, href)
                     return (
                       <Link
                         key={link.href}
-                        href={link.href}
+                        href={href}
                         onClick={() => setOpen(false)}
                         aria-current={active ? 'page' : undefined}
                         className={cn(
@@ -113,8 +125,8 @@ export function SiteHeader() {
                   })}
                 </nav>
                 <div className="mt-auto space-y-3 border-t border-border p-4">
-                  <Link href="/contact#rfq" onClick={() => setOpen(false)} className={cn(btnSignal, 'w-full')}>
-                    Request a Quote
+                  <Link href={localePath('/contact#rfq', chinese ? 'zh-CN' : 'en')} onClick={() => setOpen(false)} className={cn(btnSignal, 'w-full')}>
+                    {chinese ? ZH_COMMON.quote : 'Request a Quote'}
                   </Link>
                   <a href={`mailto:${COMPANY.email}`} className="block text-sm text-primary underline-offset-4 hover:underline">
                     {COMPANY.email}

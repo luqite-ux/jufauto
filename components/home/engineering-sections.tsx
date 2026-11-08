@@ -9,20 +9,22 @@ import { CAPABILITIES, EVIDENCE, FACTS, SOLUTIONS, type Product } from '@/lib/si
 import { btnOutline, btnSignal } from '@/lib/ui'
 import { cn } from '@/lib/utils'
 import { CASE_STUDIES } from '@/content/juftech-content.mjs'
+import { localePath, type Locale } from '@/lib/i18n'
 
-export function CapabilityGrid({ titleId = 'capabilities-title', heading = true }: { titleId?: string; heading?: boolean }) {
+export function CapabilityGrid({ titleId = 'capabilities-title', heading = true, locale = 'en' }: { titleId?: string; heading?: boolean; locale?: Locale }) {
+  const zh = locale === 'zh-CN'
   return (
     <section aria-labelledby={titleId} className="py-16 md:py-24">
       <div className="wrap">
         {heading ? (
           <div id={titleId}>
             <SectionHeading
-              eyebrow="Engineering & integration"
-              title="Mechanics, tightening, feeding and control engineered as one system"
-              description="Six capability areas cover the path from a part drawing to an integrated station or line."
+              eyebrow={zh ? '工程与集成' : 'Engineering & integration'}
+              title={zh ? '机械、锁付、供料与控制协同设计' : 'Mechanics, tightening, feeding and control engineered as one system'}
+              description={zh ? '六项能力覆盖从工件图纸到集成工作站或生产线的主要环节。' : 'Six capability areas cover the path from a part drawing to an integrated station or line.'}
               action={
-                <Link href="/capabilities" className={cn(btnOutline, 'self-start md:self-auto')}>
-                  Capabilities overview
+                <Link href={localePath('/capabilities', locale)} className={cn(btnOutline, 'self-start md:self-auto')}>
+                  {zh ? '查看能力概览' : 'Capabilities overview'}
                   <ArrowRight className="size-4" strokeWidth={1.75} aria-hidden="true" />
                 </Link>
               }
@@ -47,15 +49,16 @@ export function CapabilityGrid({ titleId = 'capabilities-title', heading = true 
   )
 }
 
-export function ProcessSection({ titleId = 'process-title' }: { titleId?: string }) {
+export function ProcessSection({ titleId = 'process-title', locale = 'en' }: { titleId?: string; locale?: Locale }) {
+  const zh = locale === 'zh-CN'
   return (
     <section aria-labelledby={titleId} className="border-y border-border bg-stage py-16 md:py-24">
       <div className="wrap">
         <div id={titleId}>
           <SectionHeading
-            eyebrow="Project workflow"
-            title="From requirement to delivery support in five controlled steps"
-            description="A signal-line view of how an automation project moves through our engineering team."
+            eyebrow={zh ? '项目流程' : 'Project workflow'}
+            title={zh ? '从需求沟通到交付支持的五个步骤' : 'From requirement to delivery support in five controlled steps'}
+            description={zh ? '展示自动化项目在工程团队中的主要推进环节。' : 'A signal-line view of how an automation project moves through our engineering team.'}
           />
         </div>
         <Reveal className="mt-12">
@@ -66,15 +69,16 @@ export function ProcessSection({ titleId = 'process-title' }: { titleId?: string
   )
 }
 
-export function EvidenceSection() {
+export function EvidenceSection({ locale = 'en' }: { locale?: Locale } = {}) {
+  const zh = locale === 'zh-CN'
   return (
     <section aria-labelledby="evidence-title" className="py-16 md:py-24">
       <div className="wrap">
         <div id="evidence-title">
           <SectionHeading
-            eyebrow="Manufacturing evidence"
-            title="Equipment, control cabinets and heavy machining in view"
-            description="Equipment and machining resources associated with JUFTECH projects."
+            eyebrow={zh ? '制造实景' : 'Manufacturing evidence'}
+            title={zh ? '设备、控制柜与大型加工资源' : 'Equipment, control cabinets and heavy machining in view'}
+            description={zh ? '展示与九峰项目相关的设备与加工资源。' : 'Equipment and machining resources associated with JUFTECH projects.'}
           />
         </div>
         <ul className="mt-10 grid gap-5 md:grid-cols-3">
@@ -100,7 +104,8 @@ export function EvidenceSection() {
   )
 }
 
-export function SolutionsPreview({ detailed = false, products = [], limit }: { detailed?: boolean; products?: Product[]; limit?: number }) {
+export function SolutionsPreview({ detailed = false, products = [], limit, locale = 'en' }: { detailed?: boolean; products?: Product[]; limit?: number; locale?: Locale }) {
+  const zh = locale === 'zh-CN'
   const items = typeof limit === 'number' ? SOLUTIONS.slice(0, limit) : SOLUTIONS
   return (
     <section aria-labelledby="solutions-title" className={cn('py-16 md:py-24', !detailed && 'border-y border-border bg-muted')}>
@@ -108,12 +113,12 @@ export function SolutionsPreview({ detailed = false, products = [], limit }: { d
         {!detailed ? (
           <div id="solutions-title">
             <SectionHeading
-              eyebrow="Applications & solutions"
-              title="Application areas built from the catalogue"
-              description="Typical ways the product families combine into working systems."
+              eyebrow={zh ? '应用与解决方案' : 'Applications & solutions'}
+              title={zh ? '由产品体系组合形成的应用方案' : 'Application areas built from the catalogue'}
+              description={zh ? '展示不同产品分类在实际系统中的典型组合方式。' : 'Typical ways the product families combine into working systems.'}
               action={
-                <Link href="/solutions" className={cn(btnOutline, 'self-start md:self-auto')}>
-                  All solutions
+                <Link href={localePath('/solutions', locale)} className={cn(btnOutline, 'self-start md:self-auto')}>
+                  {zh ? '全部解决方案' : 'All solutions'}
                   <ArrowRight className="size-4" strokeWidth={1.75} aria-hidden="true" />
                 </Link>
               }
@@ -148,10 +153,10 @@ export function SolutionsPreview({ detailed = false, products = [], limit }: { d
                 </ul>
                 {detailed && (
                   <Link
-                    href={`/products?family=${item.familySlugs[0]}`}
+                    href={localePath(`/products?family=${item.familySlugs[0]}`, locale)}
                     className="mt-auto inline-flex items-center gap-1.5 pt-5 text-sm font-semibold text-primary transition-colors duration-200 hover:text-[#083c82]"
                   >
-                    Related products
+                    {zh ? '相关产品' : 'Related products'}
                     <ArrowRight className="size-4" strokeWidth={1.75} aria-hidden="true" />
                   </Link>
                 )}
@@ -165,16 +170,17 @@ export function SolutionsPreview({ detailed = false, products = [], limit }: { d
   )
 }
 
-export function CaseStudiesSection({ products = [], limit }: { products?: Product[]; limit?: number }) {
+export function CaseStudiesSection({ products = [], limit, locale = 'en' }: { products?: Product[]; limit?: number; locale?: Locale }) {
+  const zh = locale === 'zh-CN'
   const items = typeof limit === 'number' ? CASE_STUDIES.slice(0, limit) : CASE_STUDIES
   return (
     <section aria-labelledby="case-studies-title" className="border-y border-border bg-stage py-16 md:py-24">
       <div className="wrap">
         <div id="case-studies-title">
           <SectionHeading
-            eyebrow="Selected project types"
-            title="Representative automation projects"
-            description="Selected scopes from delivered engineering work, showing the process and JUFTECH contribution at a level suitable for public review."
+            eyebrow={zh ? '项目类型' : 'Selected project types'}
+            title={zh ? '代表性自动化项目' : 'Representative automation projects'}
+            description={zh ? '从已有工程项目中整理公开可展示的工艺流程与九峰工作范围。' : 'Selected scopes from delivered engineering work, showing the process and JUFTECH contribution at a level suitable for public review.'}
           />
         </div>
         <ul className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
@@ -204,16 +210,17 @@ export function CaseStudiesSection({ products = [], limit }: { products?: Produc
   )
 }
 
-export function FactsBand() {
+export function FactsBand({ locale = 'en' }: { locale?: Locale } = {}) {
+  const zh = locale === 'zh-CN'
   return (
     <section aria-labelledby="facts-title" className="bg-primary py-14 text-white md:py-20">
       <div className="wrap">
         <div id="facts-title">
           <SectionHeading
             tone="dark"
-            eyebrow="Verified company facts"
-            title="Suzhou Industrial Park, since 2014"
-            description="A concise view of the company and its operating scale. Further capacity data is shared during project discussions."
+            eyebrow={zh ? '已核实企业信息' : 'Verified company facts'}
+            title={zh ? '扎根苏州工业园区，始于2014年' : 'Suzhou Industrial Park, since 2014'}
+            description={zh ? '简要展示企业与运营规模，进一步的能力信息可在项目沟通中提供。' : 'A concise view of the company and its operating scale. Further capacity data is shared during project discussions.'}
           />
         </div>
         <dl className="mt-8 grid grid-cols-2 gap-px overflow-hidden rounded-lg border border-white/20 bg-white/20 lg:grid-cols-4">

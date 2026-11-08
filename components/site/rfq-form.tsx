@@ -7,6 +7,7 @@ import type { Product, ProductFamily } from '@/lib/site-data'
 import { btnOutline, btnSignal, inputClass } from '@/lib/ui'
 import { cn } from '@/lib/utils'
 import { InquiryCaptchaField } from '@/components/inquiry-captcha-field'
+import type { Locale } from '@/lib/i18n'
 
 type Errors = Partial<Record<'name' | 'email' | 'subject' | 'message' | 'captcha', string>>
 
@@ -49,7 +50,8 @@ function Field({
   )
 }
 
-export function RfqForm({ defaultProduct, products, families, className }: { defaultProduct?: string; products: Product[]; families: ProductFamily[]; className?: string }) {
+export function RfqForm({ defaultProduct, products, families, className, locale = 'en' }: { defaultProduct?: string; products: Product[]; families: ProductFamily[]; className?: string; locale?: Locale }) {
+  const zh = locale === 'zh-CN'
   const uid = useId()
   const formRef = useRef<HTMLFormElement>(null)
   const [errors, setErrors] = useState<Errors>({})
@@ -77,12 +79,12 @@ export function RfqForm({ defaultProduct, products, families, className }: { def
     const value = (key: string) => String(data.get(key) ?? '').trim()
     const next: Errors = {}
 
-    if (!value('name')) next.name = 'Enter your name.'
-    if (!value('email')) next.email = 'Enter your email address.'
-    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value('email'))) next.email = 'Enter a valid email address.'
-    if (!value('subject')) next.subject = 'Choose a product or subject.'
-    if (value('message').length < 10) next.message = 'Describe your requirement in at least 10 characters.'
-    if (value('captchaAnswer').length !== 4) next.captcha = 'Enter the 4 characters shown in the image.'
+    if (!value('name')) next.name = zh ? '请输入姓名。' : 'Enter your name.'
+    if (!value('email')) next.email = zh ? '请输入邮箱地址。' : 'Enter your email address.'
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value('email'))) next.email = zh ? '请输入有效的邮箱地址。' : 'Enter a valid email address.'
+    if (!value('subject')) next.subject = zh ? '请选择产品或需求类型。' : 'Choose a product or subject.'
+    if (value('message').length < 10) next.message = zh ? '请至少用10个字符描述您的需求。' : 'Describe your requirement in at least 10 characters.'
+    if (value('captchaAnswer').length !== 4) next.captcha = zh ? '请输入图片中的4位字符。' : 'Enter the 4 characters shown in the image.'
 
     setErrors(next)
     const firstKey = (Object.keys(next) as (keyof Errors)[])[0]
@@ -113,9 +115,9 @@ export function RfqForm({ defaultProduct, products, families, className }: { def
         className={cn('rounded-lg border border-success/30 bg-[#f1faf5] p-6 sm:p-8', className)}
       >
         <CheckCircle2 className="size-8 text-success" strokeWidth={1.5} aria-hidden="true" />
-        <h3 className="mt-4 text-xl font-semibold text-ink">Request received</h3>
+        <h3 className="mt-4 text-xl font-semibold text-ink">{zh ? '需求已提交' : 'Request received'}</h3>
         <p className="mt-2 text-sm leading-relaxed text-ink/80">
-          Thank you. Your request has been recorded for the JUFTECH engineering team.
+          {zh ? '感谢您的提交。九峰工程团队已收到这条需求。' : 'Thank you. Your request has been recorded for the JUFTECH engineering team.'}
         </p>
         <button
           type="button"
@@ -126,7 +128,7 @@ export function RfqForm({ defaultProduct, products, families, className }: { def
             setRefreshKey((value) => value + 1)
           }}
         >
-          Send another request
+          {zh ? '继续提交' : 'Send another request'}
         </button>
       </div>
     )
@@ -143,22 +145,22 @@ export function RfqForm({ defaultProduct, products, families, className }: { def
       className={cn('rounded-lg border border-border bg-white p-5 shadow-[0_18px_40px_-28px_rgba(10,74,158,0.5)] sm:p-7', className)}
     >
       <fieldset disabled={submitting} className="space-y-5">
-        <legend className="sr-only">Request for quotation</legend>
+        <legend className="sr-only">{zh ? '提交询价需求' : 'Request for quotation'}</legend>
 
         <div className="grid gap-5 sm:grid-cols-2">
-          <Field id={ids.name} label="Full name" error={errors.name}>
+          <Field id={ids.name} label={zh ? '姓名' : 'Full name'} error={errors.name}>
             <input
               id={ids.name}
               name="name"
               type="text"
               autoComplete="name"
-              placeholder="Your name"
+              placeholder={zh ? '请输入姓名' : 'Your name'}
               aria-invalid={!!errors.name}
               aria-describedby={describe('name', ids.name)}
               className={inputClass}
             />
           </Field>
-          <Field id={ids.email} label="Email" error={errors.email}>
+          <Field id={ids.email} label={zh ? '邮箱' : 'Email'} error={errors.email}>
             <input
               id={ids.email}
               name="email"
@@ -170,7 +172,7 @@ export function RfqForm({ defaultProduct, products, families, className }: { def
               className={inputClass}
             />
           </Field>
-          <Field id={ids.phone} label="Phone" optional>
+          <Field id={ids.phone} label={zh ? '电话' : 'Phone'} optional>
             <input
               id={ids.phone}
               name="phone"
@@ -180,13 +182,13 @@ export function RfqForm({ defaultProduct, products, families, className }: { def
               className={inputClass}
             />
           </Field>
-          <Field id={ids.company} label="Company" optional>
+          <Field id={ids.company} label={zh ? '公司' : 'Company'} optional>
             <input
               id={ids.company}
               name="company"
               type="text"
               autoComplete="organization"
-              placeholder="Company name"
+              placeholder={zh ? '公司名称' : 'Company name'}
               className={inputClass}
             />
           </Field>
@@ -221,12 +223,12 @@ export function RfqForm({ defaultProduct, products, families, className }: { def
           </select>
         </Field>
 
-        <Field id={ids.message} label="Message" error={errors.message} hint="Part, process steps, drawings or samples available, and your application.">
+        <Field id={ids.message} label={zh ? '需求说明' : 'Message'} error={errors.message} hint={zh ? '可填写工件、工艺步骤、现有图纸或样品及应用场景。' : 'Part, process steps, drawings or samples available, and your application.'}>
           <textarea
             id={ids.message}
             name="message"
             rows={5}
-            placeholder="Describe your requirement"
+            placeholder={zh ? '请描述您的需求' : 'Describe your requirement'}
             aria-invalid={!!errors.message}
             aria-describedby={describe('message', ids.message, true)}
             className={cn(inputClass, 'h-auto min-h-32 resize-y py-2.5 leading-relaxed')}
@@ -234,7 +236,7 @@ export function RfqForm({ defaultProduct, products, families, className }: { def
         </Field>
 
         <div className="rounded-md border border-border bg-stage p-4">
-          <InquiryCaptchaField refreshKey={refreshKey} className="[&_label]:text-ink" />
+          <InquiryCaptchaField refreshKey={refreshKey} className="[&_label]:text-ink" locale={locale} />
           {errors.captcha && <p className="mt-2 text-xs font-medium text-destructive">{errors.captcha}</p>}
         </div>
 

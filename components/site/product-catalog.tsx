@@ -9,16 +9,20 @@ import { SiteIcon } from '@/components/site/site-icon'
 import type { Product, ProductFamily } from '@/lib/site-data'
 import { btnBlue } from '@/lib/ui'
 import { cn } from '@/lib/utils'
+import { localePath, type Locale } from '@/lib/i18n'
 
 export function ProductCatalog({
   products,
   families,
   initialFamily,
+  locale = 'en',
 }: {
   products: Product[]
   families: ProductFamily[]
   initialFamily?: string
+  locale?: Locale
 }) {
+  const zh = locale === 'zh-CN'
   const [family, setFamily] = useState(
     initialFamily && families.some((f) => f.slug === initialFamily) ? initialFamily : 'all',
   )
@@ -46,15 +50,15 @@ export function ProductCatalog({
     <div className="grid w-full min-w-0 gap-8 lg:grid-cols-[290px_minmax(0,1fr)] lg:gap-10">
       <div className="min-w-0 lg:sticky lg:top-28 lg:self-start">
         <h2 className="mb-3 font-mono text-xs font-medium uppercase tracking-[0.16em] text-signal-ink">
-          Filter by family
+          {zh ? '按分类筛选' : 'Filter by family'}
         </h2>
         <div
           role="group"
-          aria-label="Product family filters"
+          aria-label={zh ? '产品分类筛选' : 'Product family filters'}
           className="hide-scrollbar -mx-4 flex gap-2 overflow-x-auto px-4 pb-2 sm:-mx-6 sm:px-6 lg:mx-0 lg:flex-col lg:overflow-visible lg:px-0 lg:pb-0"
         >
           <button type="button" aria-pressed={family === 'all'} onClick={() => select('all')} className={filterButton(family === 'all')}>
-            <span className="flex-1">All families</span>
+            <span className="flex-1">{zh ? '全部分类' : 'All families'}</span>
             <span className={cn('font-mono text-xs tabular-nums', family === 'all' ? 'text-white/85' : 'text-muted-foreground')}>
               {products.length}
             </span>
@@ -77,16 +81,14 @@ export function ProductCatalog({
 
       <div className="min-w-0">
         <p className="mb-5 text-sm text-muted-foreground" role="status" aria-live="polite">
-          Showing <span className="font-semibold text-ink">{visible.length}</span>{' '}
-          {visible.length === 1 ? 'item' : 'items'}
-          {activeFamily ? <> in {activeFamily.name}</> : <> across all families</>}
+          {zh ? <>当前显示 <span className="font-semibold text-ink">{visible.length}</span> 项{activeFamily ? <>，分类：{activeFamily.name}</> : <>，来自全部分类</>}</> : <>Showing <span className="font-semibold text-ink">{visible.length}</span>{' '}{visible.length === 1 ? 'item' : 'items'}{activeFamily ? <> in {activeFamily.name}</> : <> across all families</>}</>}
         </p>
 
         {visible.length > 0 ? (
           <ul key={family} className="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
             {visible.map((product, i) => (
               <Reveal as="li" key={product.slug} index={i % 3} className="animate-in fade-in duration-300 motion-reduce:animate-none">
-                <ProductCard product={product} />
+                <ProductCard product={product} locale={locale} />
               </Reveal>
             ))}
           </ul>
@@ -103,10 +105,10 @@ export function ProductCatalog({
               an engineer will respond directly.
             </p>
             <Link
-              href={`/contact?product=${activeFamily?.slug ?? ''}#rfq`}
+              href={localePath(`/contact?product=${activeFamily?.slug ?? ''}#rfq`, locale)}
               className={cn(btnBlue, 'mt-6')}
             >
-              Send an RFQ
+              {zh ? '提交询价' : 'Send an RFQ'}
               <ArrowRight className="size-4" strokeWidth={1.75} aria-hidden="true" />
             </Link>
           </div>
