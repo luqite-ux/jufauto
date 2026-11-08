@@ -1,0 +1,26 @@
+{
+  "tenantId": "98f85dd9-ba33-44b6-86b2-6dc81286d8b3",
+  "defaultLanguage": "en",
+  "supportedLanguages": ["en", "zh-CN"],
+  "tenantZhFields": 6,
+  "products": {
+    "count": 48,
+    "nameZh": 48,
+    "descriptionZh": 48,
+    "overviewZh": 48,
+    "featuresZh": 48,
+    "applicationsZh": 48
+  },
+  "categories": {
+    "count": 9,
+    "nameZh": 9,
+    "descriptionZh": 9
+  },
+  "articles": {
+    "count": 0,
+    "note": "No published or draft articles existed at readback time; no demonstration article was created."
+  },
+  "prohibitedHits": 0,
+  "readbackAt": "2026-11-08T01:10:47.620Z",
+  "method": "Supabase service-role readback restricted to the JUFTECH tenant; no credentials recorded."
+}
