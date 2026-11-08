@@ -2,10 +2,11 @@ import type { Metadata } from 'next'
 import { CapabilityGrid, EvidenceSection, FactsBand, ProcessSection } from '@/components/home/engineering-sections'
 import { PageHeader } from '@/components/site/page-header'
 import { RfqSection } from '@/components/site/rfq-section'
+import { alternateLanguages } from '@/lib/i18n'
 
 export const metadata: Metadata = {
   title: 'Capabilities',
-  alternates: { canonical: '/capabilities' },
+  alternates: { canonical: '/capabilities', languages: alternateLanguages('/capabilities') },
   description:
     'JUFTECH engineering and integration capabilities: custom equipment design, tightening and feeding, robotic integration, control software, forming and heavy machining.',
 }

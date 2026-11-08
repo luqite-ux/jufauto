@@ -47,7 +47,7 @@ test('database product families receive professional buyer-facing presentation c
     assert.match(loader, new RegExp(copy.replace(/[&]/g, '\\&')))
   }
   assert.doesNotMatch(loader, /Explore \$\{.*\} from JUFTECH/)
-  assert.match(loader, /familyName: FAMILY_PRESENTATION\[row\.category_slug\]\?\.name \|\| row\.category/)
+  assert.match(loader, /familyName: \(locale === 'zh-CN' \? FAMILY_PRESENTATION_ZH : FAMILY_PRESENTATION\)\[row\.category_slug\]\?\.name \|\| row\.category/)
 })
 
 test('fallback product families mirror the nine production family slugs', async () => {

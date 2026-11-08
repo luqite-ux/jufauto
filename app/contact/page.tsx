@@ -1,10 +1,11 @@
 import type { Metadata } from 'next'
 import { PageHeader } from '@/components/site/page-header'
 import { RfqSection } from '@/components/site/rfq-section'
+import { alternateLanguages } from '@/lib/i18n'
 
 export const metadata: Metadata = {
   title: 'Contact',
-  alternates: { canonical: '/contact' },
+  alternates: { canonical: '/contact', languages: alternateLanguages('/contact') },
   description:
     'Contact JUFTECH engineers or send a request for quotation. Email info@jufauto.com or call 0512-67678265.',
 }

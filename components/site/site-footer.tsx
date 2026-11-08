@@ -10,7 +10,7 @@ export async function SiteFooter({ locale = 'en' }: { locale?: Locale }) {
   const zh = locale === 'zh-CN'
   const navLinks = zh ? NAV_LINKS_ZH : NAV_LINKS
   const year = new Date().getFullYear()
-  const { families } = await fetchProductsData()
+  const { families } = await fetchProductsData(locale)
 
   return (
     <footer className="border-t border-border bg-muted">

@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 }
 
 export default async function ChineseHomePage() {
-  const [{ products, families }, articles] = await Promise.all([fetchProductsData(), getPublishedArticles()])
+  const [{ products, families }, articles] = await Promise.all([fetchProductsData('zh-CN'), getPublishedArticles('zh-CN')])
   const groups = [{ title: '常见采购问题', items: PROCUREMENT_FAQ_ZH }]
   return <>
     <HeroCarousel slides={HERO_SLIDES_ZH} locale="zh-CN" />

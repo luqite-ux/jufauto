@@ -10,6 +10,7 @@ import { RfqSection } from '@/components/site/rfq-section'
 import { getProductBySlug } from '@/lib/products-db'
 import { btnOutline, btnSignal } from '@/lib/ui'
 import { cn } from '@/lib/utils'
+import { alternateLanguages } from '@/lib/i18n'
 
 export const dynamicParams = true
 export const revalidate = 60
@@ -18,7 +19,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params
   const { product } = await getProductBySlug(slug)
   if (!product) return { title: 'Product not found' }
-  return { title: product.name, description: product.summary, alternates: { canonical: `/products/${product.slug}` } }
+  const path = `/products/${product.slug}`
+  return { title: product.name, description: product.summary, alternates: { canonical: path, languages: alternateLanguages(path) } }
 }
 
 export default async function ProductDetailPage({ params }: { params: Promise<{ slug: string }> }) {

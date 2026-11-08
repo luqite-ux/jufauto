@@ -3,10 +3,11 @@ import { CaseStudiesSection, ProcessSection, SolutionsPreview } from '@/componen
 import { PageHeader } from '@/components/site/page-header'
 import { RfqSection } from '@/components/site/rfq-section'
 import { fetchProductsData } from '@/lib/products-db'
+import { alternateLanguages } from '@/lib/i18n'
 
 export const metadata: Metadata = {
   title: 'Solutions',
-  alternates: { canonical: '/solutions' },
+  alternates: { canonical: '/solutions', languages: alternateLanguages('/solutions') },
   description:
     'Application areas where JUFTECH combines automation equipment, tightening modules, feeding systems, robotic integration and control software.',
 }

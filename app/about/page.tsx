@@ -6,10 +6,11 @@ import { PageHeader } from '@/components/site/page-header'
 import { Reveal } from '@/components/site/reveal'
 import { RfqSection } from '@/components/site/rfq-section'
 import { COMPANY, PRODUCT_FAMILIES } from '@/lib/site-data'
+import { alternateLanguages } from '@/lib/i18n'
 
 export const metadata: Metadata = {
   title: 'About',
-  alternates: { canonical: '/about' },
+  alternates: { canonical: '/about', languages: alternateLanguages('/about') },
   description:
     'About JUFTECH, the public brand of Suzhou Industrial Park Jiufeng Automation Technology Co., Ltd., an industrial automation company founded in 2014.',
 }

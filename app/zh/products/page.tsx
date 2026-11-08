@@ -11,7 +11,7 @@ export const metadata: Metadata = { title: '产品中心', description: ZH_PAGE_
 
 export default async function ChineseProductsPage({ searchParams }: { searchParams: Promise<{ family?: string }> }) {
   const { family } = await searchParams
-  const { products, families } = await fetchProductsData()
+  const { products, families } = await fetchProductsData('zh-CN')
   const initialFamily = families.some((item) => item.slug === family) ? family : undefined
   return <>
     <PageHeader {...ZH_PAGE_COPY.products} crumbs={[{ label: '产品中心' }]} />

@@ -5,6 +5,7 @@ import { ArrowLeft } from 'lucide-react'
 import { PageHeader } from '@/components/site/page-header'
 import { getArticleBySlug } from '@/lib/articles-db'
 import { btnOutline } from '@/lib/ui'
+import { alternateLanguages } from '@/lib/i18n'
 
 export const dynamicParams = true
 export const revalidate = 60
@@ -13,7 +14,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params
   const article = await getArticleBySlug(slug)
   if (!article) return { title: 'Article not found' }
-  return { title: article.title, description: article.excerpt, alternates: { canonical: `/news/${article.slug}` } }
+  const path = `/news/${article.slug}`
+  return { title: article.title, description: article.excerpt, alternates: { canonical: path, languages: alternateLanguages(path) } }
 }
 
 export default async function NewsArticlePage({ params }: { params: Promise<{ slug: string }> }) {

@@ -24,7 +24,7 @@ export async function RfqSection({
   const zh = locale === 'zh-CN'
   const resolvedTitle = title ?? (zh ? ZH_COMMON.requestTitle : 'Send your requirement to our engineers')
   const resolvedDescription = description ?? (zh ? ZH_COMMON.requestDescription : 'Describe the part, the process and the application. An engineer replies with the information needed to move your request forward.')
-  const { products, families } = await fetchProductsData()
+  const { products, families } = await fetchProductsData(locale)
   const Heading = headingLevel
   return (
     <section id={idAttr} aria-labelledby={`${idAttr}-title`} className="blueprint border-t border-border bg-stage py-16 md:py-24">

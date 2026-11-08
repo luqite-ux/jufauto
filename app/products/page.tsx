@@ -3,12 +3,13 @@ import { PageHeader } from '@/components/site/page-header'
 import { ProductCatalog } from '@/components/site/product-catalog'
 import { RfqSection } from '@/components/site/rfq-section'
 import { fetchProductsData } from '@/lib/products-db'
+import { alternateLanguages } from '@/lib/i18n'
 
 export const revalidate = 60
 
 export const metadata: Metadata = {
   title: 'Products',
-  alternates: { canonical: '/products' },
+  alternates: { canonical: '/products', languages: alternateLanguages('/products') },
   description:
     'Browse JUFTECH product families: custom automation equipment, automatic tightening modules, feeding systems, rugged tablets, robotic integration, forming machines, heavy machining and control software.',
 }

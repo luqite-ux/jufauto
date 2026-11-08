@@ -56,3 +56,26 @@ export function localizedValue(
   }
   return typeof fallback === 'string' ? fallback.trim() : ''
 }
+
+export function localizedStrings(
+  value: Record<string, unknown> | null | undefined,
+  locale: Locale,
+  fallback: unknown = [],
+): string[] {
+  const candidates = locale === 'zh-CN' ? ['zh-CN', 'zh_CN', 'zh', 'en'] : ['en']
+  for (const key of candidates) {
+    const result = toStrings(value?.[key])
+    if (result.length) return result
+  }
+  for (const candidate of Object.values(value ?? {})) {
+    const result = toStrings(candidate)
+    if (result.length) return result
+  }
+  return toStrings(fallback)
+}
+
+function toStrings(value: unknown): string[] {
+  return Array.isArray(value)
+    ? value.filter((item): item is string => typeof item === 'string' && Boolean(item.trim())).map((item) => item.trim())
+    : []
+}

@@ -2,12 +2,13 @@ import type { Metadata } from 'next'
 import { NewsGrid } from '@/components/site/news-grid'
 import { PageHeader } from '@/components/site/page-header'
 import { getPublishedArticles } from '@/lib/articles-db'
+import { alternateLanguages } from '@/lib/i18n'
 
 export const revalidate = 60
 
 export const metadata: Metadata = {
   title: 'News',
-  alternates: { canonical: '/news' },
+  alternates: { canonical: '/news', languages: alternateLanguages('/news') },
   description: 'Company and product news from JUFTECH.',
 }
 

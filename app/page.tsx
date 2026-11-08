@@ -14,9 +14,10 @@ import { getPublishedArticles } from '@/lib/articles-db'
 import { getSiteContent } from '@/lib/site-content/site-content'
 import { HERO_SLIDES, type HeroSlide } from '@/lib/site-data'
 import { PROCUREMENT_FAQ } from '@/content/juftech-content.mjs'
+import { alternateLanguages } from '@/lib/i18n'
 
 export const revalidate = 60
-export const metadata: Metadata = { alternates: { canonical: '/' } }
+export const metadata: Metadata = { alternates: { canonical: '/', languages: alternateLanguages('/') } }
 
 export default async function HomePage() {
   const [{ products, families }, articles] = await Promise.all([fetchProductsData(), getPublishedArticles()])
