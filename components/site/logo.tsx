@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { cn } from '@/lib/utils'
+import { localePath, type Locale } from '@/lib/i18n'
 
 /**
  * The supplied logo file carries generous white margins. The wrapper crops to the
@@ -23,11 +24,11 @@ export function Logo({ className, priority }: { className?: string; priority?: b
   )
 }
 
-export function LogoLink({ className, priority }: { className?: string; priority?: boolean }) {
+export function LogoLink({ className, priority, locale = 'en' }: { className?: string; priority?: boolean; locale?: Locale }) {
   return (
     <Link
-      href="/"
-      aria-label="JUFTECH home"
+      href={localePath('/', locale)}
+      aria-label={locale === 'zh-CN' ? 'JUFTECH 首页' : 'JUFTECH home'}
       className="inline-block rounded-sm transition-opacity duration-200 hover:opacity-85 focus-visible:outline-2 focus-visible:outline-offset-4"
     >
       <Logo className={className} priority={priority} />

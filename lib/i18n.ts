@@ -74,6 +74,23 @@ export function localizedStrings(
   return toStrings(fallback)
 }
 
+const SPEC_LABELS_ZH: Record<string, string> = {
+  'Configuration basis': '配置依据',
+  'Minimum order quantity': '最小起订量',
+}
+
+const SPEC_VALUES_ZH: Record<string, string> = {
+  'Customised to project requirements': '按项目要求定制',
+}
+
+export function localizedSpec(label: string, value: string, locale: Locale): { label: string; value: string } {
+  if (locale !== 'zh-CN') return { label, value }
+  return {
+    label: SPEC_LABELS_ZH[label] ?? label,
+    value: SPEC_VALUES_ZH[value] ?? value,
+  }
+}
+
 function toStrings(value: unknown): string[] {
   return Array.isArray(value)
     ? value.filter((item): item is string => typeof item === 'string' && Boolean(item.trim())).map((item) => item.trim())

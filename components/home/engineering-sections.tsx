@@ -128,7 +128,7 @@ export function SolutionsPreview({ detailed = false, products = [], limit, local
           </div>
         ) : (
           <h2 id="solutions-title" className="sr-only">
-            Solution areas
+            {zh ? '解决方案领域' : 'Solution areas'}
           </h2>
         )}
         <ul className={cn('grid gap-5 md:grid-cols-2 lg:grid-cols-3', !detailed && 'mt-10')}>

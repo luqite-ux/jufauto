@@ -52,7 +52,7 @@ export function HeroCarousel({ slides = HERO_SLIDES, locale = 'en' }: { slides?:
               key={slide.id}
               role="group"
               aria-roledescription="slide"
-              aria-label={`${i + 1} of ${total}`}
+              aria-label={chinese ? `第${i + 1}张，共${total}张` : `${i + 1} of ${total}`}
               aria-hidden={!active}
               inert={!active}
               data-active={active}

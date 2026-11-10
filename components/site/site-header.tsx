@@ -57,9 +57,9 @@ export function SiteHeader() {
 
       <header className="sticky top-0 z-50 border-b border-border bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/90">
         <div className="wrap flex h-16 items-center justify-between gap-4 lg:h-[76px]">
-          <LogoLink className="h-11 lg:h-[52px]" priority />
+          <LogoLink className="h-11 lg:h-[52px]" priority locale={chinese ? 'zh-CN' : 'en'} />
 
-          <nav aria-label="Primary" className="hidden items-center gap-1 lg:flex">
+          <nav aria-label={chinese ? '主导航' : 'Primary'} className="hidden items-center gap-1 lg:flex">
             {navLinks.map((link) => {
               const href = localePath(link.href, chinese ? 'zh-CN' : 'en')
               const active = isActive(pathname, href)
@@ -84,9 +84,9 @@ export function SiteHeader() {
             <Link href={localePath('/contact#rfq', chinese ? 'zh-CN' : 'en')} className={cn(btnSignal, 'hidden h-10 sm:inline-flex')}>
               {chinese ? ZH_COMMON.quote : 'Request a Quote'}
             </Link>
-            <Link href={switchHref} hrefLang={chinese ? 'en' : 'zh-CN'} className="inline-flex h-10 items-center rounded-md border border-border px-3 text-sm font-semibold text-primary transition-colors hover:bg-accent">
+            <a href={switchHref} hrefLang={chinese ? 'en' : 'zh-CN'} className="inline-flex h-10 items-center rounded-md border border-border px-3 text-sm font-semibold text-primary transition-colors hover:bg-accent">
               {chinese ? 'EN' : '中文'}
-            </Link>
+            </a>
 
             <Sheet open={open} onOpenChange={setOpen}>
               <SheetTrigger asChild>
@@ -103,7 +103,7 @@ export function SiteHeader() {
                   <SheetTitle className="text-base">JUFTECH</SheetTitle>
                   <SheetDescription className="text-xs">{chinese ? ZH_COMMON.mobileDescription : 'Industrial automation and control systems'}</SheetDescription>
                 </SheetHeader>
-                <nav aria-label="Mobile primary" className="flex flex-col p-2">
+                <nav aria-label={chinese ? '移动端主导航' : 'Mobile primary'} className="flex flex-col p-2">
                   {navLinks.map((link) => {
                     const href = localePath(link.href, chinese ? 'zh-CN' : 'en')
                     const active = isActive(pathname, href)

@@ -23,7 +23,7 @@ export function PageHeader({
   return (
     <section className="blueprint relative border-b border-border bg-stage">
       <div className="wrap py-10 md:py-14">
-        <nav aria-label="Breadcrumb">
+        <nav aria-label={isChinese ? '面包屑导航' : 'Breadcrumb'}>
           <ol className="flex flex-wrap items-center gap-1.5 text-sm text-muted-foreground">
             <li>
               <Link href={isChinese ? '/zh' : '/'} className="transition-colors duration-200 hover:text-primary">

@@ -1,6 +1,6 @@
 import { PRODUCT_FAMILIES, PRODUCTS, type Product, type ProductFamily } from '@/lib/site-data'
 import { getSupabaseClient } from '@/lib/supabase'
-import { localizedStrings, localizedValue, type Locale } from '@/lib/i18n'
+import { localizedSpec, localizedStrings, localizedValue, type Locale } from '@/lib/i18n'
 
 const TENANT_ID = process.env.NEXT_PUBLIC_TENANT_ID?.trim()
 const ICONS: ProductFamily['icon'][] = ['cog', 'wrench', 'funnel', 'tablet', 'bot', 'hammer', 'drill', 'braces', 'workflow']
@@ -90,7 +90,9 @@ export async function fetchProductsData(locale: Locale = 'en'): Promise<{ produc
     const images = [row.image_url, ...(Array.isArray(row.extra_data?.images) ? row.extra_data.images : [])]
       .filter((url, index, all): url is string => typeof url === 'string' && !!url && all.indexOf(url) === index)
       .map((src) => ({ src, alt: locale === 'zh-CN' ? `${localizedValue(row.name_i18n, locale, row.name_en || row.name)} 产品图片` : `${localizedValue(row.name_i18n, locale, row.name_en || row.name)} product image` }))
-    const specs = row.specs && typeof row.specs === 'object' ? Object.entries(row.specs).map(([label, value]) => ({ label, value: String(value ?? '') })) : []
+    const specs = row.specs && typeof row.specs === 'object'
+      ? Object.entries(row.specs).map(([label, value]) => localizedSpec(label, String(value ?? ''), locale))
+      : []
     return {
       slug: row.slug,
       name: localizedValue(row.name_i18n, locale, row.name_en || row.name),

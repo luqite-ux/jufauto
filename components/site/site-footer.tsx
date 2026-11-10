@@ -17,14 +17,14 @@ export async function SiteFooter({ locale = 'en' }: { locale?: Locale }) {
       <div className="wrap grid gap-10 py-14 md:grid-cols-2 lg:grid-cols-[1.4fr_0.8fr_1.2fr_1.2fr] lg:py-16">
         <div className="space-y-5">
           <div className="inline-block rounded-md border border-border bg-white px-4 py-3">
-            <LogoLink className="h-16 sm:h-[72px] lg:h-20" />
+            <LogoLink className="h-16 sm:h-[72px] lg:h-20" locale={locale} />
           </div>
           <p className="max-w-sm text-sm leading-relaxed text-muted-foreground">
             {zh ? 'JUFTECH 是苏州工业园区九峰自动化技术有限公司的对外品牌，提供自动化设备、锁付与供料系统、机器人集成、成型设备、大型加工及工业控制软件。' : <>JUFTECH is the public brand of {COMPANY.legalName}, supplying automation equipment, tightening and feeding systems, robotic integration, forming, heavy machining and industrial control software from Suzhou Industrial Park.</>}
           </p>
         </div>
 
-        <nav aria-label="Footer">
+        <nav aria-label={zh ? '页脚导航' : 'Footer'}>
           <h2 className="font-mono text-xs font-medium uppercase tracking-widest text-signal-ink">{zh ? ZH_COMMON.site : 'Site'}</h2>
           <ul className="mt-4 space-y-2.5 text-sm">
             {navLinks.map((link) => (
@@ -37,7 +37,7 @@ export async function SiteFooter({ locale = 'en' }: { locale?: Locale }) {
           </ul>
         </nav>
 
-        <nav aria-label="Product families">
+        <nav aria-label={zh ? '产品分类' : 'Product families'}>
           <h2 className="font-mono text-xs font-medium uppercase tracking-widest text-signal-ink">{zh ? ZH_COMMON.productFamilies : 'Product families'}</h2>
           <ul className="mt-4 space-y-2.5 text-sm">
             {families.map((family) => (

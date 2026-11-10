@@ -2,13 +2,17 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
+import { usePathname } from 'next/navigation'
 import { ProductStage } from '@/components/site/product-image'
 import type { ProductImage } from '@/lib/site-data'
 import { cn } from '@/lib/utils'
+import { localeFromPath, type Locale } from '@/lib/i18n'
 
-export function ProductGallery({ images }: { images: ProductImage[] }) {
+export function ProductGallery({ images, locale }: { images: ProductImage[]; locale?: Locale }) {
   const [active, setActive] = useState(0)
+  const pathname = usePathname()
   const current = images[active]
+  const zh = (locale ?? localeFromPath(pathname)) === 'zh-CN'
 
   return (
     <div className="space-y-3">
@@ -17,15 +21,15 @@ export function ProductGallery({ images }: { images: ProductImage[] }) {
         priority
         sizes="(min-width: 1024px) 560px, 94vw"
         className="aspect-square w-full"
-        pendingLabel="Image pending"
+        pendingLabel={zh ? '图片待补充' : 'Image pending'}
       />
       {images.length > 1 && (
-        <ul className="grid grid-cols-4 gap-2" aria-label="Product image thumbnails">
+        <ul className="grid grid-cols-4 gap-2" aria-label={zh ? '产品图片缩略图' : 'Product image thumbnails'}>
           {images.map((image, i) => (
             <li key={image.src}>
               <button
                 type="button"
-                aria-label={`Show image ${i + 1} of ${images.length}`}
+                aria-label={zh ? `查看第${i + 1}张图片，共${images.length}张` : `Show image ${i + 1} of ${images.length}`}
                 aria-pressed={i === active}
                 onClick={() => setActive(i)}
                 className={cn(
