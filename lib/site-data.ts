@@ -264,8 +264,12 @@ export const PRODUCTS: Product[] = [
     applications: ['Part forming stations', 'Machines with a separate electrical control cabinet'],
     images: [
       {
-        src: '/images/product-forming.jpg',
-        alt: 'Green forming machine with pneumatic cylinders beside an open electrical control cabinet and mesh guarding',
+        src: '/images/equipment/compression-molding-1.jpg',
+        alt: 'Compression molding machine on the workshop floor',
+      },
+      {
+        src: '/images/equipment/belt-forming-1.jpg',
+        alt: 'Belt forming machine with control panel and guarded enclosure',
       },
     ],
     featured: true,
@@ -350,9 +354,9 @@ export const HERO_SLIDES: HeroSlide[] = [
     image: '/images/banner-1.jpg',
     imageAlt:
       'Advertising illustration of an automated production line with two robot arms, a conveyor and a machining centre',
-    eyebrow: 'Custom automation equipment',
-    title: 'Automation Engineered Around Your Process',
-    body: 'Share the part, the process steps and the plant layout. JUFTECH engineers review them and propose equipment, tightening, feeding and controls to fit.',
+    eyebrow: 'UAV Tablets · Forming Machines · Heavy Machinery Parts',
+    title: 'Batch-Custom Machined Parts for Heavy Machinery',
+    body: 'Stocked heavy equipment spare parts, with OEM custom machining to your drawings or samples.',
     primary: { label: 'Request a Quote', href: '/contact#rfq' },
     secondary: { label: 'Browse Products', href: '/products' },
     textSide: 'left',
@@ -515,9 +519,9 @@ export const EVIDENCE: { src: string; alt: string; caption: string }[] = [
     caption: 'Guarded automation line with operator panel',
   },
   {
-    src: '/images/product-forming.jpg',
-    alt: 'Forming machine beside an open electrical control cabinet',
-    caption: 'Forming machine and electrical control cabinet',
+    src: '/images/equipment/compression-molding-1.jpg',
+    alt: 'Compression molding machine on the workshop floor',
+    caption: 'Compression molding machine',
   },
   {
     src: '/images/product-heavy-machining.jpg',

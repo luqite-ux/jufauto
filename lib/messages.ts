@@ -30,8 +30,8 @@ export const ZH_COMMON = {
 export const HERO_SLIDES_ZH: HeroSlide[] = [
   {
     id: 'process', image: '/images/banner-1.jpg', imageAlt: '包含机器人、输送线和加工设备的自动化生产线应用示意图',
-    eyebrow: '非标自动化设备', title: '围绕您的工艺设计自动化方案',
-    body: '从工件、节拍和现场空间出发，完成工作站、装配线、检测与控制系统的协同设计。',
+    eyebrow: '无人机平板 · 成型机 · 重工机械配件', title: '重工机械批量定制机加工配件',
+    body: '提供现货重工设备备件，同时支持按照图纸、样品OEM定制加工。',
     primary: { label: '查看产品', href: '/zh/products' }, secondary: { label: '提交需求', href: '/zh/contact#rfq' },
     textSide: 'left', focusDesktop: 50, focusMobile: 50,
   },
@@ -103,7 +103,7 @@ export const FACTS_ZH = [
 
 export const EVIDENCE_ZH = [
   { src: '/images/product-custom-automation.jpg', alt: '带输送工位和安全防护的铝型材自动化生产线', caption: '带操作面板和安全防护的自动化生产线' },
-  { src: '/images/product-forming.jpg', alt: '成型设备及打开的电气控制柜', caption: '成型设备与电气控制柜' },
+  { src: '/images/equipment/compression-molding-1.jpg', alt: '模压成型机实拍图', caption: '模压成型机' },
   { src: '/images/product-heavy-machining.jpg', alt: '带钢制伸缩防护罩的龙门机床', caption: '龙门大型加工设备' },
 ] as const
 
