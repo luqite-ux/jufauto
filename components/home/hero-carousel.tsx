@@ -149,7 +149,7 @@ export function HeroCarousel({ slides = HERO_SLIDES, locale = 'en' }: { slides?:
                       aria-label={chinese ? `转到第 ${i + 1} 张：${slide.title}` : `Go to slide ${i + 1}: ${slide.title}`}
                       aria-current={active ? 'true' : undefined}
                       onClick={() => go(i)}
-                      className="group flex h-11 w-12 items-center justify-center focus-visible:outline-2 focus-visible:outline-ring sm:w-14"
+                      className="group flex h-11 w-7 items-center justify-center focus-visible:outline-2 focus-visible:outline-ring sm:w-14"
                     >
                       <span
                         className={cn(
