@@ -49,6 +49,20 @@ export const HERO_SLIDES_ZH: HeroSlide[] = [
     primary: { label: '了解解决方案', href: '/zh/solutions' }, secondary: { label: '了解企业能力', href: '/zh/capabilities' },
     textSide: 'left', focusDesktop: 50, focusMobile: 50,
   },
+  {
+    id: 'uav-forming-parts', image: '/images/banner-4.jpg', imageAlt: '无人机平板与成型设备加工配件的概念示意图',
+    eyebrow: '无人机平板 · 成型设备', title: '无人机平板与成型机加工配件',
+    body: '可就零件需求、图纸与机加工方案与工程团队沟通。',
+    primary: { label: '查看产品', href: '/zh/products' }, secondary: { label: '提交图纸需求', href: '/zh/contact#rfq' },
+    textSide: 'left', focusDesktop: 70, focusMobile: 66,
+  },
+  {
+    id: 'heavy-machinery-parts', image: '/images/banner-5.jpg', imageAlt: '重工机械加工设备与配件的概念示意图',
+    eyebrow: '重工机械配件', title: '现货配件与批量定制机加工',
+    body: '可咨询重工设备现货备件，并按图纸或样品沟通 OEM 定制加工。',
+    primary: { label: '提交询价', href: '/zh/contact#rfq' }, secondary: { label: '了解加工能力', href: '/zh/capabilities' },
+    textSide: 'right', focusDesktop: 34, focusMobile: 36,
+  },
 ]
 
 export const PROCUREMENT_FAQ_ZH = [

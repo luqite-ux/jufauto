@@ -391,6 +391,32 @@ export const HERO_SLIDES: HeroSlide[] = [
     focusDesktop: 70,
     focusMobile: 80,
   },
+  {
+    id: 'uav-forming-parts',
+    image: '/images/banner-4.jpg',
+    imageAlt: 'Concept artwork featuring a UAV tablet and machined parts for forming equipment',
+    eyebrow: 'UAV Tablets · Forming Equipment',
+    title: 'Machined Parts for UAV Tablets and Forming Equipment',
+    body: 'Discuss part requirements and drawing-based machining with our engineering team.',
+    primary: { label: 'Browse Products', href: '/products' },
+    secondary: { label: 'Send Your Drawings', href: '/contact#rfq' },
+    textSide: 'left',
+    focusDesktop: 70,
+    focusMobile: 66,
+  },
+  {
+    id: 'heavy-machinery-parts',
+    image: '/images/banner-5.jpg',
+    imageAlt: 'Concept artwork featuring machining equipment and heavy machinery parts',
+    eyebrow: 'Heavy Machinery Parts',
+    title: 'Stocked Parts and Batch Custom Machining',
+    body: 'Ask about available heavy equipment spare parts or OEM machining to your drawings and samples.',
+    primary: { label: 'Request a Quote', href: '/contact#rfq' },
+    secondary: { label: 'View Capabilities', href: '/capabilities' },
+    textSide: 'right',
+    focusDesktop: 34,
+    focusMobile: 36,
+  },
 ]
 
 /* ------------------------------------------------------------------ */

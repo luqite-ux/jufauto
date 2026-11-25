@@ -25,10 +25,10 @@ export default async function HomePage() {
   const home = snapshot?.pages.find((page) => page.path === '/')
   const heroValues = home?.modules.find((module) => module.key === 'hero')?.values
   const configuredSlides = Array.isArray(heroValues?.slides) ? heroValues.slides : []
-  const slides: HeroSlide[] = configuredSlides.length === HERO_SLIDES.length ? HERO_SLIDES.map((fallback, index) => {
-    const value = configuredSlides[index] as Record<string, unknown>
+  const slides: HeroSlide[] = HERO_SLIDES.map((fallback, index) => {
+    const value = (configuredSlides[index] ?? {}) as Record<string, unknown>
     return { ...fallback, eyebrow: String(value.eyebrow || fallback.eyebrow), title: String(value.title || fallback.title), body: String(value.body || fallback.body), primary: { label: String(value.primary_label || fallback.primary.label), href: String(value.primary_href || fallback.primary.href) }, secondary: { label: String(value.secondary_label || fallback.secondary.label), href: String(value.secondary_href || fallback.secondary.href) } }
-  }) : HERO_SLIDES
+  })
   const groups = [{ title: 'Key procurement questions', items: PROCUREMENT_FAQ.slice(0, 6) }]
   return (
     <>
