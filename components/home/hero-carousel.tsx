@@ -68,6 +68,12 @@ export function HeroCarousel({ slides = HERO_SLIDES, locale = 'en' }: { slides?:
                   className="hero-img object-cover"
                   style={imageStyle}
                 />
+                {slide.id === 'uav-forming-parts' && (
+                  <div
+                    aria-hidden="true"
+                    className="pointer-events-none absolute inset-y-0 left-0 hidden w-[min(46vw,650px)] bg-[linear-gradient(90deg,rgba(0,0,0,0.45)_0%,rgba(0,0,0,0.25)_48%,rgba(0,0,0,0)_100%)] lg:block"
+                  />
+                )}
               </div>
 
               <div className="relative bg-white lg:absolute lg:inset-0 lg:flex lg:items-center lg:bg-transparent lg:pb-24 lg:pt-6">
