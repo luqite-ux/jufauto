@@ -172,7 +172,7 @@ export function HeroCarousel({ slides = HERO_SLIDES, locale = 'en' }: { slides?:
                 )
               })}
             </ul>
-            <span className="px-2 font-mono text-xs tabular-nums text-muted-foreground" aria-hidden="true">
+            <span className="whitespace-nowrap px-1 font-mono text-xs tabular-nums text-muted-foreground sm:px-2" aria-hidden="true">
               {String(index + 1).padStart(2, '0')} / {String(total).padStart(2, '0')}
             </span>
           </div>

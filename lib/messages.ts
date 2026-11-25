@@ -54,7 +54,7 @@ export const HERO_SLIDES_ZH: HeroSlide[] = [
     eyebrow: '无人机平板 · 成型设备', title: '无人机平板与成型机加工配件',
     body: '可就零件需求、图纸与机加工方案与工程团队沟通。',
     primary: { label: '查看产品', href: '/zh/products' }, secondary: { label: '提交图纸需求', href: '/zh/contact#rfq' },
-    textSide: 'left', focusDesktop: 70, focusMobile: 66,
+    textSide: 'left', focusDesktop: 70, focusMobile: 90,
   },
   {
     id: 'heavy-machinery-parts', image: '/images/banner-5.jpg', imageAlt: '重工机械加工设备与配件的概念示意图',

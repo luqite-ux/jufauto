@@ -402,7 +402,7 @@ export const HERO_SLIDES: HeroSlide[] = [
     secondary: { label: 'Send Your Drawings', href: '/contact#rfq' },
     textSide: 'left',
     focusDesktop: 70,
-    focusMobile: 66,
+    focusMobile: 90,
   },
   {
     id: 'heavy-machinery-parts',
