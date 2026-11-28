@@ -57,11 +57,11 @@ export const HERO_SLIDES_ZH: HeroSlide[] = [
     textSide: 'left', focusDesktop: 70, focusMobile: 90,
   },
   {
-    id: 'forming-machines', image: '/images/equipment/belt-forming-1.jpg', imageAlt: '车间标准皮带成型机及电控安全防护结构实拍图',
+    id: 'forming-machines', image: '/images/banner-forming-machines.jpg', imageAlt: '标准皮带成型机及电控安全防护结构应用场景示意图',
     eyebrow: '成型机 · 标准成型设备', title: '皮带成型机与模压成型机',
     body: '提供标准成型设备制造与工艺配置，重点覆盖皮带成型机、模压成型机及配套电控系统。',
     primary: { label: '查看成型设备', href: '/zh/products?family=forming-machine' }, secondary: { label: '咨询设备方案', href: '/zh/contact#rfq' },
-    textSide: 'left', focusDesktop: 55, focusMobile: 60,
+    textSide: 'left', focusDesktop: 68, focusMobile: 68,
   },
   {
     id: 'heavy-machinery-parts', image: '/images/banner-5.jpg', imageAlt: '重工机械批量机加工设备与 OEM 定制加工配件概念示意图',
