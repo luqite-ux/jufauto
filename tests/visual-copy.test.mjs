@@ -69,4 +69,7 @@ test('fallback product families mirror the seven core business lines and hero sl
   assert.match(zhMessages, /皮带成型机与模压成型机/)
   assert.match(zhMessages, /东南亚纺织服装厂智能缝制自动化升级方案集成/)
   assert.match(zhMessages, /控制软件开发、电柜制作与技术服务/)
+  const hero = await source('components/home/hero-carousel.tsx')
+  assert.match(hero, /max-w-full/)
+  assert.match(hero, /w-4 items-center justify-center/)
 })
