@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { CaseStudiesSection, ProcessSection, SolutionsPreview } from '@/components/home/engineering-sections'
+import { CaseStudiesSection, ProcessSection, SolutionsPreview, TextileUpgradeSpotlight } from '@/components/home/engineering-sections'
 import { PageHeader } from '@/components/site/page-header'
 import { RfqSection } from '@/components/site/rfq-section'
 import { fetchProductsData } from '@/lib/products-db'
@@ -24,6 +24,7 @@ export default async function SolutionsPage() {
         description="Each solution area combines product families into a working station or line. Scope is defined with your engineers during requirement analysis."
         crumbs={[{ label: 'Solutions' }]}
       />
+      <TextileUpgradeSpotlight />
       <SolutionsPreview detailed products={products} />
       <CaseStudiesSection products={products} />
       <ProcessSection />

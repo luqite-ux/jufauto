@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { FamilyPaths, FeaturedProducts } from '@/components/home/catalogue-sections'
-import { CaseStudiesSection, EvidenceSection, FactsBand, SolutionsPreview } from '@/components/home/engineering-sections'
+import { CaseStudiesSection, EvidenceSection, FactsBand, SolutionsPreview, TextileUpgradeSpotlight } from '@/components/home/engineering-sections'
 import { FaqSection, NewsSection } from '@/components/home/faq-news-sections'
 import { HeroCarousel } from '@/components/home/hero-carousel'
 import { RfqSection } from '@/components/site/rfq-section'
@@ -23,6 +23,7 @@ export default async function ChineseHomePage() {
     <HeroCarousel slides={HERO_SLIDES_ZH} locale="zh-CN" />
     <FactsBand locale="zh-CN" />
     <FamilyPaths products={products} families={families} locale="zh-CN" />
+    <TextileUpgradeSpotlight locale="zh-CN" />
     <FeaturedProducts products={products} locale="zh-CN" />
     <SolutionsPreview products={products} limit={3} locale="zh-CN" />
     <CaseStudiesSection products={products} limit={3} locale="zh-CN" />

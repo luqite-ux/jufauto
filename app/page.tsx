@@ -5,6 +5,7 @@ import {
   CaseStudiesSection,
   FactsBand,
   SolutionsPreview,
+  TextileUpgradeSpotlight,
 } from '@/components/home/engineering-sections'
 import { FaqSection, NewsSection } from '@/components/home/faq-news-sections'
 import { HeroCarousel } from '@/components/home/hero-carousel'
@@ -25,8 +26,11 @@ export default async function HomePage() {
   const home = snapshot?.pages.find((page) => page.path === '/')
   const heroValues = home?.modules.find((module) => module.key === 'hero')?.values
   const configuredSlides = Array.isArray(heroValues?.slides) ? heroValues.slides : []
-  const slides: HeroSlide[] = HERO_SLIDES.map((fallback, index) => {
-    const value = (configuredSlides[index] ?? {}) as Record<string, unknown>
+  const slides: HeroSlide[] = HERO_SLIDES.map((fallback) => {
+    const value = configuredSlides.find(
+      (item): item is Record<string, unknown> => Boolean(item && typeof item === 'object' && (item as Record<string, unknown>).id === fallback.id),
+    )
+    if (!value) return fallback
     return { ...fallback, eyebrow: String(value.eyebrow || fallback.eyebrow), title: String(value.title || fallback.title), body: String(value.body || fallback.body), primary: { label: String(value.primary_label || fallback.primary.label), href: String(value.primary_href || fallback.primary.href) }, secondary: { label: String(value.secondary_label || fallback.secondary.label), href: String(value.secondary_href || fallback.secondary.href) } }
   })
   const groups = [{ title: 'Key procurement questions', items: PROCUREMENT_FAQ.slice(0, 6) }]
@@ -35,6 +39,7 @@ export default async function HomePage() {
       <HeroCarousel slides={slides} />
       <FactsBand />
       <FamilyPaths products={products} families={families} />
+      <TextileUpgradeSpotlight />
       <FeaturedProducts products={products} />
       <SolutionsPreview products={products} limit={3} />
       <CaseStudiesSection products={products} limit={3} />

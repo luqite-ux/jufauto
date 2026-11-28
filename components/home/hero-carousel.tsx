@@ -68,7 +68,7 @@ export function HeroCarousel({ slides = HERO_SLIDES, locale = 'en' }: { slides?:
                   className="hero-img object-cover"
                   style={imageStyle}
                 />
-                {slide.id === 'uav-forming-parts' && (
+                {(slide.id === 'uav-tablets' || slide.id === 'forming-machines') && (
                   <div
                     aria-hidden="true"
                     className="pointer-events-none absolute inset-y-0 left-0 hidden w-[min(46vw,650px)] bg-[linear-gradient(90deg,rgba(0,0,0,0.45)_0%,rgba(0,0,0,0.25)_48%,rgba(0,0,0,0)_100%)] lg:block"
@@ -155,7 +155,7 @@ export function HeroCarousel({ slides = HERO_SLIDES, locale = 'en' }: { slides?:
                       aria-label={chinese ? `转到第 ${i + 1} 张：${slide.title}` : `Go to slide ${i + 1}: ${slide.title}`}
                       aria-current={active ? 'true' : undefined}
                       onClick={() => go(i)}
-                      className="group flex h-11 w-7 items-center justify-center focus-visible:outline-2 focus-visible:outline-ring sm:w-14"
+                      className="group flex h-11 w-6 items-center justify-center focus-visible:outline-2 focus-visible:outline-ring sm:w-12"
                     >
                       <span
                         className={cn(

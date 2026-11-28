@@ -20,7 +20,7 @@ export async function SiteFooter({ locale = 'en' }: { locale?: Locale }) {
             <LogoLink className="h-16 sm:h-[72px] lg:h-20" locale={locale} />
           </div>
           <p className="max-w-sm text-sm leading-relaxed text-muted-foreground">
-            {zh ? 'JUFTECH 是苏州工业园区九峰自动化技术有限公司的对外品牌，提供自动化设备、锁付与供料系统、机器人集成、成型设备、大型加工及工业控制软件。' : <>JUFTECH is the public brand of {COMPANY.legalName}, supplying automation equipment, tightening and feeding systems, robotic integration, forming, heavy machining and industrial control software from Suzhou Industrial Park.</>}
+            {zh ? 'JUFTECH 是苏州工业园区九峰自动化技术有限公司的对外品牌，聚焦非标自动化、标准拧紧与供料产品、无人机和车载平板、机器人系统集成、皮带与模压成型设备、批量重型 OEM 机加工，以及控制软件、电柜制作与自动化升级技术服务。' : <>JUFTECH is the public brand of {COMPANY.legalName}, supplying custom automation, standard tightening and feeding units, UAV and vehicle tablets, robotic integration, belt and compression forming machines, batch heavy OEM machining, and control software, electrical cabinets and technical services from Suzhou Industrial Park.</>}
           </p>
         </div>
 

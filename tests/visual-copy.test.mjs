@@ -31,32 +31,29 @@ test('product-family cards use a balanced three-column desktop grid and product 
   assert.doesNotMatch(component, /catalogue items?/)
 })
 
-test('database product families receive professional buyer-facing presentation copy', async () => {
+test('database product families receive professional buyer-facing presentation copy for seven core business lines', async () => {
   const loader = await source('lib/products-db.ts')
   for (const copy of [
     'Custom Automation Equipment',
-    'Assembly Tightening Modules & Tools',
-    'Feeding Systems',
-    'Tightening Accessories',
-    'Rugged & Vehicle-Mounted Tablets',
+    'Standard Products: Tightening & Feeding',
+    'UAV & Vehicle-Mounted Tablets',
     'Robotic System Integration',
-    'Forming Machines',
-    'Heavy Machining',
-    'Industrial Control Software Development',
+    'Forming Machines \\(Standard Equipment\\)',
+    'Batch Heavy Machining & OEM Processing',
+    'Control Software, Electrical Cabinets & Technical Services',
   ]) {
-    assert.match(loader, new RegExp(copy.replace(/[&]/g, '\\&')))
+    assert.match(loader, new RegExp(copy))
   }
   assert.doesNotMatch(loader, /Explore \$\{.*\} from JUFTECH/)
-  assert.match(loader, /familyName: \(locale === 'zh-CN' \? FAMILY_PRESENTATION_ZH : FAMILY_PRESENTATION\)\[row\.category_slug\]\?\.name \|\| row\.category/)
+  assert.match(loader, /familyName: \(locale === 'zh-CN' \? FAMILY_PRESENTATION_ZH : FAMILY_PRESENTATION\)\[normalizedFamily\]\?\.name \|\| row\.category/)
 })
 
-test('fallback product families mirror the nine production family slugs', async () => {
+test('fallback product families mirror the seven core business lines and hero slides separate UAV tablets from forming machines', async () => {
   const fallback = await source('lib/site-data.ts')
+  const zhMessages = await source('lib/messages.ts')
   for (const slug of [
     'non-standard-automated-customized-equipment',
-    'tighten-the-assembly-module-and-tools',
-    'feeder',
-    'tighten-function-attachments',
+    'standard-tightening-feeding',
     'unmanned-aerial-vehicle-onboard-control-tablet',
     'robot-system-integration',
     'forming-machine',
@@ -65,7 +62,11 @@ test('fallback product families mirror the nine production family slugs', async 
   ]) {
     assert.match(fallback, new RegExp(`slug: '${slug}'`))
   }
-  assert.doesNotMatch(fallback, /eyebrow: 'Eight product families'/)
-  assert.doesNotMatch(fallback, /\{ value: '8', label: 'Product families'/)
-  assert.match(fallback, /\{ value: '9', label: 'Product families'/)
+  assert.match(fallback, /\{ value: '7', label: 'Core business lines'/)
+  assert.doesNotMatch(fallback, /Machined Parts for UAV Tablets and Forming Equipment/)
+  assert.doesNotMatch(zhMessages, /无人机平板与成型机加工配件/)
+  assert.match(zhMessages, /非标自动化定制设备与产线集成/)
+  assert.match(zhMessages, /皮带成型机与模压成型机/)
+  assert.match(zhMessages, /东南亚纺织服装厂智能缝制自动化升级方案集成/)
+  assert.match(zhMessages, /控制软件开发、电柜制作与技术服务/)
 })

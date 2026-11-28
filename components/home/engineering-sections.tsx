@@ -243,6 +243,92 @@ export function FactsBand({ locale = 'en' }: { locale?: Locale } = {}) {
   )
 }
 
+export function TextileUpgradeSpotlight({ locale = 'en' }: { locale?: Locale } = {}) {
+  const zh = locale === 'zh-CN'
+  const pillars = zh
+    ? [
+        {
+          step: '01',
+          title: '成熟标准化智能缝制硬件整合',
+          text: '整合智能模板缝纫机、自动裁床等成熟标准化设备及完整 CE 认证文件，聚焦整线方案整合与工艺适配。',
+        },
+        {
+          step: '02',
+          title: '样板产线落地与现场工艺调试',
+          text: '面向越南、柬埔寨、印尼、孟加拉等东南亚纺织服装厂，按车间布局推进产线排布、样板线实施与工艺参数调试。',
+        },
+        {
+          step: '03',
+          title: '本地培训、远程运维与持续升级',
+          text: '配套提供 1–2 周本地工人操作培训与远程运维技术支持，并持续承接后续产线扩建、工位升级及电控改造。',
+        },
+      ]
+    : [
+        {
+          step: '01',
+          title: 'Standardized Smart Sewing Hardware Integration',
+          text: 'Integrates proven smart template sewing machines and automatic cutting tables with complete CE certification files, focused on line-level engineering and process adaptation.',
+        },
+        {
+          step: '02',
+          title: 'Pilot Line Deployment & Process Commissioning',
+          text: 'Built for textile and garment factories across Vietnam, Cambodia, Indonesia and Bangladesh—covering workshop line layout, pilot line launch and on-site process tuning.',
+        },
+        {
+          step: '03',
+          title: 'Operator Training, Remote Support & Expansion',
+          text: 'Includes 1–2 weeks of local operator training and remote operations technical support, followed by ongoing line expansion, workstation upgrades and electrical cabinet support.',
+        },
+      ]
+
+  return (
+    <section id="sea-textile-smart-sewing" aria-labelledby="sea-textile-title" className="scroll-mt-24 border-y border-border bg-stage py-16 md:py-24">
+      <div className="wrap">
+        <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
+          <Reveal>
+            <p className="font-mono text-xs font-medium uppercase tracking-[0.16em] text-signal-ink">
+              {zh ? '第七大类 · 自动化升级技术服务重点方向' : 'Business Line 07 · Featured Technical Service'}
+            </p>
+            <h2 id="sea-textile-title" className="mt-3 text-2xl font-semibold leading-tight text-ink sm:text-3xl lg:text-4xl">
+              {zh ? '东南亚纺织服装厂智能缝制自动化升级方案集成' : 'Southeast Asia Textile & Garment Smart Sewing Automation Upgrade'}
+            </h2>
+            <p className="mt-4 text-base leading-relaxed text-muted-foreground">
+              {zh
+                ? '依托九峰在工业控制软件开发、电气控制柜制作与现场工艺调试方面的工程能力，面向东南亚纺织服装制造企业提供一站式智能缝制产线升级集成服务，帮助工厂高效解决用工与产能升级痛点。'
+                : 'Backed by JUFTECH control software engineering, electrical cabinet fabrication and field commissioning capabilities, we deliver integrated smart sewing automation upgrades for Southeast Asian textile and garment factories seeking higher throughput and consistent stitch quality.'}
+            </p>
+            <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+              <Link href={localePath('/contact?product=sea-textile-smart-sewing#rfq', locale)} className={btnSignal}>
+                {zh ? '咨询智能缝制升级方案' : 'Discuss Smart Sewing Upgrade'}
+                <ArrowRight className="size-4" strokeWidth={1.75} aria-hidden="true" />
+              </Link>
+              <Link href={localePath('/products?family=outsourcing-services-for-control-software-plc-labview-c', locale)} className={btnOutline}>
+                {zh ? '查看控制软件与电柜服务' : 'Control Software & Cabinets'}
+              </Link>
+            </div>
+          </Reveal>
+
+          <ol className="space-y-4">
+            {pillars.map((item, i) => (
+              <Reveal as="li" key={item.step} index={i} className="rounded-lg border border-border bg-white p-5 sm:p-6">
+                <div className="flex items-start gap-4">
+                  <span className="inline-flex size-9 shrink-0 items-center justify-center rounded-md bg-primary font-mono text-xs font-semibold text-white">
+                    {item.step}
+                  </span>
+                  <div>
+                    <h3 className="text-base font-semibold text-ink sm:text-lg">{item.title}</h3>
+                    <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">{item.text}</p>
+                  </div>
+                </div>
+              </Reveal>
+            ))}
+          </ol>
+        </div>
+      </div>
+    </section>
+  )
+}
+
 export function HomeCta() {
   return (
     <Link href="/contact#rfq" className={btnSignal}>

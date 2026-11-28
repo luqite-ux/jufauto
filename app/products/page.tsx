@@ -3,6 +3,7 @@ import { PageHeader } from '@/components/site/page-header'
 import { ProductCatalog } from '@/components/site/product-catalog'
 import { RfqSection } from '@/components/site/rfq-section'
 import { fetchProductsData } from '@/lib/products-db'
+import { normalizeFamilySlug } from '@/lib/site-data'
 import { alternateLanguages } from '@/lib/i18n'
 
 export const revalidate = 60
@@ -11,13 +12,14 @@ export const metadata: Metadata = {
   title: 'Products',
   alternates: { canonical: '/products', languages: alternateLanguages('/products') },
   description:
-    'Browse JUFTECH product families: custom automation equipment, automatic tightening modules, feeding systems, rugged tablets, robotic integration, forming machines, heavy machining and control software.',
+    'Browse JUFTECH seven core business lines: custom automation equipment, standard tightening and feeding systems, UAV and vehicle tablets, robotic integration, belt and compression forming machines, batch heavy OEM machining, and control software, electrical cabinets and technical services.',
 }
 
 export default async function ProductsPage({ searchParams }: { searchParams: Promise<{ family?: string }> }) {
   const { family } = await searchParams
   const { products, families } = await fetchProductsData()
-  const initialFamily = families.some((f) => f.slug === family) ? family : undefined
+  const normalized = normalizeFamilySlug(family)
+  const initialFamily = normalized && families.some((f) => f.slug === normalized) ? normalized : undefined
   return (
     <>
       <PageHeader

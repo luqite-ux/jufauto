@@ -12,6 +12,7 @@ import { localePath, type Locale } from '@/lib/i18n'
 
 const FAMILY_IMAGE_PRODUCT_SLUGS: Record<string, string> = {
   'non-standard-automated-customized-equipment': 'horn-assembly-production-line',
+  'standard-tightening-feeding': 'vibrating-disc-feeder',
   'tighten-the-assembly-module-and-tools': 'screw-distributor-29',
   feeder: 'vibrating-disc-feeder',
   'tighten-function-attachments': 'gantry-style-balance-arm',
@@ -25,13 +26,13 @@ const FAMILY_IMAGE_PRODUCT_SLUGS: Record<string, string> = {
 export function FamilyPaths({ products, families, locale = 'en' }: { products: Product[]; families: ProductFamily[]; locale?: Locale }) {
   const zh = locale === 'zh-CN'
   return (
-    <section aria-labelledby="families-title" className="py-16 md:py-24">
+    <section id="core-business" aria-labelledby="families-title" className="scroll-mt-24 py-16 md:py-24">
       <div className="wrap">
         <div id="families-title">
           <SectionHeading
-            eyebrow={zh ? '采购入口' : 'Procurement paths'}
-            title={zh ? `${families.length} 个产品分类，一个工程对接入口` : `${families.length} product families, one engineering contact`}
-            description={zh ? '选择与应用相符的产品分类，查看已发布产品，或直接向工程团队提交需求。' : 'Choose the family that matches your application, then review the available products or send the engineering team your requirements.'}
+            eyebrow={zh ? '七大核心业务' : 'Seven core business lines'}
+            title={zh ? `${families.length} 大核心业务板块，一个工程对接入口` : `${families.length} core business lines, one engineering contact`}
+            description={zh ? '涵盖非标自动化、标准产品（拧紧单元与供料系统）、无人机和车载平板、机器人系统集成、标准成型设备、批量重型机加工及控制软件与电柜技术服务。' : 'Covering non-standard automation, standard tightening & feeding products, UAV & vehicle tablets, robotics, standard forming machines, batch heavy OEM machining, and control software, electrical cabinets & technical services.'}
             action={
               <Link href={localePath('/products', locale)} className={cn(btnOutline, 'self-start md:self-auto')}>
                 {zh ? '全部产品' : 'All products'}
@@ -65,6 +66,7 @@ export function FamilyPaths({ products, families, locale = 'en' }: { products: P
                   <div className="flex min-w-0 flex-col p-4 sm:p-5">
                     <span className="font-mono text-[11px] tabular-nums text-muted-foreground">{String(i + 1).padStart(2, '0')}</span>
                     <h3 className="mt-2 text-base font-semibold leading-snug text-ink">{family.name}</h3>
+                    <p className="mt-2 line-clamp-2 text-xs leading-relaxed text-muted-foreground sm:text-sm">{family.short}</p>
                     <span className="mt-auto flex items-center justify-between pt-4 text-sm font-semibold text-primary">
                       <span>{count > 0 ? (zh ? `${count} 项产品` : `${count} ${count === 1 ? 'product' : 'products'}`) : (zh ? '提交询价' : 'Request via RFQ')}</span>
                       <ArrowUpRight className="size-4 transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" strokeWidth={1.75} aria-hidden="true" />

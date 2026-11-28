@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { CapabilityGrid, EvidenceSection, FactsBand, ProcessSection } from '@/components/home/engineering-sections'
+import { CapabilityGrid, EvidenceSection, FactsBand, ProcessSection, TextileUpgradeSpotlight } from '@/components/home/engineering-sections'
 import { PageHeader } from '@/components/site/page-header'
 import { RfqSection } from '@/components/site/rfq-section'
 import { alternateLanguages } from '@/lib/i18n'
@@ -21,6 +21,7 @@ export default function CapabilitiesPage() {
         crumbs={[{ label: 'Capabilities' }]}
       />
       <CapabilityGrid heading={false} titleId="capabilities-grid" />
+      <TextileUpgradeSpotlight />
       <ProcessSection />
       <EvidenceSection />
       <FactsBand />

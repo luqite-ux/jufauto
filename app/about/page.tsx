@@ -32,9 +32,11 @@ export default function AboutPage() {
               Who we are
             </h2>
             <p>
-              We design and build automation equipment and the components around it: custom stations and lines,
-              automatic tightening modules, feeding systems, rugged tablets, robotic integration, forming machines,
-              heavy machining and industrial control software.
+              We focus on seven core business lines: non-standard custom automation equipment, standardized tightening
+              units and feeding systems, UAV and vehicle-mounted rugged tablets, robotic system integration, standard
+              forming machines (focused on belt forming and compression molding machines), batch heavy machining and OEM
+              custom processing, and industrial control software, electrical cabinet fabrication and automation upgrade
+              technical services.
             </p>
             <p>
               The company works from {COMPANY.address}, on a site of approximately 9,000 m² with three workshops. Our

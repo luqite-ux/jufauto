@@ -3,6 +3,7 @@ import { PageHeader } from '@/components/site/page-header'
 import { ProductCatalog } from '@/components/site/product-catalog'
 import { RfqSection } from '@/components/site/rfq-section'
 import { fetchProductsData } from '@/lib/products-db'
+import { normalizeFamilySlug } from '@/lib/site-data'
 import { alternateLanguages } from '@/lib/i18n'
 import { ZH_PAGE_COPY } from '@/lib/messages'
 
@@ -12,7 +13,8 @@ export const metadata: Metadata = { title: '产品中心', description: ZH_PAGE_
 export default async function ChineseProductsPage({ searchParams }: { searchParams: Promise<{ family?: string }> }) {
   const { family } = await searchParams
   const { products, families } = await fetchProductsData('zh-CN')
-  const initialFamily = families.some((item) => item.slug === family) ? family : undefined
+  const normalized = normalizeFamilySlug(family)
+  const initialFamily = normalized && families.some((item) => item.slug === normalized) ? normalized : undefined
   return <>
     <PageHeader {...ZH_PAGE_COPY.products} crumbs={[{ label: '产品中心' }]} />
     <section aria-label="产品目录" className="py-12 md:py-16"><div className="wrap"><ProductCatalog products={products} families={families} initialFamily={initialFamily} locale="zh-CN" /></div></section>
